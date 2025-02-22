@@ -800,3 +800,35 @@
 		text-transform: uppercase;
 		font-weight: 700;
 	}
+
+/* === תיקון יישור לימין (RTL) === */
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* יישור כותרות ותוכן לימין */
+.wrapper.style2 .major,
+.wrapper.style3 .major,
+.wrapper.style4 .major {
+    text-align: right !important;
+}
+
+/* תיקון תפריט הניווט */
+#nav ul {
+    text-align: right;
+}
+
+#nav > ul > li {
+    float: right;
+}
+
+/* סידור הסרגל הצדדי */
+#sidebar {
+    float: left;
+}
+
+/* סידור אזור התוכן */
+#content {
+    float: right;
+}
