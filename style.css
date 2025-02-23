@@ -959,3 +959,74 @@ body {
     width: 90%;
     margin: 0 auto;
 }
+
+/* === תיקון בעיות פרופורציה ורוחב הדף === */
+html, body {
+    overflow-x: hidden !important; /* מונע גלילה ימינה לא רצויה */
+    max-width: 100% !important; /* מונע הרחבה לא תקינה של האלמנטים */
+}
+
+.container {
+    max-width: 1200px !important; /* מגביל את הרוחב של האלמנטים */
+    margin: auto !important; /* ממרכז את התוכן */
+}
+
+/* === תיקון קנה מידה של תמונות בגלריה === */
+.gallery-carousel img {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important; /* מבטיח שהתמונות יחתכו בהתאם ולא יימרחו */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === מרכוז תוכן ושמירה על גודל תקין === */
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* === מניעת גלילה מיותרת ויישור === */
+html, body {
+    overflow-x: hidden !important; /* מניעת גלילה אופקית */
+    max-width: 100% !important;
+}
+
+/* === סידור הכפתורים בצורה אסתטית === */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.contact-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    padding: 15px 25px;
+    font-size: 1.4em;
+    font-weight: bold;
+    background-color: #82b440;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-buttons a:hover {
+    background-color: #6a9a2f;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
