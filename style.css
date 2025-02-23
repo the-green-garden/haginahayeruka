@@ -914,13 +914,19 @@ body {
 .contact-buttons {
     text-align: center;
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* רווח אחיד בין הכפתורים */
+    flex-wrap: wrap; /* מוודא שהכפתורים לא יוצאים מהמסך */
 }
 
 .contact-buttons a {
-    display: inline-block;
-    padding: 15px 25px; /* מגדיל את גודל הכפתורים */
-    margin: 10px;
-    font-size: 1.5em; /* מגדיל את הטקסט */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px; /* הופך את הכפתורים ליותר רחבים */
+    padding: 15px 25px;
+    font-size: 1.5em;
     background-color: #82b440;
     color: white;
     text-decoration: none;
@@ -930,11 +936,11 @@ body {
 
 .contact-buttons a:hover {
     background-color: #6a9a2f;
-    transform: scale(1.1); /* גורם לכפתור לגדול מעט */
+    transform: scale(1.1);
 }
 
 .contact-buttons a i {
     margin-left: 8px;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
