@@ -556,25 +556,14 @@
 
 /* Header */
 
-	#header {
-		color: white;
-		height: 4em;
-		background: rgba(0, 0, 0, 0.5);
-	}
-
-		#header .container {
-			position: relative;
-		}
-
-	.homepage #logo {
-		display: none;
-	}
-
-	.homepage #nav {
-		position: static;
-		right: none;
-		text-align: center;
-	}
+#header {
+    color: white;
+    height: auto; /* מאפשר לגובה להתאים לתוכן */
+    background: #82b440; /* צבע רקע אחיד (ירוק) */
+    padding: 15px 0; /* רווח פנימי */
+    text-align: center; /* ממרכז את הלוגו והתפריט */
+    border-bottom: 3px solid #6a9a2f; /* קו תחתון דק */
+}
 
 #logo {
     display: flex; /* מאפשר גמישות */
@@ -605,35 +594,35 @@
 }
 
 #nav {
-    position: relative; /* שומר שהתפריט לא ירחף */
-    text-align: right;
-    background: #82b440; /* צבע רקע אחיד (ירוק) */
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1000; /* מבטיח שהתפריט יהיה מעל תוכן אחר */
-    margin: 0 auto; /* ממרכז את התפריט */
-    top: 0; /* מוודא שהתפריט יתחיל בדיוק מהחלק העליון */
+    position: relative; /* מונע ריחוף */
+    text-align: center; /* ממרכז את הכפתורים */
+    padding: 0; /* מבטל רווחים לא רצויים */
 }
 
 #nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    text-align: right;
+    display: flex; /* מציג את הפריטים בשורה */
+    justify-content: center; /* ממרכז את הכפתורים */
 }
 
 #nav ul li {
-    display: inline-block;
-    margin-right: 10px;
+    margin: 0 10px; /* רווח קטן בין הכפתורים */
 }
 
 #nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-    padding: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
 }
 
+#nav ul li a:hover {
+    background: #6a9a2f; /* אפקט מעבר כשעוברים עם העכבר */
+}
 
 /* Dropotron */
 
