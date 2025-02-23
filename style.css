@@ -606,14 +606,14 @@
 
 #nav {
     position: relative; /* שומר שהתפריט לא ירחף */
-    top: 10px; /* מרווח מהלוגו */
     text-align: right;
     background: #82b440; /* צבע רקע אחיד (ירוק) */
     padding: 10px;
     border-radius: 5px;
     z-index: 1000; /* מבטיח שהתפריט יהיה מעל תוכן אחר */
+    margin: 0 auto; /* ממרכז את התפריט */
+    top: 0; /* מוודא שהתפריט יתחיל בדיוק מהחלק העליון */
 }
-
 
 #nav ul {
     margin: 0;
