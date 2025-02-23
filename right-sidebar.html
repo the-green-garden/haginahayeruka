@@ -10,13 +10,26 @@
     <!-- קבצי CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="skel.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
     <!-- קבצי JavaScript -->
-    <script src="jquery.min.js"></script>
-    <script src="jquery.dropotron.min.js"></script>
-    <script src="skel.min.js"></script>
-    <script src="skel-layers.min.js"></script>
-    <script src="init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.gallery-carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                arrows: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+    </script>
     
     <style>
         body {
@@ -25,37 +38,17 @@
             font-family: Arial, sans-serif;
         }
         
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
+        .gallery-carousel {
+            width: 80%;
+            margin: auto;
+            direction: ltr;
         }
 
-        .gallery img {
-            width: 250px;
+        .gallery-carousel img {
+            width: 100%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-buttons {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .contact-buttons a {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 5px;
-            background-color: #82b440;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .contact-buttons a:hover {
-            background-color: #6a9a2f;
         }
     </style>
 </head>
@@ -99,21 +92,22 @@
                             כאן תמצאו מבחר תמונות מפרויקטים שלנו – תכנון, שיקום ועיצוב גינות ללקוחות מרוצים.
                         </p>
 
-                        <!-- גלריית תמונות -->
-<div class="gallery">
-    <img src="garden1.jpg" alt="גינה מעוצבת">
-    <img src="garden2.jpg" alt="עבודת גינון">
-    <img src="garden3.jpg" alt="שתילת צמחים">
-    <img src="garden4.jpg" alt="שיקום גינה">
-    <img src="garden5.jpg" alt="פרויקט גינון">
-    <img src="garden6.jpg" alt="תכנון גינות">
-    <img src="garden7.jpg" alt="גינה פרטית">
-    <img src="garden8.png" alt="עיצוב חצר">
-    <img src="garden9.jpg" alt="שיפוץ גינה">
-    <img src="irrigation1.jpg" alt="מערכת השקיה">
-    <img src="irrigation2.jpg" alt="השקיה חכמה">
-</div>
-
+                        <!-- גלריית תמונות מסתובבת -->
+                        <div class="gallery-carousel">
+                            <img src="before_after1.jpg" alt="לפני ואחרי גינה">
+                            <img src="garden1.jpg" alt="גינה מעוצבת">
+                            <img src="garden2.jpg" alt="עבודת גינון">
+                            <img src="garden3.jpg" alt="שתילת צמחים">
+                            <img src="garden4.jpg" alt="שיקום גינה">
+                            <img src="garden5.jpg" alt="פרויקט גינון">
+                            <img src="garden6.jpg" alt="תכנון גינות">
+                            <img src="garden7.jpg" alt="גינה פרטית">
+                            <img src="garden8.png" alt="עיצוב חצר">
+                            <img src="garden9.jpg" alt="שיפוץ גינה">
+                            <img src="irrigation1.jpg" alt="מערכת השקיה">
+                            <img src="irrigation2.jpg" alt="השקיה חכמה">
+                            <img src="plants1.jpg" alt="צמחים חדשים">
+                        </div>
 
                         <!-- כפתורי יצירת קשר -->
                         <div class="contact-buttons">
@@ -161,5 +155,3 @@
     </div>
 </body>
 </html>
-
-
