@@ -13,23 +13,25 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
-    <!-- קבצי JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.gallery-carousel').slick({
-                autoplay: true,
-                autoplaySpeed: 3000,
-                dots: true,
-                arrows: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1
-            });
+<!-- קבצי JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.gallery-carousel').slick({
+            rtl: true, /* מסדר את הכיוון בעברית */
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: true,
+            arrows: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
         });
-    </script>
+    });
+</script>
+
     
     <style>
         body {
