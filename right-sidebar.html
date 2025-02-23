@@ -24,6 +24,39 @@
             text-align: right;
             font-family: Arial, sans-serif;
         }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #82b440;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .contact-buttons a:hover {
+            background-color: #6a9a2f;
+        }
     </style>
 </head>
 <body>
@@ -68,13 +101,22 @@
 
                         <!-- גלריית תמונות -->
                         <div class="gallery">
-                            <img src="images/garden1.jpg" alt="גינה מעוצבת">
-                            <img src="images/garden2.jpg" alt="עבודת גינון">
-                            <img src="images/garden3.jpg" alt="שתילת צמחים">
-                            <img src="images/garden4.jpg" alt="שיקום גינה">
+                            <img src="garden1.jpg" alt="גינה מעוצבת">
+                            <img src="garden2.jpg" alt="עבודת גינון">
+                            <img src="garden3.jpg" alt="שתילת צמחים">
+                            <img src="garden4.jpg" alt="שיקום גינה">
+                            <img src="garden5.jpg" alt="תכנון נוף">
+                            <img src="before_after1.jpg" alt="לפני ואחרי שיקום גינה">
+                            <img src="irrigation1.jpg" alt="מערכת השקיה">
+                            <img src="irrigation2.jpg" alt="טפטפות השקיה">
                         </div>
 
-                        <a href="no-sidebar.html" class="button">צור קשר</a>
+                        <!-- כפתורי יצירת קשר -->
+                        <div class="contact-buttons">
+                            <a href="mailto:noyshoshansolomon@gmail.com">📧 שלחו מייל</a>
+                            <a href="https://wa.me/972546698931">💬 שלחו הודעה בוואטסאפ</a>
+                            <a href="https://www.facebook.com/yourpage">📘 בקרו אותנו בפייסבוק</a>
+                        </div>
                     </section>
                 </div>
 
@@ -106,13 +148,14 @@
                 <span class="byline">לקבלת הצעת מחיר ושירות מותאם אישית</span>
             </header>
             <ul class="icons">
-                <li><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
-                <li><a href="#" class="fa fa-whatsapp"><span>WhatsApp</span></a></li>
-                <li><a href="#" class="fa fa-envelope"><span>Email</span></a></li>
+                <li><a href="https://www.facebook.com/yourpage" class="fa fa-facebook"><span>Facebook</span></a></li>
+                <li><a href="https://wa.me/972546698931" class="fa fa-whatsapp"><span>WhatsApp</span></a></li>
+                <li><a href="mailto:noyshoshansolomon@gmail.com" class="fa fa-envelope"><span>Email</span></a></li>
             </ul>
             <hr>
         </section>
     </div>
 </body>
 </html>
+
 
