@@ -577,19 +577,22 @@
 	}
 
 #logo {
-    display: block;
-    margin: 0 auto; /* ממרכז את הלוגו */
-    padding: 10px 0; /* יוצר רווח מעל ומתחת ללוגו */
-    max-width: 250px; /* שומר על גודל אחיד */
+    display: flex; /* מאפשר גמישות */
+    justify-content: center; /* ממרכז את הלוגו */
+    align-items: center; /* ממרכז אנכית */
+    margin: 0 auto; /* ממרכז אופקית */
+    padding: 10px 0; /* יוצר רווח סביב הלוגו */
+    max-width: 250px; /* מבטיח שהלוגו לא יהיה גדול מדי */
     text-align: center;
 }
 
-/* ודאי שהלוגו מוצג כראוי */
 #logo img {
-    max-height: 80px; /* מגדיל מעט את הלוגו */
+    max-height: 80px; /* גודל אחיד */
     width: auto;
     display: block;
-    margin: 0 auto; /* מרכז את הלוגו */
+    margin: 0 auto; /* ממרכז את הלוגו */
+    border-radius: 50%; /* הופך את התמונה לעגולה */
+    border: 3px solid #82b440; /* מסגרת ירוקה ללוגו */
 }
 
 /* כותרת בתוך הלוגו */
@@ -602,14 +605,15 @@
 }
 
 #nav {
-    position: absolute;
-    top: 90px; /* מוודא שהתפריט לא מכוסה על ידי הלוגו */
-    right: 0;
-    background: rgba(0, 0, 0, 0.5); /* רקע שקוף */
+    position: relative; /* שומר שהתפריט לא ירחף */
+    top: 10px; /* מרווח מהלוגו */
+    text-align: right;
+    background: #82b440; /* צבע רקע אחיד (ירוק) */
     padding: 10px;
     border-radius: 5px;
-    z-index: 1000; /* מבטיח שהתפריט תמיד יהיה מעל כל האלמנטים */
+    z-index: 1000; /* מבטיח שהתפריט יהיה מעל תוכן אחר */
 }
+
 
 #nav ul {
     margin: 0;
