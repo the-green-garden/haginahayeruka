@@ -80,4 +80,45 @@
 
 	});
 
+	document.addEventListener("DOMContentLoaded", function () {
+    const galleryCarousel = document.querySelector(".gallery-carousel");
+    const images = document.querySelectorAll(".gallery-carousel img");
+    const prevButton = document.querySelector(".gallery-prev");
+    const nextButton = document.querySelector(".gallery-next");
+    const dots = document.querySelectorAll(".gallery-dot");
+
+    let currentIndex = 0;
+
+    function updateGallery() {
+        const newTransform = -currentIndex * 100 + "%";
+        galleryCarousel.style.transform = "translateX(" + newTransform + ")";
+
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+    }
+
+    function showNext() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateGallery();
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateGallery();
+    }
+
+    nextButton.addEventListener("click", showNext);
+    prevButton.addEventListener("click", showPrev);
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            currentIndex = index;
+            updateGallery();
+        });
+    });
+
+    setInterval(showNext, 3000); // מעבר אוטומטי בין תמונות כל 3 שניות
+});
+	
 })(jQuery);
