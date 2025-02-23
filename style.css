@@ -248,23 +248,24 @@
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .gallery-carousel {
-    width: 80%;
-    margin: auto;
-    direction: ltr;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
 .gallery-carousel img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
-    object-fit: contain; /* מבטיח שהתמונה תוצג ללא חיתוך */
+    object-fit: contain; /* מונע חיתוך של התמונות */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 
 /* חצים לניווט */
 .gallery-prev, .gallery-next {
@@ -912,35 +913,49 @@ body {
 }
 
 .contact-buttons {
-    text-align: center;
-    margin-top: 30px;
     display: flex;
     justify-content: center;
-    gap: 20px; /* רווח אחיד בין הכפתורים */
-    flex-wrap: wrap; /* מוודא שהכפתורים לא יוצאים מהמסך */
+    align-items: center;
+    gap: 30px; /* מגדיל את הרווח בין הכפתורים */
+    flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .contact-buttons a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 220px; /* הופך את הכפתורים ליותר רחבים */
-    padding: 15px 25px;
-    font-size: 1.5em;
+    width: 250px; /* הופך את הכפתורים לגדולים יותר */
+    padding: 20px 30px;
+    font-size: 1.6em;
+    font-weight: bold;
     background-color: #82b440;
     color: white;
     text-decoration: none;
-    border-radius: 10px;
-    transition: background 0.3s ease-in-out, transform 0.2s;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* מוסיף צל */
 }
 
 .contact-buttons a:hover {
     background-color: #6a9a2f;
-    transform: scale(1.1);
+    transform: scale(1.12);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* מחזק את הצל */
 }
 
 .contact-buttons a i {
-    margin-left: 8px;
+    margin-left: 10px;
     font-size: 1.8em;
 }
 
+
+/* מרכוז כללי של האלמנטים */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
