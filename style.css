@@ -195,32 +195,31 @@
 	}
 
 /* Image */
+.image {
+    border: 0;
+    position: relative;
+}
 
-	.image {
-		border: 0;
-		position: relative;
-	}
+.image.fit {
+    display: block;
+}
 
-		.image.fit {
-			display: block;
-		}
+.image.fit img {
+    display: block;
+    width: 100%;
+}
 
-			.image.fit img {
-				display: block;
-				width: 100%;
-			}
+.image.feature {
+    display: block;
+    margin: 0 0 2em 0;
+}
 
-		.image.feature {
-			display: block;
-			margin: 0 0 2em 0;
-		}
+.image.feature img {
+    display: block;
+    width: 100%;
+}
 
-			.image.feature img {
-				display: block;
-				width: 100%;
-			}
-
-                        /* גלריית תמונות */
+/* גלריית תמונות */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -241,7 +240,68 @@
     transform: scale(1.05);
 }
 
+/* קרוסלת הגלריה */
+.gallery-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
 
+.gallery-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-carousel img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* חצים לניווט */
+.gallery-prev, .gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.gallery-prev { left: 10px; }
+.gallery-next { right: 10px; }
+
+.gallery-prev:hover, .gallery-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* נקודות מעבר */
+.gallery-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.gallery-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.gallery-dot.active {
+    background-color: #82b440;
+}
 
 /* Icon */
 
