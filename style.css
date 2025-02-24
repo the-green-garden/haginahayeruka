@@ -195,30 +195,118 @@
 	}
 
 /* Image */
+.image {
+    border: 0;
+    position: relative;
+}
 
-	.image {
-		border: 0;
-		position: relative;
-	}
+.image.fit {
+    display: block;
+}
 
-		.image.fit {
-			display: block;
-		}
+.image.fit img {
+    display: block;
+    width: 100%;
+}
 
-			.image.fit img {
-				display: block;
-				width: 100%;
-			}
+.image.feature {
+    display: block;
+    margin: 0 0 2em 0;
+}
 
-		.image.feature {
-			display: block;
-			margin: 0 0 2em 0;
-		}
+.image.feature img {
+    display: block;
+    width: 100%;
+}
 
-			.image.feature img {
-				display: block;
-				width: 100%;
-			}
+/* גלריית תמונות */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* קרוסלת הגלריה */
+.gallery-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.gallery-carousel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.gallery-carousel img {
+    max-width: 90%;
+    height: auto;
+    object-fit: contain; /* מונע חיתוך של התמונות */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* חצים לניווט */
+.gallery-prev, .gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.gallery-prev { left: 10px; }
+.gallery-next { right: 10px; }
+
+.gallery-prev:hover, .gallery-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* נקודות מעבר */
+.gallery-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.gallery-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.gallery-dot.active {
+    background-color: #82b440;
+}
 
 /* Icon */
 
@@ -556,86 +644,73 @@
 
 /* Header */
 
-	#header {
-		color: white;
-		height: 4em;
-		background: rgba(0, 0, 0, 0.5);
-	}
-
-		#header .container {
-			position: relative;
-		}
-
-	.homepage #logo {
-		display: none;
-	}
-
-	.homepage #nav {
-		position: static;
-		right: none;
-		text-align: center;
-	}
-
-	#logo {
-    line-height: 1.5em; /* מקטין את המרווח בין השורות */
-    letter-spacing: 1px; /* מקטין את הרווח בין האותיות */
-    font-size: 1.8em; /* מקטין את גודל הלוגו */
-    font-weight: 600; /* מבליט קצת */
-    margin-right: 20px; /* יוצר רווח מהתפריט */
-    display: inline-block;
-    white-space: nowrap; /* מונע מעבר לשורה חדשה */
-    padding: 10px 0; /* מוסיף מרווח כדי לא לפגוע בתפריט */
+#header {
+    color: white;
+    height: auto; /* מאפשר לגובה להתאים לתוכן */
+    background: #82b440; /* צבע רקע אחיד (ירוק) */
+    padding: 15px 0; /* רווח פנימי */
+    text-align: center; /* ממרכז את הלוגו והתפריט */
+    border-bottom: 3px solid #6a9a2f; /* קו תחתון דק */
 }
 
+#logo {
+    display: flex; /* מאפשר גמישות */
+    justify-content: center; /* ממרכז את הלוגו */
+    align-items: center; /* ממרכז אנכית */
+    margin: 0 auto; /* ממרכז אופקית */
+    padding: 10px 0; /* יוצר רווח סביב הלוגו */
+    max-width: 250px; /* מבטיח שהלוגו לא יהיה גדול מדי */
+    text-align: center;
+}
+
+#logo img {
+    max-height: 80px; /* גודל אחיד */
+    width: auto;
+    display: block;
+    margin: 0 auto; /* ממרכז את הלוגו */
+    border-radius: 50%; /* הופך את התמונה לעגולה */
+    border: 3px solid #82b440; /* מסגרת ירוקה ללוגו */
+}
+
+/* כותרת בתוך הלוגו */
 #logo h1 {
     display: inline-block;
     margin: 0;
     padding: 0;
-    font-size: inherit; /* גורם לזה לרשת את הגודל מ-#logo */
-}
-
-#logo a {
-    color: inherit;
-    text-decoration: none;
+    font-size: 1.5em; /* מקטין קצת את הכותרת */
+    line-height: 1.5em; /* מסדר את הגובה שלא יכסה את התפריט */
 }
 
 #nav {
-    position: relative; /* משנה מ-absolute ל-relative */
-    top: 10px; /* מוריד את התפריט למיקום טוב יותר */
-    text-align: right;
+    position: relative; /* מונע ריחוף */
+    text-align: center; /* ממרכז את הכפתורים */
+    padding: 0; /* מבטל רווחים לא רצויים */
 }
-		#nav > ul {
-			margin: 0;
-		}
 
-			#nav > ul > li {
-				border-radius: 4px;
-				display: inline-block;
-				margin-left: 0.5em;
-				padding: 0 0.5em;
-			}
+#nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex; /* מציג את הפריטים בשורה */
+    justify-content: center; /* ממרכז את הכפתורים */
+}
 
-				#nav > ul > li a {
-					color: inherit;
-					line-height: 4em;
-					letter-spacing: 2px;
-					text-decoration: none;
-					text-transform: uppercase;
-					font-weight: 400;
-					font-size: 1em;
-				}
+#nav ul li {
+    margin: 0 10px; /* רווח קטן בין הכפתורים */
+}
 
-				#nav > ul > li:first-child {
-					margin-left: 0;
-				}
+#nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
 
-				#nav > ul > li.active a {
-					color: white;
-				}
-
-				#nav > ul > li > ul {
-					display: none;
-				}
+#nav ul li a:hover {
+    background: #6a9a2f; /* אפקט מעבר כשעוברים עם העכבר */
+}
 
 /* Dropotron */
 
@@ -835,4 +910,52 @@ body {
 /* סידור אזור התוכן */
 #content {
     float: right;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* מגדיל את הרווח בין הכפתורים */
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.contact-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px; /* הופך את הכפתורים לגדולים יותר */
+    padding: 20px 30px;
+    font-size: 1.6em;
+    font-weight: bold;
+    background-color: #82b440;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* מוסיף צל */
+}
+
+.contact-buttons a:hover {
+    background-color: #6a9a2f;
+    transform: scale(1.12);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* מחזק את הצל */
+}
+
+.contact-buttons a i {
+    margin-left: 10px;
+    font-size: 1.8em;
+}
+
+
+/* מרכוז כללי של האלמנטים */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
 }
