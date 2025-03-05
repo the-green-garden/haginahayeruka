@@ -228,8 +228,11 @@
 }
 
 .gallery img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 300px; /* מגביל את הגובה */
+    width: auto; 
     height: auto;
+    object-fit: cover; /* חותך את התמונה למילוי */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
@@ -259,9 +262,12 @@
 }
 
 .gallery-carousel img {
-    max-width: 90%;
-    height: auto;
-    object-fit: contain; /* מונע חיתוך של התמונות */
+    max-width: 80%; /* מגביל את הרוחב */
+    max-height: 400px; /* קובע גובה מקסימלי */
+    height: auto; /* מאפשר גובה יחסי */
+    object-fit: contain; /* מבטיח שהתמונה לא תחתך */
+    display: block;
+    margin: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
