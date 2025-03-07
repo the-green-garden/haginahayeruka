@@ -8,9 +8,16 @@
 
 /* Basic */
 
-	body {
-		background: #222222;
-	}
+body {
+    background: #222222;
+    min-width: auto; 
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+    overflow-x: hidden;
+}
+
+	
 .image.fit img {
 	width: 100%;
 	height: auto;
@@ -229,13 +236,11 @@
 
 .gallery img {
     max-width: 100%;
-    max-height: 300px; /* מגביל את הגובה */
-    width: auto; 
-    height: auto;
-    object-fit: cover; /* חותך את התמונה למילוי */
+    width: 100%;
+    height: auto; /* מאפשר גובה יחסי */
+    object-fit: contain; /* מונע חיתוך ומותאם */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
 }
 
 .gallery img:hover {
