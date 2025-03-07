@@ -18,21 +18,34 @@
 <!-- קבצי JavaScript -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 <script>
     $(document).ready(function(){
-        $('.gallery-carousel').slick({
-            rtl: true, /* מסדר את הכיוון בעברית */
-            autoplay: true,
-            autoplaySpeed: 3000,
-            dots: true,
-            arrows: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1
-        });
+        console.log("Slick is loading..."); // בודק אם הסקריפט נטען
+
+        if ($('.gallery-carousel').length) {
+            console.log("Element .gallery-carousel נמצא!");
+
+            $('.gallery-carousel').slick({
+                rtl: true, /* מסדר את הכיוון בעברית */
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                arrows: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true /* מתקן בעיות גובה */
+            });
+
+            console.log("Slick הופעל בהצלחה!");
+        } else {
+            console.log("Element .gallery-carousel לא נמצא!");
+        }
     });
 </script>
+
 
     
     <style>
