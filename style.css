@@ -235,36 +235,16 @@ body {
 }
 
 .gallery img {
-    max-width: 100%;
-    width: auto; /* מבטיח שהתמונות לא יימתחו */
-    height: 250px; /* מגביל את הגובה */
-    object-fit: cover; /* מבטיח שהתמונה לא תהיה מעוותת */
+    width: 100%; /* תמלא את הרוחב */
+    max-height: 250px; /* גובה מקסימלי כדי למנוע תמונות ענק */
+    height: auto; /* מאפשר התאמה אוטומטית */
+    object-fit: contain; /* מבטיח שהתמונה תתאים למסגרת בלי להיחתך */
+    aspect-ratio: 16/9; /* מוודא שהתמונה נשמרת בפרופורציה נכונה */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* גלריית תמונות */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* מתאים גודל עמודות */
-    gap: 15px;
-    justify-content: center;
-    padding: 20px;
-}
-
-.gallery img {
-    max-width: 100%;
-    height: 250px; /* גובה אחיד */
-    object-fit: cover; /* מונע עיוות, אך חותך */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
 
 .gallery img:hover {
     transform: scale(1.05);
@@ -292,13 +272,15 @@ body {
 
 .gallery-carousel img {
     max-width: 100%;
-    height: 300px; /* גובה אחיד */
-    object-fit: contain; /* לא חותך את התמונה */
+    height: auto; /* מאפשר גובה דינמי */
+    max-height: 400px; /* מונע תמונות ענק */
+    object-fit: contain; /* גורם לתמונה להיכנס למסגרת בלי חיתוך */
     display: block;
     margin: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 /* חצים לניווט */
 .gallery-prev, .gallery-next {
