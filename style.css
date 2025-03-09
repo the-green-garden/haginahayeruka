@@ -272,10 +272,9 @@ body {
 
 .gallery-carousel img {
     width: 100%;
-    max-height: 400px; /* מגביל גובה אחיד לכל התמונות */
     height: auto;
-    object-fit: cover; /* ממלא את הקופסה ומונע עיוות */
-    aspect-ratio: 16/9; /* יחס גובה-רוחב קבוע */
+    max-height: 400px; /* מונע תמונות ענק */
+    object-fit: contain; /* שומר על כל התמונה בלי לחתוך */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
