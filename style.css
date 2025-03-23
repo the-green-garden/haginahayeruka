@@ -1,139 +1,176 @@
-/* === עיצוב חדש, מודרני ונקי לאתר של הגינה הירוקה === */
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap");
+/* =====================================
+   הגינה הירוקה - עיצוב מודרני ומרשים
+   ===================================== */
 
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+/* בסיס כללי */
 body {
+  direction: rtl;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
   margin: 0;
   padding: 0;
-  font-family: 'Heebo', sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  direction: rtl;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
-/* === כותרת ולוגו === */
-header#main-header {
-  background-color: #82b440;
-  padding: 20px 0;
-  text-align: center;
-  border-bottom: 3px solid #6a9a2f;
-}
-
-.logo img {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* === ניווט === */
-.main-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 25px 0 0 0;
+/* לוגו עגול */
+#logo {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
-.main-nav a {
-  text-decoration: none;
-  color: #fff;
-  background-color: #6a9a2f;
-  padding: 12px 25px;
-  border-radius: 30px;
+#logo img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid #82b440;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* כותרת עליונה */
+h1, h2, h3 {
+  margin: 10px 0;
+  color: #2d6028;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+p {
   font-size: 1.1em;
-  transition: background 0.3s ease-in-out;
+  line-height: 1.7em;
 }
 
-.main-nav a:hover {
-  background-color: #5a8f24;
+/* תפריט ניווט */
+nav {
+  background-color: #82b440;
+  padding: 10px 0;
+  margin-bottom: 30px;
 }
 
-/* === באנר === */
-#banner {
-  background: url('banner.jpg') center center / cover no-repeat;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav li a {
+  text-decoration: none;
   color: white;
-  text-align: center;
-  padding: 100px 20px;
+  font-size: 1.1em;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
 }
 
-#banner h2 {
-  font-size: 2.8em;
-  margin-bottom: 0.5em;
+nav li a:hover {
+  background-color: #6a9a2f;
 }
 
-#banner span,
-#banner p {
-  font-size: 1.4em;
-  margin-bottom: 0.5em;
-}
-
-/* === אייקונים תחתית === */
+/* אייקונים */
 ul.icons {
   list-style: none;
-  padding: 0;
-  margin: 30px 0;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  padding: 0;
+  margin-top: 30px;
+  gap: 30px;
 }
 
 ul.icons li a {
-  font-size: 1.8em;
+  font-size: 26px;
   color: #82b440;
+  transition: color 0.3s ease;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
 ul.icons li a:hover {
-  color: #6a9a2f;
+  color: #2d6028;
 }
 
-/* === פוטר === */
-#footer {
-  background-color: #222;
+/* כפתור ראשי */
+.button {
+  display: inline-block;
+  background-color: #82b440;
   color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #6a9a2f;
+}
+
+/* פוטר */
+footer {
+  background-color: #2d6028;
+  color: white;
+  padding: 30px 20px;
+  margin-top: 50px;
   text-align: center;
-  padding: 40px 20px 20px 20px;
 }
 
-#footer h2 {
-  font-size: 1.8em;
-  margin-bottom: 0.5em;
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+  opacity: 0.7;
 }
 
-#footer span.byline {
-  display: block;
-  margin-bottom: 1em;
-  color: #ccc;
+/* תמונות כלליות */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* === רספונסיבי === */
+/* התאמה לנייד */
 @media (max-width: 768px) {
-  .main-nav ul {
+  nav ul {
     flex-direction: column;
     gap: 10px;
   }
 
-  #banner h2 {
+  #logo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
     font-size: 2em;
   }
 
-  #banner span,
-  #banner p {
-    font-size: 1.2em;
+  h2 {
+    font-size: 1.5em;
   }
 
-  ul.icons li a {
-    font-size: 1.5em;
+  .button {
+    font-size: 1em;
+    padding: 10px 20px;
   }
 }
