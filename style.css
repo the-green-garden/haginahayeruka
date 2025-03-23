@@ -1,171 +1,139 @@
-/* הגינה הירוקה - עיצוב חדש ונקי */
+/* === עיצוב חדש, מודרני ונקי לאתר של הגינה הירוקה === */
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
-
-/* הגדרות בסיסיות */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Varela Round', sans-serif;
-  background-color: #f4f9f4;
+  font-family: 'Heebo', sans-serif;
+  background-color: #f7f7f7;
   color: #333;
   direction: rtl;
-  text-align: right;
 }
 
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* כותרת עליונה */
-#header {
-  background-color: #7ba15d;
-  color: white;
+/* === כותרת ולוגו === */
+header#main-header {
+  background-color: #82b440;
   padding: 20px 0;
-  border-bottom: 4px solid #5e8747;
   text-align: center;
+  border-bottom: 3px solid #6a9a2f;
 }
 
-#logo img {
-  width: 120px;
-  height: 120px;
+.logo img {
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid white;
+  border: 4px solid #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* ניווט עליון */
-#nav {
-  background-color: #6c9b50;
+/* === ניווט === */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
-#nav a {
-  color: white;
+.main-nav a {
   text-decoration: none;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
+  color: #fff;
+  background-color: #6a9a2f;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  transition: background 0.3s ease-in-out;
 }
 
-#nav a:hover {
-  background-color: #557d3f;
+.main-nav a:hover {
+  background-color: #5a8f24;
 }
 
-/* באנר */
+/* === באנר === */
 #banner {
-  background: url('banner.jpg') no-repeat center center/cover;
-  padding: 80px 20px;
+  background: url('banner.jpg') center center / cover no-repeat;
   color: white;
   text-align: center;
+  padding: 100px 20px;
 }
 
 #banner h2 {
   font-size: 2.8em;
-  margin-bottom: 15px;
+  margin-bottom: 0.5em;
 }
 
+#banner span,
 #banner p {
   font-size: 1.4em;
+  margin-bottom: 0.5em;
 }
 
-/* כפתור */
-.button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #82b440;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #6a9a2f;
-}
-
-/* אזור השירותים */
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  padding: 60px 0;
-  background-color: #ffffff;
-}
-
-.service-box {
-  background-color: #f1f8ec;
-  border-radius: 20px;
-  padding: 30px;
-  width: 300px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.service-box h3 {
-  color: #5e8747;
-}
-
-/* גלריה */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 40px 0;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* פוטר */
-#footer {
-  background-color: #7ba15d;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-#footer h2 {
-  margin-bottom: 10px;
-}
-
-#footer ul.icons {
+/* === אייקונים תחתית === */
+ul.icons {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+  margin: 30px 0;
   display: flex;
   justify-content: center;
   gap: 25px;
 }
 
-#footer ul.icons li a {
+ul.icons li a {
+  font-size: 1.8em;
+  color: #82b440;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+ul.icons li a:hover {
+  color: #6a9a2f;
+}
+
+/* === פוטר === */
+#footer {
+  background-color: #222;
   color: white;
-  font-size: 28px;
-  transition: color 0.3s ease;
+  text-align: center;
+  padding: 40px 20px 20px 20px;
 }
 
-#footer ul.icons li a:hover {
-  color: #c8e6c9;
+#footer h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
 }
 
-/* רספונסיביות */
+#footer span.byline {
+  display: block;
+  margin-bottom: 1em;
+  color: #ccc;
+}
+
+/* === רספונסיבי === */
 @media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   #banner h2 {
     font-size: 2em;
   }
-  .service-box {
-    width: 90%;
+
+  #banner span,
+  #banner p {
+    font-size: 1.2em;
+  }
+
+  ul.icons li a {
+    font-size: 1.5em;
   }
 }
