@@ -1,202 +1,171 @@
-/* =============================================================
-   עיצוב חדש ומודרני לאתר "הגינה הירוקה" - נוי שושן
-   כולל: עיצוב עגול, צבעים ירוקים, התאמה לניידים, כפתורים, אייקונים ועוד
-   ============================================================= */
+/* הגינה הירוקה - עיצוב חדש ונקי */
 
-/* --- בסיס כללי --- */
-* {
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+/* הגדרות בסיסיות */
+body {
   margin: 0;
   padding: 0;
-  direction: rtl;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f8fdf5;
+  font-family: 'Varela Round', sans-serif;
+  background-color: #f4f9f4;
   color: #333;
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+  direction: rtl;
+  text-align: right;
 }
 
 .container {
-  width: 90%;
   max-width: 1200px;
   margin: auto;
-  padding: 20px 0;
+  padding: 20px;
 }
 
-/* --- כותרת עליונה --- */
-header {
-  background-color: #82b440;
-  padding: 20px 0;
-  text-align: center;
+/* כותרת עליונה */
+#header {
+  background-color: #7ba15d;
   color: white;
-  border-bottom: 4px solid #6a9a2f;
+  padding: 20px 0;
+  border-bottom: 4px solid #5e8747;
+  text-align: center;
 }
 
-.logo {
+#logo img {
   width: 120px;
   height: 120px;
+  object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #ffffff;
+  border: 5px solid white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10px;
 }
 
-nav ul {
-  list-style: none;
+/* ניווט עליון */
+#nav {
+  background-color: #6c9b50;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
+  padding: 10px 0;
 }
 
-nav a {
-  text-decoration: none;
+#nav a {
   color: white;
-  padding: 10px 20px;
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 30px;
-  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-  background-color: white;
-  color: #82b440;
+#nav a:hover {
+  background-color: #557d3f;
 }
 
-/* --- באנר ראשי --- */
-.hero {
-  background: url('banner.jpg') center center/cover no-repeat;
-  text-align: center;
+/* באנר */
+#banner {
+  background: url('banner.jpg') no-repeat center center/cover;
   padding: 80px 20px;
   color: white;
-}
-
-.hero h1 {
-  font-size: 2.5em;
-  background-color: rgba(130, 180, 64, 0.85);
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 30px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-.hero .button {
-  background-color: white;
-  color: #82b440;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-size: 1.1em;
-  cursor: pointer;
-  transition: 0.3s;
-  text-decoration: none;
-}
-
-.hero .button:hover {
-  background-color: #6a9a2f;
-  color: white;
-}
-
-/* --- אזורים פנימיים --- */
-section {
-  padding: 60px 0;
   text-align: center;
 }
 
-section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #82b440;
+#banner h2 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
 }
 
-section p {
-  max-width: 800px;
-  margin: 0 auto 30px auto;
-  font-size: 1.1em;
+#banner p {
+  font-size: 1.4em;
 }
 
-/* --- גלריה --- */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.gallery img {
-  border-radius: 15px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* --- כפתורים --- */
+/* כפתור */
 .button {
   display: inline-block;
+  padding: 12px 24px;
   background-color: #82b440;
   color: white;
-  padding: 10px 25px;
-  border-radius: 30px;
   text-decoration: none;
-  font-size: 1.1em;
-  transition: 0.3s;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
   background-color: #6a9a2f;
 }
 
-/* --- תחתית --- */
-footer {
-  background-color: #333;
-  color: white;
-  padding: 40px 20px;
+/* אזור השירותים */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.service-box {
+  background-color: #f1f8ec;
+  border-radius: 20px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-footer .social-icons {
+.service-box h3 {
+  color: #5e8747;
+}
+
+/* גלריה */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* פוטר */
+#footer {
+  background-color: #7ba15d;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#footer h2 {
+  margin-bottom: 10px;
+}
+
+#footer ul.icons {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin: 20px 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
-footer .social-icons a {
+#footer ul.icons li a {
   color: white;
-  font-size: 24px;
-  transition: color 0.3s;
+  font-size: 28px;
+  transition: color 0.3s ease;
 }
 
-footer .social-icons a:hover {
-  color: #82b440;
+#footer ul.icons li a:hover {
+  color: #c8e6c9;
 }
 
-/* --- רספונסיביות --- */
+/* רספונסיביות */
 @media (max-width: 768px) {
-  .hero h1 {
+  #banner h2 {
     font-size: 2em;
   }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
+  .service-box {
+    width: 90%;
   }
 }
