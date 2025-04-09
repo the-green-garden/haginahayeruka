@@ -21,6 +21,12 @@ body {
   padding: 30px 20px;
 }
 
+.center-box {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* מרכז את התוכן בדפים */
 .container,
 .wrapper,
