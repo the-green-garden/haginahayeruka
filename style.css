@@ -221,21 +221,27 @@ img {
     padding: 10px 20px;
   }
 
-   .hero-text {
-  max-width: 550px;
+.hero-wrapper {
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
+  background-color: #ffffffcc; /* רקע לבן חצי שקוף – אפשר לשנות או להסיר */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.hero-text h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
+.hero-wrapper h2 {
+  font-size: 2rem;
+  color: #2d6028;
+  margin-bottom: 15px;
 }
 
-.hero-text p {
-  font-size: 1.2em;
-  line-height: 1.6;
+.hero-wrapper p {
+  font-size: 1.2rem;
+  line-height: 1.7;
   margin-bottom: 10px;
+  color: #333;
 }
+
 
