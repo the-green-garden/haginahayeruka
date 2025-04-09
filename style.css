@@ -226,9 +226,9 @@ img {
   margin: 0 auto;
   text-align: center;
   padding: 40px 20px;
-  background-color: #ffffffcc; /* רקע לבן חצי שקוף – אפשר לשנות או להסיר */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #ffffffdd; /* לבן שקוף עדין */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .hero-wrapper h2 {
