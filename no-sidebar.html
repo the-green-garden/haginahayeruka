@@ -2,7 +2,7 @@
 <html lang="he" dir="rtl">
 <head>
     <!-- FontAwesome Icons CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>צור קשר - הגינה הירוקה</title>
@@ -19,6 +19,24 @@
     <script src="skel.min.js"></script>
     <script src="skel-layers.min.js"></script>
     <script src="init.js"></script>
+
+    <style>
+        body {
+            direction: rtl;
+            text-align: right;
+            font-family: Arial, sans-serif;
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        .center-box {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!-- ראש הדף -->
@@ -40,14 +58,14 @@
                         <li class="active"><a href="no-sidebar.html">צור קשר</a></li>
                     </ul>
                 </nav>
-            </div>
+            </section>
         </div>
     </div>
 
     <!-- תוכן הדף -->
     <div id="main" class="wrapper style4">
         <section class="container centered">
-            <section>
+            <section class="center-box">
                 <header class="major">
                     <h2>צרו קשר</h2>
                     <span class="byline">לקבלת מידע נוסף והשירותים שלנו</span>
@@ -58,9 +76,9 @@
                 </p>
                 <p><strong>טלפון:</strong> 054-6698931  |   0534372319</p>
                 <p><strong>אימייל:</strong> jonysolomon1986@gmail.com</p>
-                <a href="jonysolomon1986@gmail.com" class="button">שלחו לנו הודעה</a>
+                <a href="mailto:jonysolomon1986@gmail.com" class="button">שלחו לנו הודעה</a>
             </section>
-        </div>
+        </section>
     </div>
 
     <!-- תחתית הדף -->
@@ -70,25 +88,26 @@
                 <h2>עקבו אחרינו</h2>
                 <span class="byline">התחברו אלינו ברשתות החברתיות</span>
             </header>
-<ul class="icons">
-  <li>
-    <a href="https://www.facebook.com/profile.php?id=61561220525391" target="_blank">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-  </li>
-  <li>
-    <a href="https://wa.me/972546698931" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-  </li>
-  <li>
-    <a href="mailto:jonysolomon1986@gmail.com">
-      <i class="fas fa-envelope"></i>
-    </a>
-  </li>
-</ul>
+            <ul class="icons">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=61561220525391" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/972546698931" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:jonysolomon1986@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
+            </ul>
             <hr>
         </section>
     </div>
 </body>
 </html>
+
