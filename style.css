@@ -28,6 +28,10 @@ section {
   text-align: center;
 }
 
+p {
+  text-align: inherit;
+}
+
 #content h2,
 #content p,
 #content ul,
