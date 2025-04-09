@@ -22,7 +22,9 @@ body {
 }
 
 /* מרכז את התוכן בדפים */
-#content {
+.container,
+.wrapper,
+section {
   text-align: center;
 }
 
