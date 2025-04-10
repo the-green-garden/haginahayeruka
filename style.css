@@ -283,6 +283,18 @@ img {
   .text-box {
     padding: 30px 20px;
   }
+.text-box-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.text-box-row .text-box {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
 }
 
 
