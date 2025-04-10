@@ -221,18 +221,24 @@ img {
     padding: 10px 20px;
   }
 
+.hero-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
 .hero-wrapper {
   max-width: 600px;
-  margin: 0 auto;
   text-align: center;
   padding: 40px 20px;
-  background-color: #ffffffee; /* לבן שקוף עדין */
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffffcc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero-wrapper h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #2d6028;
   margin-bottom: 15px;
 }
@@ -240,12 +246,8 @@ img {
 .hero-wrapper p {
   font-size: 1.2rem;
   line-height: 1.7;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #333;
-}
-
-.hero-wrapper .button {
-  margin-top: 10px;
 }
 
 
