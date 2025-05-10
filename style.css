@@ -1,4 +1,3 @@
-
 /* =====================================
    הגינה הירוקה - עיצוב מודרני ומרשים
    ===================================== */
@@ -28,15 +27,14 @@ body {
   text-align: center;
 }
 
-/* מרכז את התוכן בדפים */
-.container,
-.wrapper,
-section {
+.container, .wrapper, section {
   text-align: center;
 }
 
 p {
   text-align: inherit;
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
 
 #content h2,
@@ -66,23 +64,15 @@ p {
 }
 
 /* כותרת עליונה */
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: 10px 0;
   color: #2d6028;
 }
 
-h1 {
-  font-size: 2.4em;
-}
-
-h2 {
-  font-size: 1.8em;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
+h1 { font-size: 2.4em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.2em; }
 
 /* תפריט ניווט */
 nav {
@@ -252,7 +242,6 @@ img {
   margin-bottom: 15px;
 }
 
-/* תיבות טקסט בשורה אחת */
 .text-box-row {
   display: flex;
   flex-wrap: wrap;
@@ -264,6 +253,98 @@ img {
 .text-box-row .text-box {
   flex: 1 1 300px;
   max-width: 500px;
+}
+
+/* אזור הנחיתה */
+.header-section {
+  text-align: center;
+  padding: 1em;
+  background-color: #e8f5e9;
+}
+
+.promo-banner {
+  max-width: 250px;
+  height: auto;
+}
+
+.intro-section {
+  text-align: center;
+  padding: 2em;
+}
+
+.highlight {
+  color: green;
+  font-weight: bold;
+}
+
+.gallery-section {
+  padding: 2em;
+  background-color: #f1f8e9;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.gallery-image {
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.pricing-section {
+  padding: 2em;
+  text-align: center;
+}
+
+.pricing-table {
+  margin: auto;
+  border-collapse: collapse;
+  width: 90%;
+  font-size: 0.95em;
+}
+
+.pricing-table th {
+  background-color: #a5d6a7;
+}
+
+.pricing-table th, .pricing-table td {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+}
+
+.note {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 1em;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 2em;
+}
+
+.cta-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 1em 2em;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.footer-section {
+  text-align: center;
+  padding: 1em;
+  background-color: #e8f5e9;
+  font-size: 0.9em;
 }
 
 /* התאמה לנייד */
@@ -299,6 +380,7 @@ img {
     padding: 30px 20px;
   }
 }
+
 
 
 
