@@ -7,46 +7,60 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header style="text-align:center; padding: 1em; background-color: #e8f5e9;">
-    <img src="הגינה.png" alt="מבצע הגינה הירוקה" style="max-width:100%; height:auto;">
+  <header class="header-section">
+    <img src="הגינה.png" alt="מבצע הגינה הירוקה" class="promo-banner">
   </header>
 
-  <section style="padding: 2em; text-align:center;">
+  <section class="intro-section">
     <h1>הגינה הירוקה – שירותי גינון והדברה</h1>
-    <h2 style="color:green;">קבלו 15% הנחה על כל שירותי הגינון וההדברה שלנו</h2>
+    <h2 class="highlight">קבלו 15% הנחה על כל שירותי הגינון וההדברה שלנו</h2>
     <p>מתחייבים לעבודה מקצועית, מחירים הוגנים ושירות אישי בדרום ובמרכז הארץ</p>
     <p><strong>פועלים בתל אביב, רמת גן, ראשון לציון, חולון, בת ים, הרצליה, אשקלון, אשדוד, קריית גת, באר שבע ועוד</strong></p>
   </section>
 
-  <section style="padding: 2em; background-color: #f1f8e9;">
-    <h3 style="text-align:center;">לפני ואחרי – תראו את ההבדל</h3>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: 1em;">
-      <img src="before_after1.jpg" alt="לפני ואחרי 1" style="max-width:300px;">
-      <img src="לפני (פוסט ל-Facebook).jpg" alt="לפני ואחרי 2" style="max-width:300px;">
-      <img src="garden6.jpg" alt="גינה מעוצבת" style="max-width:300px;">
-      <img src="Enhanced_Garden_Image.jpg" alt="גינה פורחת" style="max-width:300px;">
+  <section class="gallery-section">
+    <h3>לפני ואחרי – תראו את ההבדל</h3>
+    <div class="gallery">
+      <img src="before_after1.jpg" alt="לפני ואחרי 1" class="gallery-image">
+      <img src="לפני (פוסט ל-Facebook).jpg" alt="לפני ואחרי 2" class="gallery-image">
+      <img src="garden6.jpg" alt="גינה מעוצבת" class="gallery-image">
+      <img src="Enhanced_Garden_Image.jpg" alt="גינה פורחת" class="gallery-image">
     </div>
   </section>
 
-  <section style="padding: 2em;">
-    <h3 style="text-align:center;">מחירון לדוגמא</h3>
-    <table style="margin:auto; border-collapse: collapse; width:80%;">
-      <tr style="background-color:#a5d6a7;">
-        <th>שירות</th><th>מחיר</th>
-      </tr>
-      <tr><td>תחזוקת גינה עד 50 מ"ר</td><td>400–550 ₪</td></tr>
-      <tr><td>שיקום גינה מוזנחת</td><td>החל מ־800 ₪</td></tr>
-      <tr><td>ריסוס נגד ג'וק גרמני</td><td>350 ₪</td></tr>
+  <section class="pricing-section">
+    <h3>מחירון תחזוקת גינה לפי אזור</h3>
+    <h4>📍 אזור הדרום (אשדוד, אשקלון, קריית גת, באר שבע)</h4>
+    <table class="pricing-table">
+      <tr><th>שירות</th><th>מחיר</th></tr>
+      <tr><td>תחזוקה חודשית עד 50 מ"ר</td><td>300–600 ₪</td></tr>
+      <tr><td>תחזוקה חודשית עד 100 מ"ר</td><td>600–1,000 ₪</td></tr>
+      <tr><td>גיזום שיחים + פינוי</td><td>450–700 ₪</td></tr>
+      <tr><td>ניכוש עשבים / הדברה</td><td>300–600 ₪</td></tr>
+      <tr><td>כיסוח דשא חד פעמי</td><td>200–450 ₪</td></tr>
+      <tr><td>ניקיון גינה (100 מ"ר)</td><td>550–850 ₪</td></tr>
     </table>
-    <p style="text-align:center; font-size:0.9em; color:#666;">* המחירים לגינה מתוחזקת בלבד. גינה מוזנחת דורשת בדיקה בשטח</p>
+
+    <h4 style="margin-top:2em;">📍 אזור המרכז (ת"א, ר"ג, חולון, בת ים, הרצליה)</h4>
+    <table class="pricing-table">
+      <tr><th>שירות</th><th>מחיר</th></tr>
+      <tr><td>תחזוקה חודשית עד 50 מ"ר</td><td>400–650 ₪</td></tr>
+      <tr><td>תחזוקה חודשית עד 100 מ"ר</td><td>650–1,000 ₪</td></tr>
+      <tr><td>גיזום שיחים + פינוי</td><td>500–750 ₪</td></tr>
+      <tr><td>כיסוח דשא חד פעמי</td><td>300–500 ₪</td></tr>
+      <tr><td>הקמת גינה חדשה (למ"ר)</td><td>280–320 ₪</td></tr>
+      <tr><td>התקנת מערכת השקיה</td><td>6,000–7,000 ₪</td></tr>
+    </table>
+    <p class="note">* המחירים מתייחסים לגינות מתוחזקות. גינה מוזנחת דורשת הצעת מחיר פרטנית</p>
   </section>
 
-  <section style="text-align:center; padding:2em;">
-    <a href="https://wa.me/972584559727" style="background-color:#4caf50; color:white; padding:1em 2em; text-decoration:none; font-size:1.2em; border-radius:10px;">שלחו לנו תמונות בוואטסאפ</a>
+  <section class="cta-section">
+    <a href="https://wa.me/972584559727" class="cta-button">להצמעת מחיר מהירה שלחו לנו תמונות + פרטים בוואטסאפ</a>
   </section>
 
-  <footer style="text-align:center; padding:1em; background-color:#e8f5e9;">
+  <footer class="footer-section">
     <p>לפרטים נוספים בקרו באתר <a href="https://gina.i.ng">gina.i.ng</a> או <a href="contact.html">צרו קשר כאן</a></p>
   </footer>
 </body>
 </html>
+
