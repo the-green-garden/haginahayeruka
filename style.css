@@ -263,11 +263,15 @@ img {
 }
 
 .promo-banner {
-  max-width: 500px;
+  max-width: 380px;
   width: 100%;
   height: auto;
   margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
 }
+
 
 .intro-section {
   text-align: center;
