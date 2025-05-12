@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>צור קשר - הגינה הירוקה</title>
-    <meta name="description" content="צרו קשר לקבלת שירותי גינון מקצועיים">
-    <meta name="keywords" content="גינון, שירותי גינון, תחזוקת גינות">
+    <meta name="description" content="צור קשר עם הגינה הירוקה – שירותי גינון, תחזוקת גינות והדברה בדרום ובמרכז.">
+    <meta name="keywords" content="גינון, שירותי גינון, תחזוקת גינות, הדברה">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -28,14 +28,14 @@
                 </a>
             </h1>
             <nav id="nav">
-    <ul>
-        <li class="active"><a href="index.html">דף הבית</a></li>
-        <li><a href="left-sidebar.html">שירותים</a></li>
-        <li><a href="right-sidebar.html">גלריה</a></li>
-        <li><a href="landing.html">מבצע החודש</a></li>
-        <li><a href="no-sidebar.html">צור קשר</a></li>
-    </ul>
-</nav>
+                <ul>
+                    <li><a href="index.html">דף הבית</a></li>
+                    <li><a href="left-sidebar.html">שירותים</a></li>
+                    <li><a href="right-sidebar.html">גלריה</a></li>
+                    <li><a href="landing.html">מבצע החודש</a></li>
+                    <li class="active"><a href="no-sidebar.html">צור קשר</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -45,10 +45,39 @@
     <section class="container">
         <div class="text-box">
             <h2>צור קשר עם הגינה הירוקה</h2>
-            <p>מחפשים גנן מקצועי? מעוניינים בשיקום או תחזוקה שוטפת של הגינה? אנחנו כאן בשבילכם!</p>
-            <p><strong>טלפון:</strong> <a href="tel:0546698931">054-6698931</a> | <a href="tel:0534372319">053-4372319</a></p>
+            <p>מחפשים גנן מקצועי? זקוקים לשיקום, תחזוקה שוטפת או הדברה בטוחה בגינה? אנחנו כאן בשבילכם – עם שירות אישי ומותאם בדיוק לצרכים שלכם.</p>
+            <p><strong>טלפון:</strong> <a href="tel:0546698931">054-6698931</a> | <a href="tel:0584559727">058-4559727</a></p>
             <p><strong>אימייל:</strong> <a href="mailto:info@gina.i.ng">info@gina.i.ng</a></p>
-            <a href="mailto:info@gina.i.ng" class="button">שלחו לנו הודעה</a>
+        </div>
+
+        <!-- טופס יצירת קשר -->
+        <form action="https://formsubmit.co/info@gina.i.ng" method="POST">
+            <input type="hidden" name="_next" value="https://gina.i.ng/thank-you.html">
+            <input type="text" name="name" placeholder="שם מלא" required style="margin: 5px; padding: 10px; width: 80%;">
+            <input type="tel" name="phone" placeholder="טלפון לחזרה" required style="margin: 5px; padding: 10px; width: 80%;">
+            <input type="email" name="email" placeholder="האימייל שלך (לא חובה)" style="margin: 5px; padding: 10px; width: 80%;">
+            <textarea name="message" placeholder="פרטים נוספים (לא חובה)" rows="4" style="margin: 5px; padding: 10px; width: 80%;"></textarea>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="פנייה חדשה מהאתר הגינה הירוקה">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_autoresponse" value="תודה על הפנייה! נחזור אליך בהקדם.">
+            <br>
+            <button type="submit" class="button">שלח/י פרטים</button>
+        </form>
+
+        <p style="margin-top: 1em;">או אם נוח לך יותר –</p>
+        <a href="https://wa.me/972584559727" class="button">שלחו לנו הודעה בוואטסאפ</a>
+    </section>
+</div>
+
+<!-- המלצות לקוחות -->
+<div class="wrapper style3">
+    <section class="container">
+        <h2>מה הלקוחות שלנו מספרים?</h2>
+        <div class="gallery">
+            <img src="review_noa.jpg" alt="המלצה מנועה" class="gallery-image">
+            <img src="review_tehila.jpg" alt="המלצה מתהילה" class="gallery-image">
+            <img src="review_or.jpg" alt="המלצה מאור" class="gallery-image">
         </div>
     </section>
 </div>
@@ -61,7 +90,7 @@
             <p>נשמח לראות אתכם גם בפייסבוק או בוואטסאפ 👇</p>
             <ul class="icons">
                 <li><a href="https://www.facebook.com/profile.php?id=61561220525391" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://wa.me/972546698931" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="https://wa.me/972584559727" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                 <li><a href="mailto:info@gina.i.ng"><i class="fas fa-envelope"></i></a></li>
             </ul>
         </div>
@@ -70,3 +99,4 @@
 
 </body>
 </html>
+
