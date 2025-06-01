@@ -1,132 +1,148 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>הצעת מחיר - שיקום דשא</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f8f0;
-      margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    .header {
-      text-align: center;
-      background: linear-gradient(135deg, #2d5a27, #4a8f43);
-      color: white;
-      padding: 30px 20px;
-      border-radius: 15px;
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    .section {
-      margin-top: 30px;
-    }
-    .section h2 {
-      color: #2d5a27;
-      border-right: 4px solid #4caf50;
-      padding-right: 10px;
-    }
-    .item {
-      margin: 10px 0;
-      padding: 10px;
-      background: #f8fff8;
-      border-radius: 10px;
-      border-right: 3px solid #c8e6c9;
-    }
-    .total {
-      text-align: center;
-      background: #2d5a27;
-      color: white;
-      padding: 25px;
-      border-radius: 15px;
-      margin-top: 30px;
-      font-size: 22px;
-    }
-    .includes {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 10px;
-    }
-    .includes div {
-      background: white;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .includes span {
-      color: #4caf50;
-      font-weight: bold;
-    }
-    .note {
-      background: #fff3cd;
-      border-right: 4px solid #ffc107;
-      padding: 20px;
-      border-radius: 15px;
-      margin-top: 20px;
-    }
-    .payment {
-      background: #e8f5e9;
-      padding: 20px;
-      border-radius: 15px;
-      margin-top: 20px;
-      border-right: 4px solid #66bb6a;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הצעת מחיר - הגינה הירוקה</title>
+    <style>
+        /* עיצוב כללי */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); overflow: hidden; position: relative; }
+
+        /* כותרת */
+        .header { background: linear-gradient(135deg, #2d5a27 0%, #4a8f43 100%); color: white; padding: 30px; position: relative; overflow: hidden; }
+        .header::before { content: ''; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="60" cy="40" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="80" cy="10" r="1" fill="rgba(255,255,255,0.06)"/><circle cx="40" cy="70" r="2.5" fill="rgba(255,255,255,0.1)"/></svg>') repeat; animation: float 20s infinite linear; }
+        @keyframes float { 0% { transform: translate(0, 0) rotate(0deg); } 100% { transform: translate(-100px, -100px) rotate(360deg); } }
+
+        /* לוגו ושם חברה */
+        .logo { display: flex; flex-direction: column; align-items: center; gap: 15px; margin-bottom: 20px; position: relative; z-index: 2; }
+        .logo-icon { width: 120px; height: 120px; background: white; border-radius: 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 10px; }
+        .logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+        .company-name { font-size: 28px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .quote-title { font-size: 22px; margin-top: 10px; opacity: 0.95; position: relative; z-index: 2; }
+
+        /* מידע על הפרויקט */
+        .content { padding: 40px; }
+        .project-info { background: linear-gradient(135deg, #f8fff8 0%, #f0f8f0 100%); border-radius: 15px; padding: 25px; margin-bottom: 30px; border-right: 4px solid #4caf50; position: relative; }
+        .project-info::before { content: '🌿'; position: absolute; top: 20px; left: 20px; font-size: 24px; }
+        .project-title { font-size: 20px; font-weight: bold; color: #2d5a27; margin-bottom: 10px; margin-right: 40px; }
+        .project-description { color: #555; line-height: 1.6; margin-bottom: 15px; }
+        .highlight { background: linear-gradient(120deg, #66bb6a30 0%, #4caf5030 100%); padding: 3px 8px; border-radius: 5px; font-weight: bold; }
+
+        /* טבלה */
+        .details-table { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 30px; }
+        .table-header { background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%); color: white; padding: 20px; font-weight: bold; font-size: 18px; text-align: center; }
+        .table-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 20px; padding: 20px; border-bottom: 1px solid #f0f0f0; transition: background 0.3s ease; }
+        .table-row:hover { background: #f8fff8; }
+        .table-header-row { background: #f8f9fa; font-weight: bold; color: #2d5a27; }
+
+        /* מחיר כולל */
+        .total-section { background: linear-gradient(135deg, #2d5a27 0%, #4a8f43 100%); color: white; border-radius: 15px; padding: 30px; text-align: center; margin-bottom: 30px; position: relative; overflow: hidden; }
+        .total-section::after { content: "התשלום מתבצע בשני חלקים – 50% בתחילת העבודה ו-50% בסיומה"; display: block; font-size: 14px; margin-top: 10px; opacity: 0.8; }
+        .total-label { font-size: 18px; margin-bottom: 10px; position: relative; z-index: 2; }
+        .total-amount { font-size: 36px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); position: relative; z-index: 2; }
+
+        /* מה כולל */
+        .includes-section { background: #f8fff8; border-radius: 15px; padding: 25px; margin-bottom: 30px; }
+        .section-title { font-size: 20px; font-weight: bold; color: #2d5a27; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .includes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+        .include-item { display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+        .include-item:hover { transform: translateX(-5px); }
+        .checkmark { color: #4caf50; font-weight: bold; font-size: 18px; }
+
+        /* הערות */
+        .note-section { background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); border-radius: 15px; padding: 25px; border-right: 4px solid #ffc107; position: relative; }
+        .note-section::before { content: '💬'; position: absolute; top: 20px; left: 20px; font-size: 24px; }
+        .note-title { font-size: 18px; font-weight: bold; color: #856404; margin-bottom: 15px; margin-right: 40px; }
+        .note-content { color: #856404; line-height: 1.6; font-weight: 500; }
+
+        @media (max-width: 768px) {
+            .table-row { grid-template-columns: 1fr; gap: 10px; }
+            .includes-grid { grid-template-columns: 1fr; }
+            .container { margin: 10px; }
+            .content { padding: 20px; }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>הצעת מחיר משתלמת במיוחד 🌱</h1>
-      <p>שיקום דשא טבעי בשטח של 22 מ"ר</p>
-    </div>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg" alt="הגינה הירוקה" style="max-height: 100px; object-fit: contain;"/>
+                </div>
+                <div class="company-name">הגינה הירוקה</div>
+            </div>
+            <div class="quote-title">הצעת מחיר לשיקום דשא טבעי</div>
+        </div>
 
-    <div class="section">
-      <h2>מה כולל המחיר?</h2>
-      <div class="item">✔ מרבדי דשא מסוג אלטורו (22 מ"ר) באיכות גבוהה</div>
-      <div class="item">✔ קומפוסט אורגני לאוורור הקרקע</div>
-      <div class="item">✔ דשן סטרטר ליצירת השרשה בריאה</div>
-      <div class="item">✔ צוות מקצועי לשתילה, יישור ודישון</div>
-      <div class="item">✔ ניקיון יסודי בגמר העבודה</div>
-    </div>
+        <div class="content">
+            <div class="project-info">
+                <div class="project-title">שיקום דשא מסוג אלטורו</div>
+                <div class="project-description">
+                    שיקום קרחות ודלילות בשטח של <span class="highlight">22 מ"ר</span> מתוך שטח כולל של 50 מ"ר – התוצאה תיראה כבר ביום ההתקנה עם מראה טבעי ואחיד.
+                </div>
+            </div>
 
-    <div class="section">
-      <h2>עלות כוללת ללקוח:</h2>
-      <div class="total">
-        ₪1,760 כולל חומרים + עבודה 👷
-        <br>
-        מחיר מבצע כולל הכל – בלי הפתעות
-      </div>
-    </div>
+            <div class="details-table">
+                <div class="table-header">✅ פירוט לפי כמות בפועל</div>
+                <div class="table-row table-header-row">
+                    <div>רכיב</div>
+                    <div>כמות</div>
+                    <div>מחיר ליח'</div>
+                    <div>סה"כ</div>
+                </div>
+                <div class="table-row">
+                    <div>מרבד דשא אלטורו</div>
+                    <div>22 מ"ר</div>
+                    <div>26 ₪</div>
+                    <div>572 ₪</div>
+                </div>
+                <div class="table-row">
+                    <div>קומפוסט מנופה</div>
+                    <div>3 שקים</div>
+                    <div>20 ₪</div>
+                    <div>60 ₪</div>
+                </div>
+                <div class="table-row">
+                    <div>דשן סטרטר</div>
+                    <div>ל־50 מ"ר</div>
+                    <div>יחסי</div>
+                    <div>69 ₪</div>
+                </div>
+                <div class="table-row">
+                    <div>עבודת שיקום</div>
+                    <div>22 מ"ר</div>
+                    <div>35 ₪</div>
+                    <div>770 ₪</div>
+                </div>
+            </div>
 
-    <div class="section">
-      <h2>הערות חשובות:</h2>
-      <div class="note">
-        ההצעה מתייחסת לתיקון נקודתי של קרחות בלבד, בהתאם לתמונות שנשלחו – ולא להנחת דשא בכל הגינה.
-      </div>
-    </div>
+            <div class="total-section">
+                <div class="total-label">💰 סה"כ כולל: חומרים + עבודה</div>
+                <div class="total-amount">1,760 ₪</div>
+            </div>
 
-    <div class="section">
-      <h2>תנאי תשלום:</h2>
-      <div class="payment">
-        🟢 50% תשלום מראש לפני תחילת העבודה (880 ₪) <br>
-        🟢 יתרת 50% בסיום העבודה לשביעות רצונך (880 ₪)
-      </div>
+            <div class="includes-section">
+                <div class="section-title">📦 מה כלול בהצעה</div>
+                <div class="includes-grid">
+                    <div class="include-item"><div class="checkmark">✔</div><div>מרבדי אלטורו איכותיים</div></div>
+                    <div class="include-item"><div class="checkmark">✔</div><div>שיפור קרקע קומפוסט</div></div>
+                    <div class="include-item"><div class="checkmark">✔</div><div>דשן ייעודי להתאקלמות</div></div>
+                    <div class="include-item"><div class="checkmark">✔</div><div>שתילה מדויקת + יישור קרקע</div></div>
+                    <div class="include-item"><div class="checkmark">✔</div><div>ניקיון בסיום העבודה</div></div>
+                    <div class="include-item"><div class="checkmark">✔</div><div>אחריות להתקנה</div></div>
+                </div>
+            </div>
+
+            <div class="note-section">
+                <div class="note-title">הבהרה חשובה</div>
+                <div class="note-content">
+                    ההצעה מתייחסת לשיקום אזורים נקודתיים בלבד – לפי התמונות שנשלחו. לא מדובר בהנחת דשא על כל הגינה.
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </body>
 </html>
