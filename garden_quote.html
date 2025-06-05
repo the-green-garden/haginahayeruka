@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>הצעת מחיר - הגינה הירוקה</title>
+    <title>הצעת מחיר - התקנת דשא חי מקצועי</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -23,15 +23,16 @@
             margin: 0 auto;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             overflow: hidden;
             position: relative;
         }
 
         .header {
-            background: linear-gradient(135deg, #2d5a27 0%, #4a8f43 100%);
+            background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
             color: white;
-            padding: 30px;
+            padding: 40px 30px;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
@@ -40,381 +41,705 @@
             content: '';
             position: absolute;
             top: -50%;
-            right: -50%;
+            left: -50%;
             width: 200%;
             height: 200%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="60" cy="40" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="80" cy="10" r="1" fill="rgba(255,255,255,0.06)"/><circle cx="40" cy="70" r="2.5" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
             animation: float 20s infinite linear;
         }
 
         @keyframes float {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            100% { transform: translate(-100px, -100px) rotate(360deg); }
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-50px) translateY(-50px); }
         }
 
-        .logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .company-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            border: 3px solid rgba(255,255,255,0.3);
             position: relative;
-            z-index: 2;
-        }
-
-        .logo-icon {
-            width: 120px;
-            height: 120px;
-            background: white;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            padding: 10px;
-        }
-
-        .logo-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            z-index: 1;
         }
 
         .company-name {
-            font-size: 28px;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .quote-title {
-            font-size: 22px;
-            margin-top: 10px;
-            opacity: 0.95;
-            position: relative;
-            z-index: 2;
-        }
-
-        .content {
-            padding: 40px;
-        }
-
-        .project-info {
-            background: linear-gradient(135deg, #f8fff8 0%, #f0f8f0 100%);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-            border-right: 4px solid #4caf50;
-            position: relative;
-        }
-
-        .project-info::before {
-            content: '🌿';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 24px;
-        }
-
-        .project-title {
-            font-size: 20px;
-            font-weight: bold;
-            color: #2d5a27;
-            margin-bottom: 10px;
-            margin-right: 40px;
-        }
-
-        .project-description {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #66bb6a30 0%, #4caf5030 100%);
-            padding: 3px 8px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .details-table {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
-        }
-
-        .table-header {
-            background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
-            color: white;
-            padding: 20px;
-            font-weight: bold;
-            font-size: 18px;
-            text-align: center;
-        }
-
-        .table-row {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 20px;
-            padding: 20px;
-            border-bottom: 1px solid #f0f0f0;
-            transition: background 0.3s ease;
-        }
-
-        .table-row:hover {
-            background: #f8fff8;
-        }
-
-        .table-row:last-child {
-            border-bottom: none;
-        }
-
-        .table-header-row {
-            background: #f8f9fa;
-            font-weight: bold;
-            color: #2d5a27;
-        }
-
-        .total-section {
-            background: linear-gradient(135deg, #2d5a27 0%, #4a8f43 100%);
-            color: white;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .total-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 30px 30px;
-            animation: shimmer 15s infinite linear;
-        }
-
-        .total-label {
-            font-size: 18px;
+            font-size: 2.5rem;
+            font-weight: 700;
             margin-bottom: 10px;
             position: relative;
-            z-index: 2;
+            z-index: 1;
         }
 
-        .total-amount {
-            font-size: 36px;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        .company-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
             position: relative;
-            z-index: 2;
+            z-index: 1;
         }
 
-        .includes-section {
-            background: #f8fff8;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-
-        .section-title {
-            font-size: 20px;
-            font-weight: bold;
-            color: #2d5a27;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .includes-grid {
+        .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
-        }
-
-        .include-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .include-item:hover {
-            transform: translateX(-5px);
-        }
-
-        .checkmark {
-            color: #4caf50;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .note-section {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            border-radius: 15px;
-            padding: 25px;
-            border-right: 4px solid #ffc107;
             position: relative;
+            z-index: 1;
         }
 
-        .note-section::before {
-            content: '💬';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 24px;
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 12px 20px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
         }
 
-        .note-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #856404;
-            margin-bottom: 15px;
-            margin-right: 40px;
+        .contact-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
         }
 
-        .note-content {
-            color: #856404;
-            line-height: 1.6;
+        .contact-item a {
+            color: white;
+            text-decoration: none;
             font-weight: 500;
         }
 
+        .content {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            border-radius: 15px;
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            border: 1px solid #dee2e6;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #2d5a27;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4a7c59;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #4a7c59, transparent);
+        }
+
+        .work-list {
+            list-style: none;
+        }
+
+        .work-list li {
+            background: white;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border-right: 4px solid #4a7c59;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .work-list li:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .work-list li::before {
+            content: '✓';
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #4a7c59;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .highlight-product {
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #2d5a27;
+        }
+
+        .area-highlight {
+            background: linear-gradient(120deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #2d3436;
+        }
+
+        .price-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-section::before {
+            content: '💰';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .price-badge {
+            position: relative;
+            z-index: 1;
+        }
+
+        .price-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .price-breakdown {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .price-breakdown ul {
+            list-style: none;
+            text-align: right;
+        }
+
+        .price-breakdown li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .price-breakdown li:last-child {
+            border-bottom: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .total-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 20px 0;
+        }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .payment-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            color: #2d5a27;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .payment-percentage {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4a7c59;
+            margin-bottom: 10px;
+        }
+
+        .signature-section {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border: 2px dashed #4a7c59;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: #2d5a27;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #4a7c59;
+            box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+        }
+
+        .field-error {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            padding: 5px 10px;
+            background: #ffe6e6;
+            border-radius: 5px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .signature-area {
+            margin-top: 25px;
+        }
+
+        .signature-canvas {
+            border: 2px solid #4a7c59;
+            border-radius: 10px;
+            background: white;
+            cursor: crosshair;
+            width: 100%;
+            height: 150px;
+            display: block;
+        }
+
+        .signature-controls {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .btn-clear {
+            background: #e17055;
+            color: white;
+        }
+
+        .btn-clear:hover {
+            background: #d63031;
+            transform: translateY(-2px);
+        }
+
+        .btn-save {
+            background: #00b894;
+            color: white;
+        }
+
+        .btn-save:hover {
+            background: #00a085;
+            transform: translateY(-2px);
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #4a7c59 0%, #2d5a27 100%);
+            color: white;
+            font-size: 1.1rem;
+            padding: 15px 40px;
+            margin-top: 25px;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(74, 124, 89, 0.3);
+        }
+
+        .footer {
+            background: #2d5a27;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 1.1rem;
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .loading-spinner {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4a7c59;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* שיפורים למובייל */
         @media (max-width: 768px) {
-            .table-row {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .includes-grid {
-                grid-template-columns: 1fr;
-            }
-
             .container {
                 margin: 10px;
+                border-radius: 15px;
             }
-
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .company-name {
+                font-size: 2rem;
+            }
+            
             .content {
-                padding: 20px;
+                padding: 30px 20px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .signature-canvas {
+                height: 120px !important;
+            }
+            
+            .btn {
+                font-size: 13px;
+                padding: 10px 20px;
+            }
+            
+            .work-list li {
+                font-size: 0.9rem;
+                padding: 12px 15px;
             }
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <div class="logo">
-            <div class="logo-icon">
-                <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg" alt="הגינה הירוקה" style="max-height: 100px; object-fit: contain;" />
-            </div>
-            <div class="company-name">הגינה הירוקה</div>
-        </div>
-        <div class="quote-title">הצעת מחיר לשיקום דשא טבעי</div>
-    </div>
-
-    <div class="content">
-        <div class="project-info">
-            <div class="project-title">פרויקט שיקום דשא מסוג אלטורו</div>
-            <div class="project-description">
-                שיקום קרחות ודלילות בדשא על שטח של <span class="highlight">22 מ"ר</span> מתוך שטח כולל של 50 מ"ר.
-                <br>התוצאה תהיה <span class="highlight">נראית בשטח כבר ביום ההתקנה</span> עם מראה טבעי ואחיד.
-            </div>
-        </div>
-
-        <div class="details-table">
-            <div class="table-header">
-                ✅ פירוט לפי כמות בפועל
-            </div>
-            <div class="table-row table-header-row">
-                <div>רכיב</div>
-                <div>כמות / פירוט</div>
-                <div>עלות ליחידה</div>
-                <div>עלות כוללת</div>
-            </div>
-            <div class="table-row">
-                <div>מרבד דשא אלטורו</div>
-                <div>22 מ"ר</div>
-                <div>26 ₪ למ"ר</div>
-                <div>572 ₪</div>
-            </div>
-            <div class="table-row">
-                <div>קומפוסט אורגני מנופה</div>
-                <div>3 שקים (25 ליטר)</div>
-                <div>20 ₪ לשק</div>
-                <div>60 ₪</div>
-            </div>
-            <div class="table-row">
-                <div>דשן סטרטר ייעודי לדשא</div>
-                <div>חבילה אחת ל־50 מ"ר</div>
-                <div>לפי שימוש יחסי</div>
-                <div>69 ₪</div>
-            </div>
-            <div class="table-row">
-                <div>עבודת שיקום מקצועית</div>
-                <div>שתילה, יישור קרקע, דישון</div>
-                <div>35 ₪ למ"ר × 22</div>
-                <div>770 ₪</div>
-            </div>
-        </div>
-
-        <div class="total-section">
-            <div class="total-label">💰 סכום כולל (חומרים + עבודה)</div>
-            <div class="total-amount">1,760 ₪ כולל הכול</div>
-        </div>
-
-        <div class="includes-section">
-            <div class="section-title">
-                📦 מה הלקוח מקבל
-            </div>
-            <div class="includes-grid">
-                <div class="include-item">
-                    <div class="checkmark">✔</div>
-                    <div>מרבדי דשא אלטורו איכותיים (22 מ"ר בלבד)</div>
-                </div>
-                <div class="include-item">
-                    <div class="checkmark">✔</div>
-                    <div>קומפוסט מפורק לשיפור הקרקע</div>
-                </div>
-                <div class="include-item">
-                    <div class="checkmark">✔</div>
-                    <div>דשן ייעודי להשרשה והתאקלמות</div>
-                </div>
-                <div class="include-item">
-                    <div class="checkmark">✔</div>
-                    <div>2 אנשי צוות – שתילה מדויקת + יישור קרקע</div>
-                </div>
-                <div class="include-item">
-                    <div class="checkmark">✔</div>
-                    <div>ניקיון בסיום העבודה</div>
-                </div>
-                <div class="include-item">
-                    <div class="checkmark">✔</div>
-                    <div>תוצאה מיידית ואחריות להתקנה</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="note-section">
-            <div class="note-title">הבהרה חשובה</div>
-            <div class="note-content">
-                ההצעה מתייחסת לשיקום נקודתי בלבד ולא להנחת דשא בכל שטח הגינה.
-                הדגש על תיקון אזורים מדוללים וקרחים בלבד – בהתאם למה ששלחת בתמונות.
-                <br><br>
-                העלות כוללת את כל החומרים והעבודה אך **לא כוללת הובלה**.
-                <br>
-                התשלום יתבצע בשני חלקים: 50% בתחילת העבודה ו־50% בסיומה.
-            </div>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <h3>שולח אימייל אוטומטי...</h3>
+            <p>אנא המתינו</p>
         </div>
     </div>
-</div>
-</body>
-</html>
 
+    <div class="container">
+        <div class="header">
+            <img src="https://github.com/the-green-garden/haginahayeruka/raw/main/logo.jpg" alt="לוגו הגינה הירוקה" class="company-logo">
+            <div class="company-name">🌱 הגינה הירוקה</div>
+            <div class="company-subtitle">שרותי גינון והדברה במרכז ובדרום</div>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    📱 <a href="tel:0546698931">054-6698931</a>
+                </div>
+                <div class="contact-item">
+                    💬 <a href="https://wa.me/972546698931">וואטסאפ</a>
+                </div>
+                <div class="contact-item">
+                    ✉️ <a href="mailto:info@gina.i.ng">info@gina.i.ng</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>פירוט העבודה</h2>
+                <ul class="work-list">
+                    <li>הסרה מקצועית של דשא ישן וחומר צמחי לא רצוי</li>
+                    <li>הכנת קרקע מושלמת - חריש, יישור והעשרה בקומפוסט</li>
+                    <li>הנחת דשא חי מסוג <span class="highlight-product">אלטורו</span> – דשא עמיד ואיכותי במיוחד</li>
+                    <li>שטח הדשא להנחה: <span class="area-highlight">22 מ"ר</span></li>
+                    <li>שטח עבודת השיקום הכוללת: עד <span class="area-highlight">50 מ"ר</span></li>
+                    <li>תוספי קרקע: קומפוסט, דשן, סטרס טאץ'</li>
+                    <li>השקיה ראשונית מקצועית והדרכה על השקיה שוטפת</li>
+                    <li>ביצוע על ידי <strong>צוות של שני גננים מקצועיים</strong></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="price-section">
+                    <div class="price-badge">
+                        <div class="price-title">🎯 מבצע קיץ מיוחד!</div>
+                        <div class="price-breakdown">
+                            <div style="font-size: 1.2rem; margin-bottom: 15px;">המחיר מפורט לפי מטר:</div>
+                            <ul>
+                                <li>דשא חי מסוג אלטורו – <strong>26 ₪ למ"ר</strong></li>
+                                <li>חומרי שיקום והזנה לקרקע – <strong>15 ₪ למ"ר</strong></li>
+                                <li>עבודת שיקום והנחה מקצועית – <strong>20 ₪ למ"ר</strong></li>
+                            </ul>
+                        </div>
+                        <div class="total-price">סה"כ כולל: 1,950 ₪</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 15px;">
+                            * המחיר כולל את כל החומרים, ההכנה והעבודה, אך לא כולל הובלה<br>
+                            תקף להזמנות ביוני 2025 בלבד
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>תנאי תשלום</h2>
+                <div class="payment-grid">
+                    <div class="payment-item">
+                        <div class="payment-percentage">50%</div>
+                        <div>מקדמה ביום תחילת העבודה</div>
+                    </div>
+                    <div class="payment-item">
+                        <div class="payment-percentage">50%</div>
+                        <div>יתרה בסיום העבודה</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="signature-section">
+                    <h2 style="margin-bottom: 25px; border: none; text-align: center;">אישור והזמנת העבודה</h2>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="customerName">שם הלקוח/ה מלא:</label>
+                            <input type="text" id="customerName" placeholder="הכניסו את שמכם המלא">
+                        </div>
+                        <div class="form-group">
+                            <label for="customerId">מספר תעודת זהות:</label>
+                            <input type="text" id="customerId" placeholder="מספר תעודת זהות">
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">מספר טלפון:</label>
+                            <input type="tel" id="customerPhone" placeholder="מספר טלפון ליצירת קשר">
+                        </div>
+                        <div class="form-group">
+                            <label for="customerAddress">כתובת לביצוע העבודה:</label>
+                            <input type="text" id="customerAddress" placeholder="כתובת מלאה לביצוע העבודה">
+                        </div>
+                    </div>
+
+                    <div class="signature-area">
+                        <label style="display: block; color: #2d5a27; font-weight: bold; margin-bottom: 10px;">
+                            חתימה דיגיטלית:
+                        </label>
+                        <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 15px; margin-bottom: 10px; font-size: 0.9rem;">
+                            <strong>📝 הוראות חתימה:</strong><br>
+                            1. חתמו בתיבה הירוקה למטה עם העכבר או האצבע<br>
+                            2. לחצו על "שמור חתימה" כשסיימתם<br>
+                            3. אם רוצים להתחיל מחדש - לחצו "נקה חתימה"
+                        </div>
+                        <canvas id="signatureCanvas" class="signature-canvas" style="touch-action: none;"></canvas>
+                        <div class="signature-controls">
+                            <button type="button" class="btn btn-clear" onclick="clearSignature()">🗑️ נקה חתימה</button>
+                            <button type="button" class="btn btn-save" onclick="saveSignature()">💾 שמור חתימה</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-submit" onclick="submitQuote()">
+                        📨 שלח הזמנה אוטומטית
+                    </button>
+
+                    <div id="successMessage" class="success-message">
+                        <h3>🎉 ההזמנה נשלחה בהצלחה!</h3>
+                        <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                            <p><strong>✅ מה קרה:</strong></p>
+                            <ul style="text-align: right; padding-right: 20px; margin: 10px 0;">
+                                <li>📝 הפרטים והחתימה שלכם נקלטו במערכת</li>
+                                <li>📧 ההזמנה נשלחה אוטומטית לצוות הגינה הירוקה</li>
+                                <li>🔒 כל הנתונים שלכם נשמרו בבטחה</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: rgba(40,167,69,0.2); padding: 15px; border-radius: 10px; margin: 15px 0; border: 2px solid #28a745;">
+                            <p><strong>🕐 מה הלאה:</strong></p>
+                            <ol style="text-align: right; padding-right: 20px; margin: 10px 0;">
+                                <li><strong>קיבלנו את הפרטים</strong> - אין צורך לעשות דבר נוסף</li>
+                                <li><strong>נחזור אליכם תוך 24 שעות</strong> לתיאום מועד</li>
+                                <li><strong>נקבע תאריך ביצוע</strong> העבודה המתאים לכם</li>
+                            </ol>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                            <p><strong>📋 פרטי ההזמנה שהתקבלה:</strong></p>
+                            <p style="font-size: 0.9em; line-height: 1.6;">
+                                🏡 התקנת דשא חי מסוג אלטורו - 22 מ"ר<br>
+                                🌱 שיקום קרקע כולל עד 50 מ"ר<br>
+                                💰 סכום: 1,950 ₪<br>
+                                👥 ביצוע על ידי צוות מקצועי
+                            </p>
+                        </div>
+
+                        <button class="btn btn-save" onclick="sendWhatsApp()" style="margin-top: 20px; width: 100%;">
+                            💬 שלח הודעת וואטסאפ
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" style="text-align: center; background: linear-gradient(145deg, #2d5a27, #4a7c59); color: white;">
+                <h2 style="color: white; border-bottom-color: rgba(255,255,255,0.3);">יצירת קשר</h2>
+                <div style="font-size: 1.1rem; line-height: 1.8;">
+                    <strong>נוי שושן – הגינה הירוקה</strong><br>
+                    📱 טלפון: <a href="tel:0546698931" style="color: #84fab0;">054-6698931</a><br>
+                    💬 וואטסאפ: <a href="https://wa.me/972546698931" style="color: #84fab0;">שלחו הודעה</a><br>
+                    ✉️ דוא"ל: <a href="mailto:info@gina.i.ng" style="color: #84fab0;">info@gina.i.ng</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            🌿 צוות הגינה הירוקה – כאן לכל שאלה או בקשה נוספת 🌿
+        </div>
+    </div>
+
+    <!-- הוספת ספריית jsPDF ליצירת PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <script>
+        // הגדרת משתנים גלובליים
+        let canvas = document.getElementById('signatureCanvas');
+        let ctx = canvas.getContext('2d');
+        let isDrawing = false;
+        let signatureData = '';
+        let formData = null;
+
+        // התאמת גודל הקנבס
+        function resizeCanvas() {
+            const rect = canvas.getBoundingClientRect();
+            const devicePixelRatio = window.devicePixelRatio || 1;
+            
+            // התאמה למובייל
+            const isMobile = window.innerWidth <= 768;
+            const canvasHeight = isMobile ? 120 : 150;
+            
+            canvas.width = rect.width * devicePixelRatio;
+            canvas.height = canvasHeight * devicePixelRatio;
+            canvas.style.width = rect.width + 'px';
+            canvas.style.height = canvasHeight + 'px';
+            
+            ctx.scale(devicePixelRatio, devicePixelRatio);
+            ctx.strokeStyle = '#2d5a27';
+            ctx.lineWidth = isMobile ? 2 : 3;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            
+            // שמירת הגדרות הקנבס
+            canvas.setAttribute('data-mobile', isMobile);
+        }
+
+        // קריאה לפונקציה בטעינת הדף ובשינוי גודל המסך
+        window.addEventListener('load', function() {
+            setTimeout(resizeCanvas, 100);
+            
+            // הוספת אירועי בדיקה לשדות
+            addFieldValidation();
+        });
+        window.addEventListener('resize', resizeCanvas);
+        
+        // הוספת בדיקת תקינות לשדות
+        function addFieldValidation() {
+            // בדיקת שם
+            const nameField = document.getElementById('customerName');
+            nameField.addEventListener('blur', function() {
+                if (this.value.trim().length < 2) {
+                    this.style.borderColor = '#
