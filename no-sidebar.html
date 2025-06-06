@@ -6,20 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>צור קשר - הגינה הירוקה</title>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJDZ29X5CZ"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17054224877"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('set', 'traffic_type', 'internal');
- 
-    // אנליטיקס
-  gtag('config', 'G-BJDZ29X5CZ');
-
-  // Google Ads
-  gtag('config', 'AW-17054224877');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJDZ29X5CZ"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17054224877"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('set', 'traffic_type', 'internal');
+      gtag('config', 'G-BJDZ29X5CZ');
+      gtag('config', 'AW-17054224877');
+    </script>
 
     <meta name="description" content="צור קשר עם הגינה הירוקה – שירותי גינון, תחזוקת גינות והדברה בדרום ובמרכז.">
     <meta name="keywords" content="גינון, שירותי גינון, תחזוקת גינות, הדברה">
@@ -30,6 +26,27 @@
 
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Responsive tweaks -->
+    <style>
+      @media (max-width: 768px) {
+        input, textarea, button {
+          width: 100% !important;
+        }
+        .gallery {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .gallery-image {
+          width: 90% !important;
+          margin-bottom: 10px;
+        }
+        #logo img {
+          max-width: 160px;
+        }
+      }
+    </style>
 </head>
 <body>
 
@@ -90,9 +107,9 @@
     <section class="container">
         <h2>מה הלקוחות שלנו מספרים?</h2>
         <div class="gallery">
-            <img src="review_noa.jpg" alt="המלצה מנועה" class="gallery-image">
-            <img src="review_tehila.jpg" alt="המלצה מתהילה" class="gallery-image">
-            <img src="review_or.jpg" alt="המלצה מאור" class="gallery-image">
+            <img src="review_noa.jpg" alt="המלצה מנועה" class="gallery-image" style="width: 30%;">
+            <img src="review_tehila.jpg" alt="המלצה מתהילה" class="gallery-image" style="width: 30%;">
+            <img src="review_or.jpg" alt="המלצה מאור" class="gallery-image" style="width: 30%;">
         </div>
     </section>
 </div>
@@ -114,4 +131,5 @@
 
 </body>
 </html>
+
 
