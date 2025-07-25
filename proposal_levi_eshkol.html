@@ -707,6 +707,8 @@
             box-shadow: 0 5px 25px rgba(0,0,0,0.08);
             border: 1px solid #e9ecef;
             text-align: center;
+            position: relative;
+            z-index: 10;
         }
         
         .approval-title {
@@ -829,11 +831,11 @@
                     💬 בוואטסאפ שייפתח, אנא הוסיפו את שמכם המלא לפני השליחה
                 </p>
                 <div class="approval-buttons">
-                    <button class="approval-button primary" onclick="approveProposal()">
+                    <button class="approval-button primary" onclick="alert('כפתור נלחץ!'); approveProposal();" style="cursor: pointer;">
                         <i class="fas fa-check-circle" style="margin-left: 8px;"></i>
                         אני מאשר/ת את ההצעה
                     </button>
-                    <button class="approval-button secondary" onclick="requestMeeting()">
+                    <button class="approval-button secondary" onclick="alert('כפתור פגישה נלחץ!'); requestMeeting();" style="cursor: pointer;">
                         <i class="fas fa-calendar-alt" style="margin-left: 8px;"></i>
                         בקשה לפגישה
                     </button>
@@ -1061,6 +1063,7 @@
         
         // אישור ההצעה
         function approveProposal() {
+            console.log('approveProposal function called'); // דיבוג
             const currentDate = new Date().toLocaleDateString('he-IL');
             const currentTime = new Date().toLocaleTimeString('he-IL');
             
@@ -1081,15 +1084,20 @@
 
             const whatsappUrl = `https://wa.me/972584559727?text=${encodeURIComponent(message)}`;
             
-            // פתיחת וואטסאפ
-            window.open(whatsappUrl, '_blank');
-            
-            // הודעת אישור
-            alert('תודה! ההצעה אושרה. אתם מועברים לוואטסאפ לתיאום המשך התהליך.');
+            try {
+                // פתיחת וואטסאפ
+                window.open(whatsappUrl, '_blank');
+                // הודעת אישור
+                alert('תודה! ההצעה אושרה. אתם מועברים לוואטסאפ לתיאום המשך התהליך.');
+            } catch (error) {
+                console.error('Error opening WhatsApp:', error);
+                alert('שגיאה בפתיחת וואטסאפ. אנא צרו קשר ישירות: 058-4559727');
+            }
         }
         
         // בקשת פגישה
         function requestMeeting() {
+            console.log('requestMeeting function called'); // דיבוג
             const message = `שלום! אני מעוניין/ת בפגישה לדיון בהצעת המחיר לפרויקט גינה ברחוב לוי אשכול 74, תל אביב.
             
 אשמח לתיאום פגישה בימים הקרובים לדיון בפרטי ההצעה והתאמות נוספות.
@@ -1098,9 +1106,14 @@
 [השם שלך]`;
 
             const whatsappUrl = `https://wa.me/972584559727?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
             
-            alert('אתם מועברים לוואטסאפ לתיאום פגישה');
+            try {
+                window.open(whatsappUrl, '_blank');
+                alert('אתם מועברים לוואטסאפ לתיאום פגישה');
+            } catch (error) {
+                console.error('Error opening WhatsApp:', error);
+                alert('שגיאה בפתיחת וואטסאפ. אנא צרו קשר ישירות: 058-4559727');
+            }
         }
         
         // אפשרות להזין סיסמה בלחיצת Enter
