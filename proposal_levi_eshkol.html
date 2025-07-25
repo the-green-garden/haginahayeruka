@@ -444,15 +444,15 @@
         }
         
         .advantage-item {
-            flex: 1 1 280px;
+            flex: 1 1 260px;
             max-width: 320px;
             background: white;
-            padding: 30px 25px;
-            border-radius: 16px;
-            border-top: 4px solid #2d5a27;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            padding: 40px 30px;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 5px 40px rgba(0,0,0,0.05);
             text-align: center;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
@@ -461,40 +461,52 @@
             content: '';
             position: absolute;
             top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(45,90,39,0.05), transparent);
-            transition: left 0.6s ease;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #2d5a27, transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
         
         .advantage-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 60px rgba(0,0,0,0.1);
         }
         
         .advantage-item:hover::before {
-            left: 100%;
+            opacity: 1;
         }
         
-        .advantage-icon {
-            font-size: 3em;
+        .advantage-number {
+            font-size: 2.5em;
+            font-weight: 200;
+            color: #2d5a27;
             margin-bottom: 20px;
             position: relative;
-            z-index: 2;
+            letter-spacing: -2px;
         }
         
-        /* צבעים מקצועיים לאייקונים */
-        .advantage-item:nth-child(1) .advantage-icon {
-            color: #3498db; /* כחול מקצועי - לחיפוש ופרטים */
+        .advantage-number::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 2px;
+            background: linear-gradient(90deg, #2d5a27, #3aa56b);
+            border-radius: 1px;
         }
         
-        .advantage-item:nth-child(2) .advantage-icon {
-            color: #27ae60; /* ירוק טבעי - לעלה וניסיון */
+        .advantage-item:hover .advantage-number {
+            transform: scale(1.1);
+            color: #1a2f1a;
         }
         
-        .advantage-item:nth-child(3) .advantage-icon {
-            color: #e67e22; /* כתום מקצועי - לטכנולוגיה */
+        .advantage-item:hover .advantage-number::after {
+            width: 50px;
+            background: linear-gradient(90deg, #1a2f1a, #2d5a27);
         }
         
         .advantage-title {
@@ -586,18 +598,6 @@
             .advantage-item {
                 max-width: 100%;
                 flex: none;
-            }
-            
-            .advantage-icon {
-                font-size: 2.5em;
-            }
-            
-            .advantage-title {
-                font-size: 1.1em;
-            }
-            
-            .advantage-description {
-                font-size: 0.95em;
             }
         }
         
@@ -698,17 +698,16 @@
             display: none;
         }
         
-        /* כפתור אישור ההצעה */
+        /* כפתור אישור ההצעה - בסוף הדף */
         .approval-section {
             background: linear-gradient(135deg, #f8fffe 0%, #ffffff 100%);
             padding: 50px 40px;
             border-radius: 15px;
-            margin: 50px 0 0 0;
+            margin: 30px auto;
+            max-width: 210mm;
             box-shadow: 0 5px 25px rgba(0,0,0,0.08);
             border: 1px solid #e9ecef;
             text-align: center;
-            position: relative;
-            z-index: 10;
         }
         
         .approval-title {
@@ -767,6 +766,7 @@
             color: #6c757d;
             font-style: italic;
         }
+
         @media print {
             body { 
                 background: white;
@@ -802,222 +802,222 @@
     
     <!-- תוכן המסמך המוגן -->
     <div class="document-protected" id="documentContent">
-    <div class="document">
-        <div class="header">
-            <div class="header-content">
-                <div class="logo-section">
-                    <div class="logo">
-                        <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/_שקוף%20logo.png" alt="לוגו הגינה הירוקה - פתרונות גינון יוקרתיים" />
+        <div class="document">
+            <div class="header">
+                <div class="header-content">
+                    <div class="logo-section">
+                        <div class="logo">
+                            <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/_שקוף%20logo.png" alt="לוגו הגינה הירוקה - פתרונות גינון יוקרתיים" />
+                        </div>
+                        <div class="company-info">
+                            <h1>הגינה הירוקה</h1>
+                            <div class="tagline">כל מה שהגינה שלך צריכה</div>
+                        </div>
                     </div>
-                    <div class="company-info">
-                        <h1>הגינה הירוקה</h1>
-                        <div class="tagline">כל מה שהגינה שלך צריכה</div>
-                    </div>
-                </div>
-                <div class="document-type">
-                    <span class="premium-badge">עקרונית</span><br>
-                    הצעת מחיר ראשונית<br>
-                    יולי 2025
-                </div>
-            </div>
-            
-            <!-- קטע אישור ההצעה -->
-            <div class="approval-section">
-                <h3 class="approval-title">אישור ההצעה</h3>
-                <p class="approval-description">
-                    לאישור ההצעה ולהתחלת תהליך התיאום, אנא בחרו באחת מהאפשרויות הבאות:
-                </p>
-                <p style="color: #28a745; font-weight: 600; margin-bottom: 25px; font-size: 1.05em;">
-                    💬 בוואטסאפ שייפתח, אנא הוסיפו את שמכם המלא לפני השליחה
-                </p>
-                <div class="approval-buttons">
-                    <button class="approval-button primary" onclick="approveProposal()">
-                        <i class="fas fa-check-circle" style="margin-left: 8px;"></i>
-                        אני מאשר/ת את ההצעה
-                    </button>
-                    <button class="approval-button secondary" onclick="requestMeeting()">
-                        <i class="fas fa-calendar-alt" style="margin-left: 8px;"></i>
-                        בקשה לפגישה
-                    </button>
-                </div>
-                <p class="approval-note">
-                    האישור מהווה הסכמה עקרונית לתנאי ההצעה ולא התחייבות סופית
-                </p>
-            </div>
-        </div>
-        
-        <div class="content">
-            <div class="project-header">
-                <div class="project-title">הצעת מחיר עקרונית לפרויקט גינה היקפית יוקרתית</div>
-                <div class="project-subtitle">נציגות הבניין | לוי אשכול 74, תל אביב</div>
-                
-                <div class="project-summary">
-                    <div class="summary-item">
-                        <div class="summary-label">היקף שטח:</div>
-                        <div class="summary-value">240 מ"ר</div>
-                    </div>
-                    <div class="summary-item">
-                        <div class="summary-label">משך ביצוע:</div>
-                        <div class="summary-value">12-16 שבועות</div>
+                    <div class="document-type">
+                        <span class="premium-badge">עקרונית</span><br>
+                        הצעת מחיר ראשונית<br>
+                        יולי 2025
                     </div>
                 </div>
             </div>
             
-         <div class="important-notice">
-         <h3>הבהרה חשובה</h3>
-         <p>הצעה זו ניתנת לצורך התרשמות ראשונית ואינה מהווה התחייבות סופית.  
-         המחירים המוצגים מתייחסים לעבודות הביצוע בלבד, ואינם כוללים תשתיות, חומרים, מסים או הוצאות נלוות – אלא אם צוין אחרת.</p>
-         <p>כל שינוי מהותי בהיקף העבודה או בדרישות הלקוח עשוי לדרוש עדכון של ההצעה בהתאם.</p>
-         <p>נשמח לענות על כל שאלה ולהתאים את ההצעה לצרכים המדויקים בשטח.</p>
-          </div>
-
-            
-            <div class="pricing-section">
-                <div class="section-title">שלבי העבודה ועלויות (עבור 240 מ"ר)</div>
-                
-                <table class="pricing-table">
-                    <thead>
-                        <tr>
-                            <th>שלב</th>
-                            <th>תיאור העבודה</th>
-                            <th>מחיר למ"ר</th>
-                            <th>עלות כוללת</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="step-number">1</td>
-                            <td class="step-description">הכנת הקרקע, פינוי, עבודות עפר</td>
-                            <td class="price-per-sqm">150 ₪</td>
-                            <td class="total-price">36,000 ₪</td>
-                        </tr>
-                        <tr>
-                            <td class="step-number">2</td>
-                            <td class="step-description">הקמת מערכת השקיה חכמה</td>
-                            <td class="price-per-sqm">175 ₪</td>
-                            <td class="total-price">42,000 ₪</td>
-                        </tr>
-                        <tr>
-                            <td class="step-number">3</td>
-                            <td class="step-description">תכנון והתקנת תאורת גן יוקרתית</td>
-                            <td class="price-per-sqm">200 ₪</td>
-                            <td class="total-price">48,000 ₪</td>
-                        </tr>
-                        <tr>
-                            <td class="step-number">4</td>
-                            <td class="step-description">שתילה ועיצוב צמחיה חיה עשירה</td>
-                            <td class="price-per-sqm">250 ₪</td>
-                            <td class="total-price">60,000 ₪</td>
-                        </tr>
-                        <tr>
-                            <td class="step-number">5</td>
-                            <td class="step-description">גימורים, ניקוי ואחריות סיום</td>
-                            <td class="price-per-sqm">58 ₪</td>
-                            <td class="total-price">14,000 ₪</td>
-                        </tr>
-                        <tr class="total-row">
-                            <td><strong>סה"כ</strong></td>
-                            <td><strong>עבודה בלבד</strong></td>
-                            <td><strong>833 ₪/מ"ר</strong></td>
-                            <td><strong>200,000 ₪</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="payment-terms">
-                <h3>תנאי תשלום מוצעים</h3>
-                <div class="payment-list">
-                    <div class="payment-item">
-                        <div class="payment-percentage">50%</div>
-                        <div class="payment-description">בתחילת העבודה</div>
-                    </div>
-                    <div class="payment-item">
-                        <div class="payment-percentage">50%</div>
-                        <div class="payment-description">עם סיום מלא ואישור סופי</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="additional-terms">
-                <h3>הערות נוספות</h3>
-                <div class="terms-grid">
-                    <div class="term-item">
-                        <div class="term-title">שינויים במפרט</div>
-                        <div class="term-description">כל שינוי בשטח, גישה או מפרט יחויב בהתאם</div>
-                    </div>
-                    <div class="term-item">
-                        <div class="term-title">לוח זמנים</div>
-                        <div class="term-description">כפוף למזג אוויר ותיאום עם נציגות הבניין</div>
-                    </div>
-                    <div class="term-item">
-                        <div class="term-title">רכישת חומרים</div>
-                        <div class="term-description">כל החומרים יירכשו בנפרד ועל חשבון הלקוח, בליווי וייעוץ שלנו</div>
-                    </div>
-                    <div class="term-item">
-                        <div class="term-title">התחלת עבודה</div>
-                        <div class="term-description">משוערת לתוך 3-4 שבועות מאישור סופי</div>
-                    </div>
-                    <div class="term-item">
-                        <div class="term-title">אחריות</div>
-                        <div class="term-description">12 חודשים על עבודה + 6 חודשים על קליטת צמחייה</div>
-                    </div>
-                    <div class="term-item">
-                        <div class="term-title">איכות גימור</div>
-                        <div class="term-description">אנו מתחייבים לביצוע ברמת גימור גבוהה, תוך שימוש באמצעים מתקדמים בלבד</div>
-                    </div>
-                </div>
-                
-                <div class="materials-estimate">
-                    <strong style="color: #856404;">הערכת עלות חומרים:</strong>
-                    <span style="color: #495057;"> לפרויקט ברמת יוקרה זו, עלות החומרים והציוד צפויה להיות בטווח של 120,000-180,000 ₪ (בהתאם לבחירות הלקוח ורמת האיכות הרצויה).</span>
-                </div>
-            </div>
-            
-            <div class="why-choose-us">
-                <h3>למה לבחור בנו?</h3>
-                <div class="advantages-grid">
+            <div class="content">
+                <div class="project-header">
+                    <div class="project-title">הצעת מחיר עקרונית לפרויקט גינה היקפית יוקרתית</div>
+                    <div class="project-subtitle">נציגות הבניין | לוי אשכול 74, תל אביב</div>
                     
-                    <div class="advantage-item">
-                        <div class="advantage-number">01</div>
-                        <div class="advantage-title">ירידה לפרטים הקטנים</div>
-                        <div class="advantage-description">הקפדה על כל שלב – מתכנון מוקפד ועד ביצוע מדויק בשטח</div>
+                    <div class="project-summary">
+                        <div class="summary-item">
+                            <div class="summary-label">היקף שטח:</div>
+                            <div class="summary-value">240 מ"ר</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">משך ביצוע:</div>
+                            <div class="summary-value">12-16 שבועות</div>
+                        </div>
                     </div>
-
-                    <div class="advantage-item">
-                        <div class="advantage-number">02</div>
-                        <div class="advantage-title">ניסיון בגינות יוקרה</div>
-                        <div class="advantage-description">שנות ניסיון בפרויקטים יוקרתיים, עם דגש על אסתטיקה ועמידות</div>
-                    </div>
-
-                    <div class="advantage-item">
-                        <div class="advantage-number">03</div>
-                        <div class="advantage-title">טכנולוגיה וחומרים מתקדמים</div>
-                        <div class="advantage-description">שילוב של מערכות השקיה חכמות, תאורה איכותית וצוות ביצוע מקצועי</div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <div class="footer-content">
-                <div>
-                    <h3>הגינה הירוקה</h3>
-                    <div>פתרונות גינון יוקרתיים • מקצועיות ואמינות</div>
                 </div>
                 
-                <div class="contact-details">
-                    <div class="contact-item">📞 טלפון: <a href="tel:0584559727" style="color: white; text-decoration: none;">058-4559727</a></div>
-                    <div class="contact-item">✉️ מייל: <a href="mailto:info@gina.i.ng" style="color: white; text-decoration: none;">info@gina.i.ng</a></div>
-                    <div class="contact-item">🌐 אתר: <a href="https://gina.i.ng" target="_blank" style="color: white; text-decoration: none;">www.gina.i.ng</a></div>
+                <div class="important-notice">
+                    <h3>הבהרה חשובה</h3>
+                    <p>הצעה זו ניתנת לצורך התרשמות ראשונית ואינה מהווה התחייבות סופית.  
+                    המחירים המוצגים מתייחסים לעבודות הביצוע בלבד, ואינם כוללים תשתיות, חומרים, מסים או הוצאות נלוות – אלא אם צוין אחרת.</p>
+                    <p>כל שינוי מהותי בהיקף העבודה או בדרישות הלקוח עשוי לדרוש עדכון של ההצעה בהתאם.</p>
+                    <p>נשמח לענות על כל שאלה ולהתאים את ההצעה לצרכים המדויקים בשטח.</p>
+                </div>
+
+                <div class="pricing-section">
+                    <div class="section-title">שלבי העבודה ועלויות (עבור 240 מ"ר)</div>
+                    
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>שלב</th>
+                                <th>תיאור העבודה</th>
+                                <th>מחיר למ"ר</th>
+                                <th>עלות כוללת</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="step-number">1</td>
+                                <td class="step-description">הכנת הקרקע, פינוי, עבודות עפר</td>
+                                <td class="price-per-sqm">150 ₪</td>
+                                <td class="total-price">36,000 ₪</td>
+                            </tr>
+                            <tr>
+                                <td class="step-number">2</td>
+                                <td class="step-description">הקמת מערכת השקיה חכמה</td>
+                                <td class="price-per-sqm">175 ₪</td>
+                                <td class="total-price">42,000 ₪</td>
+                            </tr>
+                            <tr>
+                                <td class="step-number">3</td>
+                                <td class="step-description">תכנון והתקנת תאורת גן יוקרתית</td>
+                                <td class="price-per-sqm">200 ₪</td>
+                                <td class="total-price">48,000 ₪</td>
+                            </tr>
+                            <tr>
+                                <td class="step-number">4</td>
+                                <td class="step-description">שתילה ועיצוב צמחיה חיה עשירה</td>
+                                <td class="price-per-sqm">250 ₪</td>
+                                <td class="total-price">60,000 ₪</td>
+                            </tr>
+                            <tr>
+                                <td class="step-number">5</td>
+                                <td class="step-description">גימורים, ניקוי ואחריות סיום</td>
+                                <td class="price-per-sqm">58 ₪</td>
+                                <td class="total-price">14,000 ₪</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td><strong>סה"כ</strong></td>
+                                <td><strong>עבודה בלבד</strong></td>
+                                <td><strong>833 ₪/מ"ר</strong></td>
+                                <td><strong>200,000 ₪</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="payment-terms">
+                    <h3>תנאי תשלום מוצעים</h3>
+                    <div class="payment-list">
+                        <div class="payment-item">
+                            <div class="payment-percentage">50%</div>
+                            <div class="payment-description">בתחילת העבודה</div>
+                        </div>
+                        <div class="payment-item">
+                            <div class="payment-percentage">50%</div>
+                            <div class="payment-description">עם סיום מלא ואישור סופי</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="additional-terms">
+                    <h3>הערות נוספות</h3>
+                    <div class="terms-grid">
+                        <div class="term-item">
+                            <div class="term-title">שינויים במפרט</div>
+                            <div class="term-description">כל שינוי בשטח, גישה או מפרט יחויב בהתאם</div>
+                        </div>
+                        <div class="term-item">
+                            <div class="term-title">לוח זמנים</div>
+                            <div class="term-description">כפוף למזג אוויר ותיאום עם נציגות הבניין</div>
+                        </div>
+                        <div class="term-item">
+                            <div class="term-title">רכישת חומרים</div>
+                            <div class="term-description">כל החומרים יירכשו בנפרד ועל חשבון הלקוח, בליווי וייעוץ שלנו</div>
+                        </div>
+                        <div class="term-item">
+                            <div class="term-title">התחלת עבודה</div>
+                            <div class="term-description">משוערת לתוך 3-4 שבועות מאישור סופי</div>
+                        </div>
+                        <div class="term-item">
+                            <div class="term-title">אחריות</div>
+                            <div class="term-description">12 חודשים על עבודה + 6 חודשים על קליטת צמחייה</div>
+                        </div>
+                        <div class="term-item">
+                            <div class="term-title">איכות גימור</div>
+                            <div class="term-description">אנו מתחייבים לביצוע ברמת גימור גבוהה, תוך שימוש באמצעים מתקדמים בלבד</div>
+                        </div>
+                    </div>
+                    
+                    <div class="materials-estimate">
+                        <strong style="color: #856404;">הערכת עלות חומרים:</strong>
+                        <span style="color: #495057;"> לפרויקט ברמת יוקרה זו, עלות החומרים והציוד צפויה להיות בטווח של 120,000-180,000 ₪ (בהתאם לבחירות הלקוח ורמת האיכות הרצויה).</span>
+                    </div>
+                </div>
+                
+                <div class="why-choose-us">
+                    <h3>למה לבחור בנו?</h3>
+                    <div class="advantages-grid">
+                        
+                        <div class="advantage-item">
+                            <div class="advantage-number">01</div>
+                            <div class="advantage-title">ירידה לפרטים הקטנים</div>
+                            <div class="advantage-description">הקפדה על כל שלב – מתכנון מוקפד ועד ביצוע מדויק בשטח</div>
+                        </div>
+
+                        <div class="advantage-item">
+                            <div class="advantage-number">02</div>
+                            <div class="advantage-title">ניסיון בגינות יוקרה</div>
+                            <div class="advantage-description">שנות ניסיון בפרויקטים יוקרתיים, עם דגש על אסתטיקה ועמידות</div>
+                        </div>
+
+                        <div class="advantage-item">
+                            <div class="advantage-number">03</div>
+                            <div class="advantage-title">טכנולוגיה וחומרים מתקדמים</div>
+                            <div class="advantage-description">שילוב של מערכות השקיה חכמות, תאורה איכותית וצוות ביצוע מקצועי</div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             
-            <div class="validity">
-                הצעה עקרונית זו תקפה למשך 14 יום מתאריך הנפקה • בכפוף להסדרת הסטטוס הרגולטורי
+            <div class="footer">
+                <div class="footer-content">
+                    <div>
+                        <h3>הגינה הירוקה</h3>
+                        <div>פתרונות גינון יוקרתיים • מקצועיות ואמינות</div>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">📞 טלפון: <a href="tel:0584559727" style="color: white; text-decoration: none;">058-4559727</a></div>
+                        <div class="contact-item">✉️ מייל: <a href="mailto:info@gina.i.ng" style="color: white; text-decoration: none;">info@gina.i.ng</a></div>
+                        <div class="contact-item">🌐 אתר: <a href="https://gina.i.ng" target="_blank" style="color: white; text-decoration: none;">www.gina.i.ng</a></div>
+                    </div>
+                </div>
+                
+                <div class="validity">
+                    הצעה עקרונית זו תקפה למשך 14 יום מתאריך הנפקה • בכפוף להסדרת הסטטוס הרגולטורי
+                </div>
             </div>
         </div>
+    </div>
+
+    <!-- קטע אישור ההצעה - מחוץ למסמך, בסוף הדף -->
+    <div class="approval-section" id="approvalSection" style="display: none;">
+        <h3 class="approval-title">אישור ההצעה</h3>
+        <p class="approval-description">
+            לאישור ההצעה ולהתחלת תהליך התיאום, אנא בחרו באחת מהאפשרויות הבאות:
+        </p>
+        <p style="color: #28a745; font-weight: 600; margin-bottom: 25px; font-size: 1.05em;">
+            💬 בוואטסאפ שייפתח, אנא הוסיפו את שמכם המלא לפני השליחה
+        </p>
+        <div class="approval-buttons">
+            <button class="approval-button primary" onclick="approveProposal()">
+                <i class="fas fa-check-circle" style="margin-left: 8px;"></i>
+                אני מאשר/ת את ההצעה
+            </button>
+            <button class="approval-button secondary" onclick="requestMeeting()">
+                <i class="fas fa-calendar-alt" style="margin-left: 8px;"></i>
+                בקשה לפגישה
+            </button>
+        </div>
+        <p class="approval-note">
+            האישור מהווה הסכמה עקרונית לתנאי ההצעה ולא התחייבות סופית
+        </p>
     </div>
 
     <script>
@@ -1029,6 +1029,7 @@
             if (password === correctPassword) {
                 document.getElementById('passwordOverlay').style.display = 'none';
                 document.getElementById('documentContent').style.display = 'block';
+                document.getElementById('approvalSection').style.display = 'block';
                 document.getElementById('passwordError').style.display = 'none';
             } else {
                 document.getElementById('passwordError').style.display = 'block';
@@ -1039,7 +1040,6 @@
         
         // אישור ההצעה
         function approveProposal() {
-            console.log('approveProposal function called'); // דיבוג
             const currentDate = new Date().toLocaleDateString('he-IL');
             const currentTime = new Date().toLocaleTimeString('he-IL');
             
@@ -1073,7 +1073,6 @@
         
         // בקשת פגישה
         function requestMeeting() {
-            console.log('requestMeeting function called'); // דיבוג
             const message = `שלום! אני מעוניין/ת בפגישה לדיון בהצעת המחיר לפרויקט גינה ברחוב לוי אשכול 74, תל אביב.
             
 אשמח לתיאום פגישה בימים הקרובים לדיון בפרטי ההצעה והתאמות נוספות.
