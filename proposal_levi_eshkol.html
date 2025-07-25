@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>הצעת מחיר עקרונית - הגינה הירוקה</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Kfs3nNS9HCyHFAPUkRADLDnbtjMa9SrOcJlLRG2QpS2ELO/gBcgGJ3XJTLFdVjHp8SnKm/U1gBXKGPqWbN4zYA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap');
         
@@ -404,7 +408,7 @@
             background: linear-gradient(135deg, #f8fffe 0%, #ffffff 100%);
             padding: 40px;
             border-radius: 15px;
-            margin: 40px 0;
+            margin: 60px 0 40px 0;
             box-shadow: 0 5px 25px rgba(0,0,0,0.08);
             border: 1px solid #e9ecef;
         }
@@ -433,9 +437,10 @@
         
         .advantages-grid {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
             gap: 30px;
+            margin-top: 20px;
         }
         
         .advantage-item {
@@ -475,9 +480,21 @@
         .advantage-icon {
             font-size: 3em;
             margin-bottom: 20px;
-            color: #2d5a27;
             position: relative;
             z-index: 2;
+        }
+        
+        /* צבעים מקצועיים לאייקונים */
+        .advantage-item:nth-child(1) .advantage-icon {
+            color: #3498db; /* כחול מקצועי - לחיפוש ופרטים */
+        }
+        
+        .advantage-item:nth-child(2) .advantage-icon {
+            color: #27ae60; /* ירוק טבעי - לעלה וניסיון */
+        }
+        
+        .advantage-item:nth-child(3) .advantage-icon {
+            color: #e67e22; /* כתום מקצועי - לטכנולוגיה */
         }
         
         .advantage-title {
@@ -604,7 +621,7 @@
             <div class="header-content">
                 <div class="logo-section">
                     <div class="logo">
-                        <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/_שקוף%20logo.png" alt="הגינה הירוקה" />
+                        <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/_שקוף%20logo.png" alt="לוגו הגינה הירוקה - פתרונות גינון יוקרתיים" />
                     </div>
                     <div class="company-info">
                         <h1>הגינה הירוקה</h1>
@@ -752,21 +769,21 @@
                 <div class="advantages-grid">
                     
                     <div class="advantage-item">
-                        <div class="advantage-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
-                        <div class="advantage-title">הקפדה על פרטים קטנים</div>
-                        <div class="advantage-description">תכנון מדויק, ביצוע קפדני, וליווי אישי – עד לפרט האחרון</div>
+                        <div class="advantage-icon"><i class="fas fa-search-plus"></i></div>
+                        <div class="advantage-title">ירידה לפרטים הקטנים</div>
+                        <div class="advantage-description">הקפדה על כל שלב – מתכנון מוקפד ועד ביצוע מדויק בשטח</div>
                     </div>
 
                     <div class="advantage-item">
                         <div class="advantage-icon"><i class="fas fa-seedling"></i></div>
-                        <div class="advantage-title">ניסיון מוכח בפרויקטים יוקרתיים</div>
-                        <div class="advantage-description">שנות ניסיון בגינות יוקרה, עם תוצאות שמדברות בעד עצמן</div>
+                        <div class="advantage-title">ניסיון בגינות יוקרה</div>
+                        <div class="advantage-description">שנות ניסיון בפרויקטים יוקרתיים, עם דגש על אסתטיקה ועמידות</div>
                     </div>
 
                     <div class="advantage-item">
-                        <div class="advantage-icon"><i class="fas fa-gears"></i></div>
-                        <div class="advantage-title">שילוב טכנולוגיה מתקדמת</div>
-                        <div class="advantage-description">מערכות השקיה חכמות, תאורה דקורטיבית וטכנולוגיה משתלבת</div>
+                        <div class="advantage-icon"><i class="fas fa-tools"></i></div>
+                        <div class="advantage-title">טכנולוגיה וחומרים מתקדמים</div>
+                        <div class="advantage-description">שילוב של מערכות השקיה חכמות, תאורה איכותית וצוות ביצוע מקצועי</div>
                     </div>
 
                 </div>
