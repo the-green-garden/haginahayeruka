@@ -838,14 +838,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="important-notice">
-                    <h3>הבהרה חשובה</h3>
-                    <p>הצעה זו ניתנת לצורך התרשמות ראשונית ואינה מהווה התחייבות סופית.  
-                    המחירים המוצגים מתייחסים לעבודות הביצוע בלבד, ואינם כוללים תשתיות, חומרים, מסים או הוצאות נלוות – אלא אם צוין אחרת.</p>
-                    <p>כל שינוי מהותי בהיקף העבודה או בדרישות הלקוח עשוי לדרוש עדכון של ההצעה בהתאם.</p>
-                    <p>נשמח לענות על כל שאלה ולהתאים את ההצעה לצרכים המדויקים בשטח.</p>
-                </div>
 
                 <div class="pricing-section">
                     <div class="section-title">שלבי העבודה ועלויות (עבור 240 מ"ר)</div>
@@ -900,6 +892,14 @@
                     </table>
                 </div>
                 
+                <div class="important-notice">
+                    <h3>הבהרה חשובה</h3>
+                    <p>הצעה זו ניתנת לצורך התרשמות ראשונית ואינה מהווה התחייבות סופית.  
+                    המחירים המוצגים מתייחסים לעבודות הביצוע בלבד, ואינם כוללים תשתיות, חומרים, מסים או הוצאות נלוות – אלא אם צוין אחרת.</p>
+                    <p>כל שינוי מהותי בהיקף העבודה או בדרישות הלקוח עשוי לדרוש עדכון של ההצעה בהתאם.</p>
+                    <p>נשמח לענות על כל שאלה ולהתאים את ההצעה לצרכים המדויקים בשטח.</p>
+                </div>
+
                 <div class="payment-terms">
                     <h3>תנאי תשלום מוצעים</h3>
                     <div class="payment-list">
@@ -973,6 +973,27 @@
 
                     </div>
                 </div>
+                
+                <!-- כפתורי פעולה - אחרי כל המידע! -->
+                <div class="approval-section">
+                    <h3 class="approval-title">מה אומרים? בואו נתקדם!</h3>
+                    <p class="approval-description">
+                        אם ההצעה מתאימה לכם, נשמח להתחיל בתיאום. אם יש התאמות או שאלות - בואו נפגש ונדבר!
+                    </p>
+                    <div class="approval-buttons">
+                        <button class="approval-button primary" onclick="approveProposal()">
+                            <i class="fas fa-check-circle" style="margin-left: 8px;"></i>
+                            מעולה! אני מאשר/ת
+                        </button>
+                        <button class="approval-button secondary" onclick="requestMeeting()">
+                            <i class="fas fa-calendar-alt" style="margin-left: 8px;"></i>
+                            בואו נקבע פגישה
+                        </button>
+                    </div>
+                    <p style="color: #28a745; font-weight: 600; margin-top: 20px; font-size: 1.05em;">
+                        💬 בוואטסאפ שייפתח, אנא הוסיפו את שמכם המלא
+                    </p>
+                </div>
             </div>
             
             <div class="footer">
@@ -996,30 +1017,6 @@
         </div>
     </div>
 
-    <!-- קטע אישור ההצעה - מחוץ למסמך, בסוף הדף -->
-    <div class="approval-section" id="approvalSection" style="display: none;">
-        <h3 class="approval-title">אישור ההצעה</h3>
-        <p class="approval-description">
-            לאישור ההצעה ולהתחלת תהליך התיאום, אנא בחרו באחת מהאפשרויות הבאות:
-        </p>
-        <p style="color: #28a745; font-weight: 600; margin-bottom: 25px; font-size: 1.05em;">
-            💬 בוואטסאפ שייפתח, אנא הוסיפו את שמכם המלא לפני השליחה
-        </p>
-        <div class="approval-buttons">
-            <button class="approval-button primary" onclick="approveProposal()">
-                <i class="fas fa-check-circle" style="margin-left: 8px;"></i>
-                אני מאשר/ת את ההצעה
-            </button>
-            <button class="approval-button secondary" onclick="requestMeeting()">
-                <i class="fas fa-calendar-alt" style="margin-left: 8px;"></i>
-                בקשה לפגישה
-            </button>
-        </div>
-        <p class="approval-note">
-            האישור מהווה הסכמה עקרונית לתנאי ההצעה ולא התחייבות סופית
-        </p>
-    </div>
-
     <script>
         // בדיקת סיסמה
         function checkPassword() {
@@ -1029,7 +1026,6 @@
             if (password === correctPassword) {
                 document.getElementById('passwordOverlay').style.display = 'none';
                 document.getElementById('documentContent').style.display = 'block';
-                document.getElementById('approvalSection').style.display = 'block';
                 document.getElementById('passwordError').style.display = 'none';
             } else {
                 document.getElementById('passwordError').style.display = 'block';
