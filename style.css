@@ -715,99 +715,77 @@ body.homepage {
   margin-bottom: 16px;
 }
 
-/* גלריה - תמונות חכמות */
+/* גלריה - תמונות חכמות בריבועים */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
   margin-top: 40px;
-  padding: 0 10px;
+  padding: 40px 10px;
+  max-width: 100%;
 }
 
-.gallery-image {
+.gallery img {
   width: 100%;
-  max-width: 500px;
-  height: auto;
-  aspect-ratio: 3/4;
-  object-fit: contain;
+  aspect-ratio: 1/1;
+  object-fit: cover;
   object-position: center;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
-  cursor: zoom-in;
-  margin: 0 auto;
+  cursor: pointer;
   display: block;
-  border: 2px solid rgba(107, 144, 128, 0.2);
-  background: var(--white);
-  padding: 8px;
+  border: none;
+  background: var(--light-gray);
 }
 
-.gallery-image:hover {
-  transform: translateY(-8px) scale(1.05);
+.gallery img:hover {
+  transform: translateY(-12px) scale(1.05);
   box-shadow: var(--shadow-lg);
-  border-color: var(--accent-green);
-  z-index: 10;
-  position: relative;
 }
 
-/* Modal לזום תמונות */
-.gallery-image:active {
-  transform: scale(1.8);
-  z-index: 100;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.8);
-  max-width: 90vw;
-  max-height: 90vh;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  cursor: zoom-out;
+.gallery img:active {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-xl);
+  z-index: 50;
+}
+
+/* תמונות במכשירים גדולים */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    padding: 30px 10px;
+  }
+}
+
+/* תמונות במכשירים בינוניים */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 10px;
+  }
+  
+  .gallery img:hover {
+    transform: translateY(-8px) scale(1.03);
+  }
 }
 
 /* תמונות במכשירים קטנים */
-@media (max-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 0 5px;
-  }
-  
-  .gallery-image {
-    max-width: 450px;
-    aspect-ratio: 3/4;
-    padding: 6px;
-  }
-  
-  .gallery-image:hover {
-    transform: translateY(-5px) scale(1.03);
-  }
-  
-  .gallery-image:active {
-    transform: translate(-50%, -50%) scale(1.5);
-  }
-}
-
 @media (max-width: 480px) {
   .gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    padding: 0;
+    padding: 16px 8px;
   }
   
-  .gallery-image {
-    max-width: 100%;
-    aspect-ratio: 3/4;
-    padding: 4px;
+  .gallery img {
+    border-radius: var(--border-radius);
   }
   
-  .gallery-image:hover {
-    transform: translateY(-3px) scale(1.02);
-  }
-  
-  .gallery-image:active {
-    transform: translate(-50%, -50%) scale(1.3);
-    max-width: 95vw;
-    max-height: 95vh;
+  .gallery img:hover {
+    transform: translateY(-4px) scale(1.02);
   }
 }
 
