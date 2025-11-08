@@ -30,6 +30,56 @@
       overflow-x: hidden;
     }
 
+    /* תפריט עליון */
+    nav {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1a4d3a;
+      font-weight: 600;
+      font-size: 0.95em;
+      padding: 6px 10px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      background: rgba(26,77,58,0.08);
+      color: #0f2f23;
+    }
+
+    /* קישור של העמוד הנוכחי – דף מבצע */
+    nav a[href="/landing.html"],
+    nav a[href="landing.html"] {
+      background: #1a4d3a;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    }
+
     /* באנר עליון מקצועי */
     .top-banner {
       background: linear-gradient(-45deg, #1a4d3a, #2c5f2d, #1a4d3a, #2c5f2d);
@@ -835,6 +885,18 @@
   <div class="top-banner">
     🍂 מבצע סתיו נובמבר 2025! הכנת הגינה לעונת הגשמים • שיפוצים דחופים • הנחות מיוחדות עכשיו
   </div>
+
+  <!-- תפריט עליון -->
+  <nav>
+    <ul>
+      <li><a href="/">דף הבית</a></li>
+      <li><a href="/services.html">שירותים</a></li>
+      <li><a href="/gallery.html">גלריה</a></li>
+      <li><a href="/landing.html">מבצע החודש</a></li>
+      <li><a href="/contact.html">צור קשר</a></li>
+      <li><a href="/pricing.html">מחירון</a></li>
+    </ul>
+  </nav>
 
   <header>
     <div class="header-content">
