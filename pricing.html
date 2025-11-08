@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מחירון שירותים - הגינה הירוקה והמקצועיים</title>
+  
+  <!-- Meta Tags לתצוגה מקדימה -->
+  <meta property="og:title" content="מחירון שירותים - הגינה הירוקה והמקצועיים">
+  <meta property="og:description" content="טווחי מחירים משוערים לשירותי גינון, הדברה, אינסטלציה, חשמל ועוד. כל הצעה מותאמת לאחר ביקור בשטח.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg">
+  <meta property="og:url" content="https://gina.i.ng/pricing.html">
+  <meta property="og:type" content="website">
+  <meta name="description" content="מחירון שירותי הגינה הירוקה והמקצועיים - טווחי מחירים ריאליים וברורים">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Heebo', sans-serif;
+      background: linear-gradient(135deg, #f7f5f1, #e8e4d8);
+      color: #2c3e50;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* באנר עליון מקצועי */
+    .top-banner {
+      background: linear-gradient(-45deg, #1a4d3a, #2c5f2d, #1a4d3a, #2c5f2d);
+      background-size: 400% 400%;
+      animation: gradientShift 4s ease infinite;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: 600;
+      font-size: 1.1em;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Header עם ירוק עמוק */
+    header {
+      background: linear-gradient(135deg, #1a4d3a, #2c5f2d, #4a7c59);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
+      background-size: 300% 300%;
+      animation: subtleGradientMove 12s ease infinite;
+    }
+
+    @keyframes subtleGradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .main-headline {
+      font-size: 3em;
+      margin-bottom: 15px;
+      font-weight: 800;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      animation: slideInDown 1s ease-out;
+      line-height: 1.1;
+    }
+
+    @keyframes slideInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sub-headline {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      font-weight: 500;
+      opacity: 0.95;
+      animation: slideInUp 1s ease-out 0.3s backwards;
+    }
+
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .value-proposition {
+      background: rgba(255,255,255,0.15);
+      padding: 20px 30px;
+      border-radius: 15px;
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: 500;
+      font-size: 1.1em;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      border: 2px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0.8; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      margin-top: 60px;
+      color: #1a4d3a;
+      text-align: center;
+      font-weight: 700;
+      position: relative;
+      animation: slideInUp 0.8s ease-out;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #1a4d3a, #4a7c59);
+      border-radius: 2px;
+      animation: lineExpand 2s ease-out 0.5s forwards;
+    }
+
+    @keyframes lineExpand {
+      from { width: 0; }
+      to { width: 80px; }
+    }
+
+    /* הבהרה משפטית */
+    .disclaimer-section {
+      background: linear-gradient(135deg, #f9f9f9, #ffffff);
+      border-radius: 20px;
+      padding: 40px 35px;
+      margin: 40px 0;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      border-right: 6px solid #d4af37;
+      animation: slideInUp 0.8s ease-out;
+    }
+
+    .disclaimer-section h3 {
+      color: #1a4d3a;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .disclaimer-section p {
+      color: #555;
+      line-height: 1.8;
+      font-size: 1.05em;
+    }
+
+    /* כרטיסיות שירותים */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+      margin-bottom: 50px;
+    }
+
+    .service-card {
+      background: linear-gradient(135deg, #f9f9f9, #ffffff);
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      padding: 35px;
+      text-align: right;
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+      border: 3px solid transparent;
+      opacity: 0;
+      animation: slideInUp 0.8s ease-out forwards;
+    }
+
+    .service-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-card:nth-child(2) { animation-delay: 0.2s; }
+    .service-card:nth-child(3) { animation-delay: 0.3s; }
+    .service-card:nth-child(4) { animation-delay: 0.4s; }
+    .service-card:nth-child(5) { animation-delay: 0.5s; }
+    .service-card:nth-child(6) { animation-delay: 0.6s; }
+    .service-card:nth-child(7) { animation-delay: 0.7s; }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(180deg, #1a4d3a, #d4af37, #1a4d3a);
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover::before {
+      transform: scaleY(1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 30px 60px rgba(26, 77, 58, 0.2);
+      border-color: #d4af37;
+      background: linear-gradient(135deg, #ffffff, #f8f8f8);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #1a4d3a, #d4af37);
+      color: white;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 25px rgba(26, 77, 58, 0.3);
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.15) rotate(5deg);
+      box-shadow: 0 15px 35px rgba(26, 77, 58, 0.5);
+    }
+
+    .service-card h3 {
+      margin-bottom: 15px;
+      font-size: 1.4em;
+      color: #1a4d3a;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      color: #666;
+      line-height: 1.7;
+      font-size: 0.95em;
+      margin-bottom: 25px;
+    }
+
+    .price-section {
+      background: rgba(26, 77, 58, 0.05);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 15px;
+      border-right: 4px solid #d4af37;
+    }
+
+    .price-label {
+      color: #1a4d3a;
+      font-size: 0.9em;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      opacity: 0.8;
+    }
+
+    .price-range {
+      color: #1a4d3a;
+      font-size: 1.3em;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .price-note {
+      color: #888;
+      font-size: 0.85em;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .flexible-note {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(26, 77, 58, 0.1));
+      color: #555;
+      font-size: 0.9em;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: right;
+      line-height: 1.6;
+      margin-top: 15px;
+      border-right: 3px solid #d4af37;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      margin-top: 80px;
+      text-align: center;
+      background: linear-gradient(135deg, #1a4d3a, #2c5f2d, #d4af37);
+      color: white;
+      padding: 60px 40px;
+      border-radius: 25px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(26, 77, 58, 0.3);
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.1), transparent);
+      animation: rotate 30s linear infinite;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-weight: 800;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .cta-section p {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .cta-btn {
+      background: white;
+      color: #1a4d3a;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: 700;
+      transition: all 0.4s ease;
+      display: inline-block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+      border: 3px solid transparent;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    .cta-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(26, 77, 58, 0.15), transparent);
+      transition: left 0.8s ease;
+    }
+
+    .cta-btn:hover::before {
+      left: 100%;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-6px) scale(1.04);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.3);
+      background: #f8f8f8;
+      border-color: #d4af37;
+    }
+
+    .whatsapp-btn {
+      background: linear-gradient(135deg, #25d366, #128c7e) !important;
+      color: white !important;
+    }
+
+    .whatsapp-btn:hover {
+      background: linear-gradient(135deg, #20b358, #0f7a6b) !important;
+      color: white !important;
+      border-color: transparent !important;
+    }
+
+    /* Footer disclaimer */
+    .footer-disclaimer {
+      background: linear-gradient(135deg, #f0ede3, #e8e4d8);
+      border-radius: 15px;
+      padding: 30px;
+      margin-top: 50px;
+      text-align: center;
+      color: #666;
+      font-size: 0.95em;
+      line-height: 1.7;
+      border-top: 3px solid #d4af37;
+    }
+
+    .footer-disclaimer p {
+      margin-bottom: 15px;
+    }
+
+    .footer-disclaimer strong {
+      color: #1a4d3a;
+      font-weight: 700;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 40px 15px;
+      }
+
+      .main-headline {
+        font-size: 2.2em;
+      }
+
+      .sub-headline {
+        font-size: 1.2em;
+      }
+
+      .section-title {
+        font-size: 2em;
+        margin-top: 40px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .service-card {
+        padding: 30px;
+      }
+
+      .cta-section {
+        padding: 40px 25px;
+      }
+
+      .cta-section h2 {
+        font-size: 1.8em;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta-btn {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .disclaimer-section {
+        padding: 30px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-headline {
+        font-size: 1.8em;
+      }
+
+      .value-proposition {
+        font-size: 0.95em;
+        padding: 15px 20px;
+      }
+
+      .section-title {
+        font-size: 1.6em;
+      }
+
+      .service-card {
+        padding: 25px;
+      }
+
+      .service-card h3 {
+        font-size: 1.2em;
+      }
+
+      .cta-section h2 {
+        font-size: 1.5em;
+      }
+
+      .cta-section p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- באנר עליון -->
+  <div class="top-banner">
+    📋 מחירון שירותים 2025 • טווחי מחירים משוערים בלבד • המחירים אינם הצעת מחיר מחייבת
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <h1 class="main-headline">מחירון שירותים</h1>
+      <p class="sub-headline">הגינה הירוקה והמקצועיים</p>
+      <div class="value-proposition">
+        טווחי מחירים ריאליים • עבודה מקצועית • בלי הפתעות
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- הבהרה משפטית -->
+    <div class="disclaimer-section">
+      <h3>❓ איך אנחנו קובעים מחירים?</h3>
+      <p>
+        המחירים בעמוד זה הם טווחי מחירים משוערים לעבודות סטנדרטיות, ומתבססים על מחירוני שוק עדכניים וניסיון של מעל 15 שנה בשטח. כל עבודה נבדקת באופן אישי – לפי גודל השטח, מורכבות, חומרים ונגישות. <strong>⚠️ המחירים המוצגים כאן אינם הצעת מחיר סופית ואינם מחייבים.</strong> הצעת מחיר סופית ניתנת רק אחרי שיחה קצרה + תמונה או סרטון מהשטח. המטרה שלנו: לשלב בין עבודה מקצועית, חומרים איכותיים ומחיר הוגן – בלי הפתעות.
+      </p>
+    </div>
+
+    <!-- חלק א: הגינה הירוקה -->
+    <h2 class="section-title">💚 הגינה הירוקה</h2>
+    <p style="text-align: center; color: #666; font-size: 1.1em; margin-bottom: 40px;">שירותי גינון, הדברה, השקיה ועיצוב – לבית פרטי, בניינים משותפים וחצרות.</p>
+
+    <div class="services-grid">
+      <!-- שירות 1 -->
+      <div class="service-card">
+        <div class="service-icon">🌿</div>
+        <h3>תחזוקת גינה חודשית</h3>
+        <p>תחזוקה שוטפת לשמירה על גינה ירוקה ומסודרת: גיזום, ניקיון, טיפול בעשבייה, ריסוס מניעה בסיסי וסידור כללי.</p>
+        <div class="price-section">
+          <div class="price-label">טווח מחירים משוער</div>
+          <div class="price-range">650₪ - 1,200₪ / חודש</div>
+          <div class="price-note">עד 100 מ"ר: החל מ-650₪ | 100-200 מ"ר: 850-1,200₪</div>
+        </div>
+        <div class="flexible-note">⚡ המחיר הסופי נקבע לפי גודל הגינה, מצבה ותדירות הביקורים.<br>⚠️ המחיר משוער – מחיר סופי ייקבע בהצעה אישית.</div>
+      </div>
+
+      <!-- שירות 2 -->
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>ביקור חד-פעמי</h3>
+        <p>ניקיון עומק והכנה לעונה: ניקיון עלים, סידור, גיזום כללי וטיפול בעשבייה – הכנה לחורף או לקיץ.</p>
+        <div class="price-section">
+          <div class="price-label">טווח מחירים משוער</div>
+          <div class="price-range">700₪ - 900₪</div>
+          <div class="price-note">לפי גודל השטח ורמת ההזנחה</div>
+        </div>
+        <div class="flexible-note">⚡ מתומחר לפי גודל השטח ורמת ההזנחה.<br>⚠️ המחיר משוער – מחיר סופי ייקבע בהצעה אישית.</div>
+      </div>
+
+      <!-- שירות 3 -->
+      <div class="service-card">
+        <div class="service-icon">✂️</div>
+        <h3>גיזום שיחים ועצים</h3>
+        <p>גיזום מקצועי לשיחים, עצים נמוכים וגבוהים, ניקוי ענפים יבשים ושיפור מראה הגינה.</p>
+        <div class="price-section">
+          <div class="price-label">טווח מחירים משוער</div>
+          <div class="price-range">450₪ + לביקור</div>
+          <div class="price-note">החל מ-450₪ לביקור</div>
+        </div>
+        <div class="flexible-note">⚡ פרויקטים מורכבים ומצרכי גובה/סיכון – יתומחרו לאחר ביקור בשטח.<br>⚠️ המחיר משוער – מחיר סופי ייקבע בהצעה אישית.</div>
+      </div>
+
+      <!-- שירות 4 -->
+      <div class="service-card">
+        <div class="service-icon">🐛</div>
+        <h3>הדברה</h3>
+        <p>הדברה נגד חרקים ומזיקים בגינה ובבית, עם חומרים מאושרים ובטוחים לילדים ובעלי חיים (בהתאם להנחיות).</p>
+        <div class="price-section">
+          <div class="price-label">טווח מחירים משוער</div>
+          <div class="price-range">350₪ - 700₪</div>
+          <div class="price-note">דירה: החל מ-350₪ | בית קרקע עם גינה: 450-700₪ | טיפול משולב בית+גינה: 650₪ ומעלה</div>
+        </div>
+        <div class="flexible-note">⚡ כולל חומרים איכותיים, אפשרות לטיפול מניעתי.<br>⚠️ המחיר משוער – מחיר סופי ייקבע בהצעה אישית.</div>
+      </div>
+
+      <!-- שירות 5 -->
+      <div class="service-card">
+        <div class="service-icon">💧</div>
+        <h3>מערכת השקיה</h3>
+        <p>בדיקה של מערכת ההשקיה, ניקוי וטיפול בטפטפות, איתור נזילות, תיקוני קווים וכיוון לזמני העונה.</p>
+        <div class="price-section">
+          <div class="price-label">טווח מחירים משוער</div>
+          <div class="price-range">400₪ - 1,200₪</div>
+          <div class="price-note">לפי מספר קווים, מצב המערכת ומורכבות</div>
+        </div>
+        <div class="flexible-note">⚡ המחיר תלוי במספר הקווים, מצב המערכת ונגישות.<br>⚠️ המחיר משוער – מחיר סופי ייקבע בהצעה אישית.</div>
+      </div>
+
+      <!-- שירות 6 -->
+      <div class="service-card">
+        <div class="service-icon">🌸</div>
+        <h3>שתילות</h3>
+        <p>שתילה מקצועית של עצים, שיחים, פרחים וצמחי נוי – בהתאמה לתנאי השטח והעונה.</p>
+        <div class="price-section">
+          <div class="price-label">טווח מחירים משוער</div>
+          <div class="price-range">עבודה: החל מ-200₪ ליחידה</div>
+          <div class="price-note">לא כולל עלות הצמח</div>
+        </div>
+        <div class="flexible-note">⚡ המחיר מתייחס לעבודה בלבד, לא כולל עלות הצמח.<br>⚡ מחיר סופי לפי סוג וגודל הצמח וכמות השתילה.<br>⚠️ המחיר משוער – מחיר סופי ייקבע בהצעה אישית.</div>
+      </div>
+
+      <!-- שירות 7 -->
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>עיצוב גינה וייעוץ</h3>
+        <p>תכנון ועיצוב גינה בהתאמה אישית – החל מסידור מחדש של גינה קיימת ועד תכנון גינה מהיסוד.</p>
+        <div class="price-section">
+          <div class="price-label">טווח מחירים משוער</div>
+          <div class="price-range">ייעוץ בשטח: החל מ-500₪</div>
+          <div class="price-note">תלוי בהיקף הפרויקט</div>
+        </div>
+        <div class="flexible-note">⚡ בפרויקטים גדולים – המחיר יותאם לאחר שיחת תיאום וביקור בשטח.<br>⚠️ המחיר משוער – מחיר סופי ייקבע בהצעה אישית.</div>
+      </div>
+    </div>
+
+    <div style="text-align: center; background: rgba(212, 175, 55, 0.1); border-right: 4px solid #d4af37; padding: 15px; border-radius: 10px; margin: 30px 0; color: #333;">
+      <p style="font-size: 0.95em; margin: 0;">⚠️ המחירים משוערים בלבד – המחיר הסופי ייקבע לאחר הצעת מחיר אישית בהתאם לשטח ולעבודה.</p>
+    </div>
+
+    <!-- חלק ב: המקצועיים -->
+    <h2 class="section-title">🛠️ המקצועיים</h2>
+    <p style="text-align: center; color: #666; font-size: 1.1em; margin-bottom: 40px;">שירותי אינסטלציה, חשמל, איטום וחיזוק חצרות לקראת חורף וקיץ.</p>
+
+    <div class="services-grid">
+      <!-- שירות 1 -->
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>אינסטלציה</h3>
+        <p>פתיחת סתימות, תיקון נזילות, החלפת כלים סניטריים (ברזים, אסלה, כיור) וטיפול כללי בצנרת.</p>
+        <div class="price-section">
+          <div class="price-label">טווח מחירים משוער</div>
+          <div class="price-range">350₪ - 850₪</div>
+          <div class="price-note">סתימה פשוטה: 350₪ | נזילה/תיקון מורכב: 450-850₪ | החלפת כלים: 350-600₪</div>
+        </div>
+        <div class="flexible-note">⚡ מחיר סופי לאחר אבחון בשטח.<br>⚠️ המחיר משוער – מחיר סופי ייקבע בהצעה אישית.</div>
+      </div>
+
+      <!-- שירות 2 -->
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>חשמל</h3>
+        <p>ביקור חשמלאי מוסמך לתיקורים, הוספת נקודות חשמל, התקנת תאורה פנימית וחיצונית.</p>
+        <div class="price-section">
+          <div class="price-label">טווח מחירים משוער</div>
+          <div class="price-range">300₪ - 900₪</div>
+          <div class="price-note">ביקור + תיקור בסיסי: 300-450₪ | נקודת חשמל חדשה: 550-900₪ | התקנת תאורה: 350₪ ומעלה</div>
+        </div>
+        <div class="flexible-note">⚡ לא כולל עלות גופי התאורה/חומרים.<br>⚠️ המחיר משוער – מחיר סופי ייקבע בהצעה אישית.</div>
+      </div>
+
+      <!-- שירות 3 -->
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>איטום</h3>
+        <p>איטום נקודתי או שטח גדול בגג, מרפסת או קירות חיצוניים – למניעת חדירת מים ונזילות.</p>
+        <div class="price-section">
+          <div class="price-label">טווח מחירים משוער</div>
+          <div class="price-range">החל מ-900₪ עד 140₪/מ"ר</div>
+          <div class="price-note">איטום נקודתי: החל מ-900₪ | שטח גדול: 70-140₪ למ"ר</div>
+        </div>
+        <div class="flexible-note">⚡ תלוי במצב הקיים, סוג החומר והנגישות לשטח.<br>⚠️ המחיר משוער – מחיר סופי ייקבע בהצעה אישית.</div>
+      </div>
+
+      <!-- שירות 4 -->
+      <div class="service-card">
+        <div class="service-icon">🔐</div>
+        <h3>חיזוק גדרות וחצרות</h3>
+        <p>חיזוק גדרות, פרגולות, סככות ומבנים קלים לקראת רוחות חזקות וגשמים.</p>
+        <div class="price-section">
+          <div class="price-label">טווח מחירים משוער</div>
+          <div class="price-range">החל מ-1,200₪</div>
+          <div class="price-note">מחיר בסיסי לביקור בשטח</div>
+        </div>
+        <div class="flexible-note">⚡ מחיר בסיסי לביקור בשטח, אבחון ותכנון עבודה.<br>⚡ הצעת מחיר סופית תינתן לאחר מדידות ובחירת חומרים.<br>⚠️ המחיר משוער – מחיר סופי ייקבע בהצעה אישית.</div>
+      </div>
+    </div>
+
+    <div style="text-align: center; background: rgba(212, 175, 55, 0.1); border-right: 4px solid #d4af37; padding: 15px; border-radius: 10px; margin: 30px 0; color: #333;">
+      <p style="font-size: 0.95em; margin: 0;">⚠️ המחירים משוערים בלבד – המחיר הסופי ייקבע לאחר הצעת מחיר אישית בהתאם לשטח ולעבודה.</p>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <div class="cta-content">
+        <h2>🎯 רוצים הצעת מחיר מדויקת?</h2>
+        <p>שלחו לנו תמונה או סרטון של המקום + תיאור קצר של מה שדורש טיפול</p>
+        <p style="font-size: 1em; margin-top: 15px; opacity: 0.9;">נחזור אליכם עם הצעת מחיר מותאמת ומדויקת תוך 24 שעות</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/972584559727?text=שלום, ראיתי את מחירון השירותים ורציתי לשלוח תמונות" target="_blank" class="cta-btn whatsapp-btn">📱 וואטסאפ 058-455-9727</a>
+          <a href="https://wa.me/972546698931?text=שלום, ראיתי את מחירון השירותים ורציתי לשלוח תמונות" target="_blank" class="cta-btn whatsapp-btn">📱 וואטסאפ 054-669-8931</a>
+          <a href="tel:0584559727" class="cta-btn">☎️ התקשרות ישירה</a>
+          <a href="mailto:info@gina.i.ng" class="cta-btn">✉️ אימייל</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer disclaimer -->
+    <div class="footer-disclaimer">
+      <p><strong>📋 עדכון אחרון:</strong> נובמבר 2025</p>
+      <p>המחירים המוצגים בדף זה מתעדכנים מעת לעת בהתאם למחירי השוק, חומרי הגלם והעונה. לקבלת הצעת מחיר מדויקת ובלא הפתעות – שלחו לנו תמונה ותקבלו הערכה אישית.</p>
+      <p style="font-size: 0.9em; opacity: 0.8; margin-top: 20px;">© 2025 הגינה הירוקה והמקצועיים | 15 שנות ניסיון בשטח | עבודה מקצועית וחומרים איכותיים</p>
+    </div>
+  </div>
+
+  <script>
+    // Smooth scrolling
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
