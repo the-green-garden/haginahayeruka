@@ -3,9 +3,12 @@
 <head>
     <!-- FontAwesome Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>צור קשר - הגינה הירוקה</title>
+    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJDZ29X5CZ"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17054224877"></script>
     <script>
@@ -20,33 +23,8 @@
     <meta name="description" content="צור קשר עם הגינה הירוקה – שירותי גינון, תחזוקת גינות והדברה בדרום ובמרכז.">
     <meta name="keywords" content="גינון, שירותי גינון, תחזוקת גינות, הדברה">
 
-    <!-- CSS -->
+    <!-- ✅ CSS - קובץ אחד מרכזי בלבד -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="skel.css">
-
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Responsive tweaks -->
-    <style>
-      @media (max-width: 768px) {
-        input, textarea, button {
-          width: 100% !important;
-        }
-        .gallery {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .gallery-image {
-          width: 90% !important;
-          margin-bottom: 10px;
-        }
-        #logo img {
-          max-width: 160px;
-        }
-      }
-    </style>
 </head>
 <body>
 
@@ -76,41 +54,79 @@
 <!-- תוכן הדף -->
 <div class="wrapper style2">
     <section class="container">
-        <div class="text-box">
-            <h2>צור קשר עם הגינה הירוקה</h2>
-            <p>מחפשים גנן מקצועי? זקוקים לשיקום, תחזוקה שוטפת או הדברה בטוחה בגינה? אנחנו כאן בשבילכם – עם שירות אישי ומותאם בדיוק לצרכים שלכם.</p>
-            <p><strong>טלפון:</strong> <a href="tel:0546698931">054-6698931</a> | <a href="tel:0584559727">058-4559727</a></p>
-            <p><strong>אימייל:</strong> <a href="mailto:info@gina.i.ng">info@gina.i.ng</a></p>
+        <div class="intro-text">
+            <h2>צור קשר עם הגינה הירוקה 💬</h2>
+            <p>
+                מחפשים גנן מקצועי? זקוקים לשיקום, תחזוקה שוטפת או הדברה בטוחה בגינה? אנחנו כאן בשבילכם – עם שירות אישי ומותאם בדיוק לצרכים שלכם.
+            </p>
+        </div>
+
+        <!-- דרכי יצירת קשר -->
+        <div class="text-box-row" style="margin-top: 60px;">
+            <div class="text-box">
+                <h3>📞 התקשרו ישירות</h3>
+                <p>
+                    <strong>054-669-8931</strong>
+                    <br>
+                    <strong>058-455-9727</strong>
+                    <br><br>
+                    זמנים: 08:00-18:00 ימים א'-ה'
+                </p>
+            </div>
+            <div class="text-box">
+                <h3>💬 וואטסאפ</h3>
+                <p>
+                    העדיף להודעה מהירה?
+                    <br>
+                    <a href="https://wa.me/972546698931" target="_blank" class="button" style="margin-top: 10px;">וואטסאפ 054-669-8931</a>
+                </p>
+            </div>
+            <div class="text-box">
+                <h3>📧 אימייל</h3>
+                <p>
+                    <strong>info@gina.i.ng</strong>
+                    <br><br>
+                    שלחו לנו תיאור של הפרויקט
+                </p>
+            </div>
         </div>
 
         <!-- טופס יצירת קשר -->
-        <form action="https://formsubmit.co/info@gina.i.ng" method="POST">
+        <form action="https://formsubmit.co/info@gina.i.ng" method="POST" style="margin-top: 80px;">
             <input type="hidden" name="_next" value="https://gina.i.ng/thank-you.html">
-            <input type="text" name="name" placeholder="שם מלא" required style="margin: 5px; padding: 10px; width: 80%;">
-            <input type="tel" name="phone" placeholder="טלפון לחזרה" required style="margin: 5px; padding: 10px; width: 80%;">
-            <input type="email" name="email" placeholder="האימייל שלך (לא חובה)" style="margin: 5px; padding: 10px; width: 80%;">
-            <textarea name="message" placeholder="פרטים נוספים (לא חובה)" rows="4" style="margin: 5px; padding: 10px; width: 80%;"></textarea>
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="פנייה חדשה מהאתר הגינה הירוקה">
             <input type="hidden" name="_template" value="box">
             <input type="hidden" name="_autoresponse" value="תודה על הפנייה! נחזור אליך בהקדם.">
-            <br>
-            <button type="submit" class="button">שלח/י פרטים</button>
+            
+            <h3 style="text-align: center; margin-bottom: 40px; color: var(--text-primary);">מלאו את הטופס ואנחנו נחזור אליכם בהקדם</h3>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <input type="text" name="name" placeholder="שם מלא *" required>
+                <input type="tel" name="phone" placeholder="טלפון לחזרה *" required>
+                <input type="email" name="email" placeholder="אימייל (לא חובה)">
+                <textarea name="message" placeholder="ספרו לנו על הפרויקט (לא חובה)" rows="5"></textarea>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <button type="submit" class="button">
+                        <i class="fas fa-paper-plane"></i> שלחו את הפרטים
+                    </button>
+                </div>
+            </div>
         </form>
 
-        <p style="margin-top: 1em;">או אם נוח לך יותר –</p>
-        <a href="https://wa.me/972584559727" class="button">שלחו לנו הודעה בוואטסאפ</a>
-    </section>
-</div>
-
-<!-- המלצות לקוחות -->
-<div class="wrapper style3">
-    <section class="container">
-        <h2>מה הלקוחות שלנו מספרים?</h2>
-        <div class="gallery">
-            <img src="review_noa.jpg" alt="המלצה מנועה" class="gallery-image" style="width: 30%;">
-            <img src="review_tehila.jpg" alt="המלצה מתהילה" class="gallery-image" style="width: 30%;">
-            <img src="review_or.jpg" alt="המלצה מאור" class="gallery-image" style="width: 30%;">
+        <!-- CTA Section -->
+        <div class="cta-section" style="margin-top: 80px;">
+            <div class="cta-content">
+                <h2>או בואו לדבר אתנו עכשיו! 🌱</h2>
+                <p>לא בטוח איפה להתחיל? נוכל לעזור לכם עם הצעה ראשונית בחינם.</p>
+                <a href="https://wa.me/972546698931" target="_blank" class="button button-white" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> דברו אתנו בוואטסאפ
+                </a>
+                <a href="tel:0546698931" class="button button-white">
+                    <i class="fas fa-phone-alt"></i> התקשרו עכשיו
+                </a>
+            </div>
         </div>
     </section>
 </div>
@@ -119,12 +135,29 @@
 <div id="footer">
     <section class="container">
         <div class="text-box">
-            <h2>עקבו אחרינו ברשתות החברתיות</h2>
-            <p>נשמח לראות אתכם גם בפייסבוק או בוואטסאפ 👇</p>
+            <h2>צרו קשר 💬</h2>
+            <p>נשמח לעזור לך להפוך את החצר למקום ירוק ומזמין 🌿</p>
             <ul class="icons">
-                <li><a href="https://www.facebook.com/profile.php?id=61561220525391" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://wa.me/972584559727" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                <li><a href="mailto:info@gina.i.ng"><i class="fas fa-envelope"></i></a></li>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=61561220525391" target="_blank" title="Facebook" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/972546698931" target="_blank" title="WhatsApp" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:0546698931" title="התקשר אלינו">
+                        <i class="fas fa-phone-alt"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:info@gina.i.ng" title="שלח מייל">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </section>
@@ -132,6 +165,3 @@
 
 </body>
 </html>
-
-
-
