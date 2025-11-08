@@ -389,6 +389,20 @@ section > h2::after {
   text-decoration: underline;
 }
 
+#footer .text-box {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--white);
+}
+
+#footer .text-box h2 {
+  color: var(--gold);
+}
+
+#footer .text-box p {
+  color: rgba(255,255,255,0.95);
+}
+
 /* ===== SOCIAL ICONS ===== */
 .icons {
   list-style: none;
