@@ -2,7 +2,6 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="utf-8">
-    <!-- חשוב! meta tag לתצוגה במובייל -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
@@ -27,121 +26,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <!-- CSS הראשי -->
+    <!-- ✅ CSS - קובץ אחד מרכזי בלבד -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- CSS נוסף לגלריה -->
-    <style>
-        /* סגנונות לגלריה */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .gallery-grid img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .gallery-grid img:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 30px rgba(74, 124, 93, 0.3);
-        }
-        
-        /* כפתורי יצירת קשר */
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 40px 20px;
-            flex-wrap: wrap;
-        }
-        
-        .contact-buttons .button {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 15px 30px;
-            font-size: 16px;
-        }
-        
-        /* רשימה */
-        ul.default {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        ul.default li {
-            padding: 10px 0;
-            padding-right: 25px;
-            position: relative;
-        }
-        
-        ul.default li:before {
-            content: "✓";
-            position: absolute;
-            right: 0;
-            color: #4a7c5d;
-            font-weight: bold;
-        }
-        
-        /* מחיקת padding-top מ-body */
-        body {
-            padding-top: 100px;
-        }
-        
-        /* Media Queries */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 80px;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 15px;
-                padding: 20px 15px;
-            }
-            
-            .gallery-grid img {
-                height: 180px;
-            }
-            
-            .contact-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .contact-buttons .button {
-                width: 90%;
-                max-width: 300px;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            body {
-                padding-top: 120px;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-grid img {
-                height: 200px;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -168,13 +54,14 @@
     </div>
 </div>
 
-<!-- תוכן הגלריה -->
+<!-- כותרת הגלריה -->
 <div class="wrapper style2">
     <div class="container">
-        <div class="text-box center-box">
-            <h2>גלריית העבודות שלנו</h2>
+        <div class="intro-text">
+            <h2>🖼️ גלריית העבודות שלנו</h2>
             <p>
-                בואו לראות איך אנחנו הופכים גינות מוזנחות לפינות ירוקות ומזמינות!<br>
+                בואו לראות איך אנחנו הופכים גינות מוזנחות לפינות ירוקות ומזמינות!
+                <br><br>
                 מבחר תמונות מפרויקטים אמיתיים – שיקום, עיצוב ותכנון נוף בהתאמה אישית.
             </p>
         </div>
@@ -182,33 +69,21 @@
 </div>
 
 <!-- גלריית תמונות -->
-<div class="gallery-grid">
-    <img src="https://the-green-garden.github.io/haginahayeruka/garden1.jpg" alt="גינה מעוצבת" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/garden2.jpg" alt="עבודת גינון" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/garden3.jpg" alt="שתילת צמחים" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/garden4.jpg" alt="שיקום גינה" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/garden5.jpg" alt="פרויקט גינון" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/garden6.jpg" alt="תכנון גינות" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/garden7.jpg" alt="גינה פרטית" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/garden8.png" alt="עיצוב חצר" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/garden9.jpg" alt="שיפוץ גינה" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/irrigation1.jpg" alt="מערכת השקיה" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/irrigation2.jpg" alt="השקיה חכמה" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/before_after1.jpg" alt="לפני ואחרי" loading="lazy">
-    <img src="https://the-green-garden.github.io/haginahayeruka/%D7%9C%D7%A4%D7%A0%D7%99%20(%D7%A4%D7%95%D7%A1%D7%98%20%D7%9C-Facebook).jpg" alt="לפני - פוסט לפייסבוק" loading="lazy">
-</div>
-
-<!-- כפתורים -->
-<div class="contact-buttons">
-    <a href="mailto:info@gina.i.ng" class="button">
-        <i class="fas fa-envelope"></i> שלחו מייל
-    </a>
-    <a href="https://wa.me/972546698931" class="button" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i> דברו איתנו בוואטסאפ
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61561220525391" class="button" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-facebook-f"></i> בקרו בפייסבוק
-    </a>
+<div class="container">
+    <div class="gallery">
+        <img src="https://the-green-garden.github.io/haginahayeruka/garden1.jpg" alt="גינה מעוצבת" loading="lazy">
+        <img src="https://the-green-garden.github.io/haginahayeruka/garden2.jpg" alt="עבודת גינון" loading="lazy">
+        <img src="https://the-green-garden.github.io/haginahayeruka/garden3.jpg" alt="שתילת צמחים" loading="lazy">
+        <img src="https://the-green-garden.github.io/haginahayeruka/garden4.jpg" alt="שיקום גינה" loading="lazy">
+        <img src="https://the-green-garden.github.io/haginahayeruka/garden5.jpg" alt="פרויקט גינון" loading="lazy">
+        <img src="https://the-green-garden.github.io/haginahayeruka/garden6.jpg" alt="תכנון גינות" loading="lazy">
+        <img src="https://the-green-garden.github.io/haginahayeruka/garden7.jpg" alt="גינה פרטית" loading="lazy">
+        <img src="https://the-green-garden.github.io/haginahayeruka/garden8.png" alt="עיצוב חצר" loading="lazy">
+        <img src="https://the-green-garden.github.io/haginahayeruka/garden9.jpg" alt="שיפוץ גינה" loading="lazy">
+        <img src="https://the-green-garden.github.io/haginahayeruka/irrigation1.jpg" alt="מערכת השקיה" loading="lazy">
+        <img src="https://the-green-garden.github.io/haginahayeruka/irrigation2.jpg" alt="השקיה חכמה" loading="lazy">
+        <img src="https://the-green-garden.github.io/haginahayeruka/before_after1.jpg" alt="לפני ואחרי" loading="lazy">
+    </div>
 </div>
 
 <!-- למה לבחור בנו -->
@@ -216,14 +91,44 @@
     <section class="container">
         <div class="text-box-row">
             <div class="text-box">
-                <h3>למה לבחור בנו?</h3>
-                <ul class="default">
-                    <li>מומחים בעיצוב ותכנון גינות</li>
-                    <li>שירות מקצועי ואדיב</li>
-                    <li>תחזוקה שוטפת בהתאמה אישית</li>
-                    <li>עבודה עם חומרים איכותיים</li>
-                    <li>מחירים הוגנים ושקופים</li>
-                </ul>
+                <h3>💚 למה לבחור בנו?</h3>
+                <p>
+                    ✓ מומחים בעיצוב ותכנון גינות
+                    <br>
+                    ✓ שירות מקצועי ואדיב
+                    <br>
+                    ✓ תחזוקה שוטפת בהתאמה אישית
+                    <br>
+                    ✓ עבודה עם חומרים איכותיים
+                    <br>
+                    ✓ מחירים הוגנים ושקופים
+                </p>
+            </div>
+            <div class="text-box">
+                <h3>📞 צרו קשר</h3>
+                <p>
+                    רוצים להיות החלק הבא בגלריה שלנו?
+                    <br><br>
+                    📧 <a href="mailto:info@gina.i.ng" style="color: var(--accent-green); text-decoration: none; font-weight: 600;">info@gina.i.ng</a>
+                    <br>
+                    💬 <a href="https://wa.me/972546698931" style="color: var(--accent-green); text-decoration: none; font-weight: 600;" target="_blank">וואטסאפ: 054-669-8931</a>
+                    <br>
+                    📱 <a href="tel:0546698931" style="color: var(--accent-green); text-decoration: none; font-weight: 600;">054-669-8931</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section" style="margin-top: 60px;">
+            <div class="cta-content">
+                <h2>מוכנים לגינה חדשה? 🌱</h2>
+                <p>בואו נהפוך את החלום שלכם למציאות</p>
+                <a href="https://wa.me/972546698931" target="_blank" class="button button-white" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> תחילת שיחה בוואטסאפ
+                </a>
+                <a href="no-sidebar.html" class="button button-white">
+                    <i class="fas fa-envelope"></i> טופס יצירת קשר
+                </a>
             </div>
         </div>
     </section>
@@ -233,8 +138,8 @@
 <div id="footer">
     <section class="container">
         <div class="text-box">
-            <h2>צור קשר</h2>
-            <p>לפרטים נוספים והצעת מחיר</p>
+            <h2>צרו קשר 💬</h2>
+            <p>נשמח לעזור לך להפוך את החצר למקום ירוק ומזמין 🌿</p>
             <ul class="icons">
                 <li>
                     <a href="https://www.facebook.com/profile.php?id=61561220525391" target="_blank" title="Facebook" rel="noopener noreferrer">
@@ -263,4 +168,3 @@
 
 </body>
 </html>
-
