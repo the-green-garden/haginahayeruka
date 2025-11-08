@@ -148,6 +148,21 @@ a:hover { color: var(--primary); }
   margin-bottom: 0;
 }
 
+/* ===== WRAPPER SECTIONS ===== */
+.wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper.style1 {
+  background: var(--white);
+}
+
+.wrapper.style2 {
+  background: #f8f9f7;
+  padding: 60px 0;
+}
+
 /* ===== SECTIONS ===== */
 section {
   padding: 60px 0;
