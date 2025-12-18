@@ -8,10 +8,11 @@
 <style>
   :root{
     --green:#184E36;
+    --green2:#2E7D56;
     --text:#1f1f1f;
-    --muted:#5f5f5f;
-    --line:#e6e6e6;
-    --soft:#f6f8f6;
+    --muted:#666;
+    --line:#e7e7e7;
+    --soft:#f5f7f5;
   }
 
   body{
@@ -20,75 +21,91 @@
     color:var(--text);
     font-family: Arial, sans-serif;
   }
+
   .page{
-    max-width: 920px;
+    max-width: 960px;
     margin: 24px auto;
     background:#fff;
-    padding: 34px 34px;
     border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
   }
 
-  .topbar{
+  .header{
+    padding:22px 28px;
+    background:linear-gradient(135deg, rgba(24,78,54,.10), rgba(46,125,86,.06));
+    border-bottom:1px solid var(--line);
     display:flex;
+    align-items:center;
     justify-content:space-between;
     gap:16px;
-    align-items:flex-start;
-    border-bottom:2px solid rgba(24,78,54,.12);
-    padding-bottom:14px;
-    margin-bottom:18px;
   }
-  .brand h1{
-    margin:0 0 6px 0;
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+
+  .logo{
+    width:62px;
+    height:62px;
+    border-radius:14px;
+    background:#fff;
+    border:1px solid rgba(24,78,54,.18);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .logo img{ width:100%; height:100%; object-fit:cover; }
+
+  .titles h1{
+    margin:0;
+    font-size:24px;
     color:var(--green);
-    font-size:26px;
     font-weight:900;
+    letter-spacing:.2px;
   }
-  .brand .sub{
-    color:rgba(24,78,54,.85);
+  .titles .sub{
+    margin:6px 0 0 0;
+    color:rgba(24,78,54,.9);
     font-weight:800;
     font-size:13px;
-    margin:0;
   }
+
   .meta{
     text-align:left;
     color:var(--muted);
-    font-size:12px;
+    font-size:13px;
     line-height:1.7;
     white-space:nowrap;
   }
-  .pill{
-    display:inline-block;
-    padding:6px 10px;
-    border-radius:999px;
-    border:1px solid rgba(24,78,54,.25);
-    background:rgba(24,78,54,.06);
-    color:var(--green);
-    font-weight:800;
-    margin-top:6px;
-  }
+  .meta b{ color:#2b2b2b; }
+
+  .content{ padding:22px 28px 28px 28px; }
 
   h2{
-    margin: 22px 0 10px 0;
+    margin: 18px 0 10px 0;
     color:var(--green);
-    font-size:16px;
+    font-size:15px;
     font-weight:900;
-    border-bottom:2px solid rgba(24,78,54,.14);
-    padding-bottom:6px;
   }
 
   p{
-    margin:10px 0;
-    line-height:1.65;
+    margin:8px 0;
+    line-height:1.7;
     font-size:13px;
   }
 
-  .grid2{
+  .cards{
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap:12px;
   }
   .card{
     border:1px solid var(--line);
+    border-radius:12px;
     padding:12px 12px;
     background:#fff;
   }
@@ -97,257 +114,208 @@
     justify-content:space-between;
     gap:10px;
     padding:8px 10px;
-    border:1px solid rgba(24,78,54,.10);
+    border-radius:10px;
+    border:1px solid rgba(24,78,54,.12);
     background:#fff;
     margin:8px 0 0 0;
   }
-  .kv .k{ color:rgba(24,78,54,.9); font-weight:900; }
-  .kv .v{ font-weight:800; }
+  .kv .k{ color:rgba(24,78,54,.95); font-weight:900; }
+  .kv .v{ font-weight:900; }
 
   table{
     width:100%;
-    border-collapse: collapse;
+    border-collapse:separate;
+    border-spacing:0;
     margin-top:10px;
+    border:1px solid rgba(24,78,54,.18);
+    border-radius:12px;
+    overflow:hidden;
     background:#fff;
-    border:1px solid rgba(24,78,54,.14);
   }
   thead th{
     text-align:right;
-    color:var(--green);
-    font-weight:900;
+    padding:11px 10px;
     font-size:13px;
-    padding:10px 10px;
-    border-bottom:2px solid rgba(24,78,54,.18);
-    background:#fff; /* לא תלוי "Print background" */
+    color:#fff;
+    background:var(--green);
+    font-weight:900;
   }
   tbody td{
-    vertical-align:top;
+    padding:11px 10px;
     font-size:13px;
-    padding:10px 10px;
     border-bottom:1px solid var(--line);
+    vertical-align:top;
+    background:#fff;
   }
   tbody tr:last-child td{ border-bottom:0; }
+  tbody tr:nth-child(even) td{ background:rgba(24,78,54,.03); }
 
   .price{ white-space:nowrap; font-weight:900; }
   .muted{ color:var(--muted); font-size:12px; }
 
   .total{
-    margin-top:16px;
+    margin-top:14px;
+    border:1px solid rgba(24,78,54,.22);
+    border-right:7px solid var(--green);
+    border-radius:12px;
     padding:14px 14px;
-    border-right:6px solid var(--green);
-    background:#fff;
-    border:1px solid rgba(24,78,54,.18);
-    font-size:18px;
-    font-weight:900;
+    background:rgba(24,78,54,.05);
     color:var(--green);
+    font-weight:900;
+    font-size:18px;
   }
 
   ul{
     margin:8px 0 0 0;
     padding: 0 18px 0 0;
-    line-height:1.7;
+    line-height:1.75;
     font-size:13px;
   }
   li{ margin:5px 0; }
 
   .footer{
-    margin-top:22px;
-    padding-top:12px;
+    margin-top:18px;
     border-top:1px solid var(--line);
-    color:var(--green);
-    font-weight:900;
-    font-size:13px;
+    padding-top:14px;
     display:flex;
     justify-content:space-between;
     gap:12px;
     flex-wrap:wrap;
+    color:var(--green);
+    font-weight:900;
+    font-size:13px;
   }
 
   /* הדפסה */
-  @page{
-    size: A4;
-    margin: 14mm 14mm 14mm 14mm;
-  }
+  @page { size:A4; margin: 14mm 14mm; }
   @media print{
     body{ background:#fff; }
-    .page{
-      margin:0;
-      border:none;
-      padding:0;
-      max-width:none;
-    }
-    table, tr, td, th { page-break-inside: avoid; }
-    h2 { page-break-after: avoid; }
+    .page{ margin:0; border:none; border-radius:0; }
+    .content{ padding:16px 18px 18px 18px; }
+    table, tr, td, th{ page-break-inside: avoid; }
     .card, .total { page-break-inside: avoid; }
-    .topbar{ border-bottom: 1px solid #ddd; }
   }
 </style>
 </head>
 
 <body>
-<div class="page">
+  <div class="page">
+    <div class="header">
+      <div class="brand">
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg" alt="הגינה הירוקה">
+        </div>
+        <div class="titles">
+          <h1>הצעת מחיר להקמת גינה</h1>
+          <div class="sub">הגינה הירוקה</div>
+        </div>
+      </div>
 
-  <div class="topbar">
-    <div class="brand">
-      <h1>הצעת מחיר – הקמת גינה</h1>
-      <p class="sub">הגינה הירוקה</p>
+      <div class="meta">
+        <div><b>לקוחה:</b> אורלי</div>
+        <div><b>מיקום:</b> מושב בית עזרא</div>
+        <div><b>תאריך:</b> 18.12.2024</div>
+        <div><b>תוקף ההצעה:</b> 30 ימים</div>
+      </div>
     </div>
 
-    <div class="meta">
-      <div><b>לקוחה:</b> אורלי</div>
-      <div><b>מיקום:</b> מושב בית עזרא</div>
-      <div><b>תאריך:</b> <!-- עדכני ידנית --> 18.12.2024</div>
-      <div><b>תוקף ההצעה:</b> 30 ימים</div>
-      <div class="pill">מסמך מותאם ל-PDF</div>
+    <div class="content">
+      <h2>תיאור כללי של הפרויקט</h2>
+      <p>
+        הקמת גינה פרטית חדשה לבית פרטי לאחר שיפוץ, כולל תשתיות השקיה ודישון, דשא חי, עצי פרי,
+        עץ נוי, צמחייה רב־שנתית, אזורי תבלינים, גדר במבוק, שבילי הליכה וחיפוי קרקע לבחירה.
+      </p>
+
+      <h2>נתוני שטח ותכנון</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="kv"><span class="k">שטח דשא חי</span><span class="v">כ־53 מ״ר</span></div>
+          <div class="kv"><span class="k">אזור חיפוי אחורי</span><span class="v">כ־88 מ״ר</span></div>
+          <div class="kv"><span class="k">אזור עצי פרי + תבלינים</span><span class="v">כ־20×2.5 מ׳</span></div>
+        </div>
+        <div class="card">
+          <div class="kv"><span class="k">קיר למטפסים</span><span class="v">כ־10 מ׳</span></div>
+          <div class="kv"><span class="k">קו מים ראשי קיים</span><span class="v">כ־25 מ׳ (הטמעה בקרקע)</span></div>
+          <div class="kv"><span class="k">אורך מערכת השקיה כולל</span><span class="v">עד 200 מ׳</span></div>
+        </div>
+      </div>
+
+      <h2>פירוט עבודות ומחירים</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:8%">סעיף</th>
+            <th>תיאור העבודה</th>
+            <th style="width:22%">טווח מחיר (₪)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="price">1</td><td>עבודות הכנה ותשתית – יישור קרקע נקודתי, התאמות גבהים, סימון אזורים והכנת תשתית</td><td class="price">3,500–4,500</td></tr>
+          <tr><td class="price">2</td><td>מערכת השקיה + דישון – קו ראשי 32 מ״מ, שלוחות, טפטפות/ממטרות, אביזרים, מיכל דישון + דשן 10 ל׳</td><td class="price">5,500–6,500</td></tr>
+          <tr><td class="price">3</td><td><b>דשא דרבן</b> – כ־53 מ״ר, כולל אדמה/מצע, יישור, הנחה והשקיית קליטה</td><td class="price">11,000–13,000</td></tr>
+          <tr><td class="price">4</td><td>עצי פרי <b>חצי־בוגרים</b> (5 יח׳) – שתילה וחיבור להשקיה <div class="muted">הובלה/מנוף במידת הצורך – לא כלול (לפי ספק)</div></td><td class="price">3,700–4,500</td></tr>
+          <tr><td class="price">5</td><td>עץ נוי לכניסה – מראה ייצוגי, תחזוקה נמוכה</td><td class="price">1,200–2,100</td></tr>
+          <tr><td class="price">6</td><td>גדר במבוק – כ־20 מ׳, כולל חיבור וחיזוק עמוד אחד</td><td class="price">3,000</td></tr>
+          <tr><td class="price">7</td><td>שביל אבני מדרך – <b>הנחה ישירה על מצע מהודק</b> (20–30 יח׳)</td><td class="price">3,700–5,100</td></tr>
+          <tr><td class="price">8</td><td>מטפסים לקיר – כ־10 מ׳, כולל שתילה וחיבור להשקיה</td><td class="price">700–1,100</td></tr>
+          <tr><td class="price">9</td><td>שיחי נוי וצמחייה רב־שנתית – שתילה וחיבור להשקיה</td><td class="price">1,800–2,600</td></tr>
+          <tr><td class="price">10</td><td>גינת תבלינים – כולל אדמה מתאימה</td><td class="price">800–1,200</td></tr>
+          <tr><td class="price">11</td><td>טיפול בעץ זית קיים</td><td class="price">1,000</td></tr>
+        </tbody>
+      </table>
+
+      <h2>חיפוי אזור אחורי – 88 מ״ר (לבחירה)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:12%">חלופה</th>
+            <th>תיאור</th>
+            <th style="width:22%">מחיר (₪)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="price">א׳</td><td>טוף טבעי</td><td class="price">4,000–5,000</td></tr>
+          <tr><td class="price">ב׳</td><td>חלוקי נחל – <b>ניצן / בזלת</b></td><td class="price">5,500–6,500</td></tr>
+          <tr><td class="price">ג׳</td><td>שילוב חלוקים + צמחייה נמוכה</td><td class="price">6,000–7,500</td></tr>
+        </tbody>
+      </table>
+
+      <div class="total">עלות הפרויקט (טווח): 42,000–49,000 ₪</div>
+
+      <h2>הבהרות חשובות</h2>
+      <div class="card">
+        <ul>
+          <li>המחירים כוללים עבודה וחומרים, אלא אם צוין אחרת.</li>
+          <li>הובלות עצים / מנוף – אינם כלולים (650–1,200 ₪ לפי דרישת ספק).</li>
+          <li>כל שינוי בהיקף/בחירת חומרים יתומחר בנפרד ובאישור מראש.</li>
+        </ul>
+      </div>
+
+      <h2>אחריות</h2>
+      <div class="card">
+        <ul>
+          <li>ציוד השקיה ודישון – אחריות יצרן בהתאם לתנאי היצרן.</li>
+          <li>מחשב השקיה/בקר – אחריות לפי תנאי הספק/היצרן.</li>
+          <li>הגינה הירוקה אחראית לעבודה תקינה ומקצועית.</li>
+          <li>אין אחריות על קליטת צמחים (תלוי תחזוקה/השקיה/תנאי סביבה).</li>
+        </ul>
+      </div>
+
+      <h2>לוח זמנים משוער</h2>
+      <div class="card">
+        <p><b>משך ביצוע משוער:</b> 5–7 ימי עבודה (כפוף למזג אוויר/אספקות/תיאומים).</p>
+      </div>
+
+      <h2>תנאי תשלום</h2>
+      <div class="card">
+        <p><b>50%</b> עם אישור ההצעה ותחילת עבודה &nbsp; | &nbsp; <b>50%</b> בסיום העבודה.</p>
+      </div>
+
+      <div class="footer">
+        <div>הגינה הירוקה | 054-6698931</div>
+        <div>info@gina.i.ng | www.gina.i.ng</div>
+      </div>
     </div>
   </div>
-
-  <h2>תיאור כללי של הפרויקט</h2>
-  <p>
-    הקמת גינה פרטית חדשה לבית פרטי לאחר שיפוץ, כולל תשתיות השקיה ודישון, דשא חי,
-    עצי פרי, עץ נוי, צמחייה רב־שנתית, אזורי תבלינים, גדר במבוק, שבילי הליכה וחיפויי קרקע לבחירה.
-    העבודות מבוצעות בהתאם למדידות שבוצעו בשטח ולבקשות הלקוחה, תוך התאמה לאקלים המקומי ולתחזוקה נוחה לאורך זמן.
-  </p>
-
-  <h2>נתוני שטח ותכנון</h2>
-  <div class="grid2">
-    <div class="card">
-      <div class="kv"><span class="k">דשא חי</span><span class="v">כ-53 מ"ר</span></div>
-      <div class="kv"><span class="k">אזור חיפוי אחורי</span><span class="v">כ-88 מ"ר</span></div>
-      <div class="kv"><span class="k">אזור תבלינים לאורך גדר</span><span class="v">כ-20×2.5 מ׳</span></div>
-      <div class="kv"><span class="k">קיר למטפסים</span><span class="v">כ-10 מ׳</span></div>
-    </div>
-
-    <div class="card">
-      <div class="kv"><span class="k">ערוגות</span><span class="v">2 × (כ-3×0.4 מ׳)</span></div>
-      <div class="kv"><span class="k">קו מים ראשי קיים</span><span class="v">כ-25 מ׳ (נדרש הטמעה)</span></div>
-      <div class="kv"><span class="k">אורך מערכת השקיה כולל</span><span class="v">עד 200 מ׳</span></div>
-      <p class="muted">הנתונים מבוססים על מדידה ותכנון בשטח.</p>
-    </div>
-  </div>
-
-  <h2>פירוט עבודות ומחירים</h2>
-  <table>
-    <thead>
-      <tr>
-        <th style="width:8%">סעיף</th>
-        <th>תיאור העבודה</th>
-        <th style="width:22%">טווח מחיר (₪)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="price">1</td>
-        <td>עבודות הכנה ותשתית – יישור קרקע נקודתי, התאמות גבהים, סימון אזורים והכנת תשתית לשתילה/דשא/חיפויים</td>
-        <td class="price">3,500–4,500</td>
-      </tr>
-      <tr>
-        <td class="price">2</td>
-        <td>מערכת השקיה + דישון מלאה – הטמעת קו ראשי קיים 32 מ״מ, פריסת קווים לדשא/עצים/צמחייה ותבלינים, טפטפות/ממטרות/מחברים ואביזרים, מערכת דישון כולל מיכל ודשן 10 ל׳</td>
-        <td class="price">5,500–6,500</td>
-      </tr>
-      <tr>
-        <td class="price">3</td>
-        <td><b>דשא חי מסוג דרבן</b> – כ-53 מ"ר, כולל אספקת מרבדים, הכנת מצע אדמה מתאים לדשא, יישור/הידוק/הנחה והשקיית קליטה</td>
-        <td class="price">11,000–13,000</td>
-      </tr>
-      <tr>
-        <td class="price">4</td>
-        <td>עצי פרי <b>חצי-בוגרים</b> (5 יח׳) – כולל שתילה וחיבור להשקיה<br><span class="muted">הובלה/מנוף במידת הצורך – לא כלול (לפי דרישת ספק)</span></td>
-        <td class="price">3,700–4,500</td>
-      </tr>
-      <tr>
-        <td class="price">5</td>
-        <td>עץ נוי לכניסה – עץ נוי שאינו מלכלך, מראה מרשים ותחזוקה נמוכה, כולל שתילה וחיבור להשקיה</td>
-        <td class="price">1,200–2,100</td>
-      </tr>
-      <tr>
-        <td class="price">6</td>
-        <td>גדר במבוק – כ-20 מ׳, כולל אספקה וחיבור לגדר קיימת + חיזוק/תיקון עמוד אחד קיים</td>
-        <td class="price">3,000</td>
-      </tr>
-      <tr>
-        <td class="price">7</td>
-        <td>שביל אבני מדרך גדולות (כ-100×60 ס״מ) – <b>הנחה ישירה על מצע מהודק</b>, כמות משוערת 20–30 יח׳</td>
-        <td class="price">3,700–5,100</td>
-      </tr>
-      <tr>
-        <td class="price">8</td>
-        <td>מטפסים לקיר – כ-10 מ׳, מטפסים רב-שנתיים בהתאם לתנאי אור, כולל שתילה וחיבור להשקיה</td>
-        <td class="price">700–1,100</td>
-      </tr>
-      <tr>
-        <td class="price">9</td>
-        <td>שיחי נוי וצמחייה רב-שנתית – גובה כ-50 ס״מ, מותאם שמש/צל, כולל שתילה וחיבור להשקיה</td>
-        <td class="price">1,800–2,600</td>
-      </tr>
-      <tr>
-        <td class="price">10</td>
-        <td>גינת תבלינים – תבלינים רב-שנתיים לשימוש יומיומי לאורך אזור הבמבוק, כולל אדמה מתאימה</td>
-        <td class="price">800–1,200</td>
-      </tr>
-      <tr>
-        <td class="price">11</td>
-        <td>טיפול בעץ זית קיים – ניקוי/גיזום קל וטיפול בסיסי בהתאם לצורך</td>
-        <td class="price">1,000</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2>חיפוי אזור אחורי – 88 מ"ר (לבחירה)</h2>
-  <table>
-    <thead>
-      <tr>
-        <th style="width:12%">חלופה</th>
-        <th>תיאור</th>
-        <th style="width:22%">מחיר (₪)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td class="price">א׳</td><td>טוף טבעי</td><td class="price">4,000–5,000</td></tr>
-      <tr><td class="price">ב׳</td><td>חלוקי נחל – <b>ניצן / בזלת</b></td><td class="price">5,500–6,500</td></tr>
-      <tr><td class="price">ג׳</td><td>שילוב חלוקים + צמחייה נמוכה</td><td class="price">6,000–7,500</td></tr>
-    </tbody>
-  </table>
-
-  <div class="total">עלות הפרויקט (טווח): 42,000–49,000 ₪</div>
-  <p class="muted">המחיר הסופי יקבע בהתאם לחלופת החיפוי שתיבחר ושינויים בהיקף בפועל (באישור מראש).</p>
-
-  <h2>הבהרות חשובות</h2>
-  <div class="card">
-    <ul>
-      <li>המחירים כוללים עבודה וחומרים, אלא אם צוין אחרת.</li>
-      <li>הובלות עצים / מנוף – אינם כלולים (650–1,200 ₪ לפי דרישת ספק).</li>
-      <li>ההצעה מבוססת על מדידה ותכנון בשטח; כל שינוי בהיקף/בחירה יתומחר בנפרד ובאישור מראש.</li>
-    </ul>
-  </div>
-
-  <h2>אחריות</h2>
-  <div class="card">
-    <ul>
-      <li>ציוד השקיה ודישון – אחריות יצרן בהתאם לתנאי היצרן.</li>
-      <li>מחשב השקיה/בקר – אחריות לפי תנאי הספק/היצרן.</li>
-      <li>הגינה הירוקה אחראית לביצוע עבודה תקינה ומקצועית.</li>
-      <li>אין אחריות על קליטת צמחים – תלוי בתחזוקה שוטפת, השקיה נכונה ותנאי סביבה.</li>
-    </ul>
-  </div>
-
-  <h2>לוח זמנים משוער</h2>
-  <div class="card">
-    <p><b>משך ביצוע משוער:</b> 5–7 ימי עבודה (כפוף למזג אוויר/אספקות/תיאומים).</p>
-  </div>
-
-  <h2>תנאי תשלום</h2>
-  <div class="card">
-    <p><b>50%</b> עם אישור ההצעה ותחילת עבודה &nbsp; | &nbsp; <b>50%</b> בסיום העבודה.</p>
-  </div>
-
-  <div class="footer">
-    <div>הגינה הירוקה | 054-6698931</div>
-    <div>info@gina.i.ng | www.gina.i.ng</div>
-  </div>
-
-</div>
 </body>
 </html>
-
