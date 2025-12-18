@@ -218,15 +218,37 @@
       font-size:14px;
     }
 
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .page{ margin:12px; border-radius:12px; }
+      .topbar{ flex-direction:column; padding:18px 18px; }
+      .sideNote{ max-width:100%; text-align:right; margin-top:14px; }
+      .grid{ grid-template-columns:1fr; }
+      .cell:nth-child(odd){ border-left:0; border-top:1px solid var(--line); }
+      .cell:first-child{ border-top:0; }
+      .content{ padding:18px 18px 24px 18px; }
+      h1{ font-size:24px; }
+      .footer{ flex-direction:column; gap:8px; text-align:center; }
+      table{ font-size:13px; }
+      tbody td, thead th{ padding:10px 8px; }
+    }
+
     /* הדפסה ל-PDF */
-    @page { size:A4; margin: 14mm 14mm; }
+    @page { size:A4; margin: 12mm 14mm; }
     @media print{
-      *{-webkit-print-color-adjust: exact; print-color-adjust: exact;}
-      body{ background:#fff; }
-      .page{ margin:0; border:none; border-radius:0; box-shadow:none; }
+      *{-webkit-print-color-adjust: exact; print-color-adjust: exact; color-adjust: exact;}
+      body{ background:#fff; margin:0; padding:0; }
+      .page{ margin:0; border:none; border-radius:0; box-shadow:none; max-width:100%; }
+      .topbar{ page-break-after: avoid; }
+      .content{ page-break-before: avoid; }
+      h2{ page-break-after: avoid; page-break-inside: avoid; }
+      table{ page-break-before: auto; page-break-after: auto; }
       table, tr, td, th{ page-break-inside: avoid; }
-      .box, .total, .infocard{ page-break-inside: avoid; }
+      .box, .total, .infocard{ page-break-inside: avoid; page-break-after: auto; }
+      thead{ display:table-header-group; }
+      tbody{ display:table-row-group; }
       a{ color:inherit; text-decoration:none; }
+      .sideNote{ text-align:right; }
     }
   </style>
 </head>
@@ -237,8 +259,6 @@
       <div>
         <div class="brandwrap">
           <div class="logo">
-            <!-- מומלץ לשים לוגו בתיקיית האתר ולהשתמש באחד מאלה -->
-            <!-- <img src="/logo.png" alt="הגינה הירוקה"> -->
             <img src="/logo.jpg" alt="הגינה הירוקה">
           </div>
           <div>
@@ -252,7 +272,7 @@
           <div class="grid">
             <div class="cell"><div class="k">לקוחה</div><div class="v">אורלי</div></div>
             <div class="cell"><div class="k">מיקום</div><div class="v">מושב בית עזרא</div></div>
-            <div class="cell"><div class="k">תאריך</div><div class="v">18.12.2024</div></div>
+            <div class="cell"><div class="k">תאריך</div><div class="v">18.12.2025</div></div>
             <div class="cell"><div class="k">תוקף ההצעה</div><div class="v">30 ימים</div></div>
           </div>
         </div>
@@ -260,8 +280,6 @@
 
       <div class="sideNote">
         הצעה מפורטת הכוללת עבודה וחומרים (אלא אם צוין אחרת), בהתאם למדידות ותכנון שבוצעו בשטח.
-        <br><br>
-        הדפסה מומלצת: <b>Print → Save as PDF</b>
       </div>
     </div>
 
@@ -276,9 +294,9 @@
       <table>
         <thead>
           <tr>
-            <th style="width:8%">סעיף</th>
-            <th>תיאור העבודה</th>
-            <th style="width:22%">טווח מחיר (ש"ח)</th>
+            <th scope="col" style="width:8%">סעיף</th>
+            <th scope="col">תיאור העבודה</th>
+            <th scope="col" style="width:22%">טווח מחיר (ש"ח)</th>
           </tr>
         </thead>
         <tbody>
@@ -300,20 +318,20 @@
       <table>
         <thead>
           <tr>
-            <th style="width:12%">חלופה</th>
-            <th>תיאור</th>
-            <th style="width:22%">מחיר (ש"ח)</th>
+            <th scope="col" style="width:12%">חלופה</th>
+            <th scope="col">תיאור</th>
+            <th scope="col" style="width:22%">מחיר (ש"ח)</th>
           </tr>
         </thead>
         <tbody>
           <tr><td class="price">א'</td><td>טוף טבעי</td><td class="price">4,000-5,000</td></tr>
-          <tr><td class="price">ב'</td><td>חלוקי נחל - <b>ניצן / בזלת</b></td><td class="price">5,500-6,500</td></tr>
-          <tr><td class="price">ג'</td><td>שילוב חלוקים + צמחייה נמוכה</td><td class="price">6,000-7,500</td></tr>
+          <tr><td class="price">ב'</td><td>חלוקי נחל - <b>ניצן / בזלת</b></td><td class="price">7,000-8,500</td></tr>
+          <tr><td class="price">ג'</td><td>שילוב חלוקים + צמחייה נמוכה</td><td class="price">7,500-9,500</td></tr>
         </tbody>
       </table>
 
       <div class="total">
-        <div>עלות הפרויקט (טווח): <span style="font-size:22px;">42,000-49,000 ש"ח</span></div>
+        <div>עלות הפרויקט (טווח): <span style="font-size:22px;">40,000-54,000 ש"ח</span></div>
         <small>המחיר הסופי ייקבע בהתאם לבחירת חלופת החיפוי והיקף חומרים בפועל</small>
       </div>
 
@@ -348,9 +366,4 @@
 
       <div class="footer">
         <div>הגינה הירוקה | 054-6698931</div>
-        <div>info@gina.i.ng | www.gina.i.ng</div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+        <div><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="11787f777e517
