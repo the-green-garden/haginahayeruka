@@ -167,6 +167,16 @@
     .price{ white-space:nowrap; font-weight:800; }
     .muted{ color:var(--muted); font-size:13px; line-height:1.65; margin-top:6px; }
 
+    /* רשימה קומפקטית בתוך תא בטבלה */
+    .mini-list{
+      margin:8px 0 0 0;
+      padding: 0 18px 0 0;
+      line-height:1.85;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .mini-list li{ margin:4px 0; }
+
     /* תיבות */
     .box{
       border:1px solid var(--line);
@@ -300,17 +310,81 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td class="price">1</td><td>עבודות הכנה ותשתית - יישור קרקע נקודתי, התאמות גבהים, סימון אזורים והכנת תשתית</td><td class="price">3,500-4,500</td></tr>
-          <tr><td class="price">2</td><td>מערכת השקיה + דישון - הטמעת קו ראשי, שלוחות לדשא/עצים/צמחייה, טפטפות/ממטרות/אביזרים, מערכת דישון מלאה כולל מיכל ודשן 10 ליטר</td><td class="price">5,500-6,500</td></tr>
-          <tr><td class="price">3</td><td><b>דשא חי מסוג דרבן</b> - כ-53 מ"ר, כולל אדמה/מצע, יישור, הנחה והשקיית קליטה<div class="muted">המחיר משקף דשא דרבן והכנת מצע מלאה לשטח הדשא.</div></td><td class="price">11,000-13,000</td></tr>
-          <tr><td class="price">4</td><td>עצי פרי <b>חצי-בוגרים</b> (5 יחידות) - שתילה וחיבור להשקיה<div class="muted">הובלה/מנוף במידת הצורך - לא כלול (לפי דרישת ספק).</div></td><td class="price">3,700-4,500</td></tr>
-          <tr><td class="price">5</td><td>עץ נוי לכניסה - מראה ייצוגי ותחזוקה נמוכה</td><td class="price">1,200-2,100</td></tr>
-          <tr><td class="price">6</td><td>גדר במבוק - כ-20 מטר, כולל חיבור וחיזוק עמוד אחד קיים</td><td class="price">3,000</td></tr>
-          <tr><td class="price">7</td><td>שביל אבני מדרך - <b>הנחה ישירה על מצע מהודק</b> (כ-20-30 יחידות)</td><td class="price">3,700-5,100</td></tr>
-          <tr><td class="price">8</td><td>מטפסים לקיר - כ-10 מטר, כולל שתילה וחיבור להשקיה</td><td class="price">700-1,100</td></tr>
-          <tr><td class="price">9</td><td>שיחי נוי וצמחייה רב-שנתית - כולל שתילה וחיבור להשקיה</td><td class="price">1,800-2,600</td></tr>
-          <tr><td class="price">10</td><td>גינת תבלינים - כולל אדמה מתאימה</td><td class="price">800-1,200</td></tr>
-          <tr><td class="price">11</td><td>טיפול בעץ זית קיים</td><td class="price">1,000</td></tr>
+          <tr>
+            <td class="price">1</td>
+            <td>עבודות הכנה ותשתית - יישור קרקע נקודתי, התאמות גבהים, סימון אזורים והכנת תשתית</td>
+            <td class="price">3,500-4,500</td>
+          </tr>
+
+          <tr>
+            <td class="price">2</td>
+            <td>מערכת השקיה + דישון - הטמעת קו ראשי, שלוחות לדשא/עצים/צמחייה, טפטפות/ממטרות/אביזרים, מערכת דישון מלאה כולל מיכל ודשן 10 ליטר</td>
+            <td class="price">5,500-6,500</td>
+          </tr>
+
+          <!-- ✅ סעיף דשא מתוקן -->
+          <tr>
+            <td class="price">3</td>
+            <td>
+              <b>דשא חי מסוג דרבן</b> - כ-53 מ"ר, כולל:
+              <ul class="mini-list">
+                <li>אספקת מרבדי דשא דרבן איכותי</li>
+                <li>מצע אדמה גננית איכותית (שכבה מלאה)</li>
+                <li>יישור והכנת הקרקע</li>
+                <li>הנחה מקצועית והשקיית קליטה</li>
+              </ul>
+              <div class="muted">המחיר כולל חומרים ועבודה.</div>
+            </td>
+            <td class="price">4,900-5,600</td>
+          </tr>
+
+          <tr>
+            <td class="price">4</td>
+            <td>עצי פרי <b>חצי-בוגרים</b> (5 יחידות) - שתילה וחיבור להשקיה<div class="muted">הובלה/מנוף במידת הצורך - לא כלול (לפי דרישת ספק).</div></td>
+            <td class="price">3,700-4,500</td>
+          </tr>
+
+          <tr>
+            <td class="price">5</td>
+            <td>עץ נוי לכניסה - מראה ייצוגי ותחזוקה נמוכה</td>
+            <td class="price">1,200-2,100</td>
+          </tr>
+
+          <tr>
+            <td class="price">6</td>
+            <td>גדר במבוק - כ-20 מטר, כולל חיבור וחיזוק עמוד אחד קיים</td>
+            <td class="price">3,000</td>
+          </tr>
+
+          <tr>
+            <td class="price">7</td>
+            <td>שביל אבני מדרך - <b>הנחה ישירה על מצע מהודק</b> (כ-20-30 יחידות)</td>
+            <td class="price">3,700-5,100</td>
+          </tr>
+
+          <tr>
+            <td class="price">8</td>
+            <td>מטפסים לקיר - כ-10 מטר, כולל שתילה וחיבור להשקיה</td>
+            <td class="price">700-1,100</td>
+          </tr>
+
+          <tr>
+            <td class="price">9</td>
+            <td>שיחי נוי וצמחייה רב-שנתית - כולל שתילה וחיבור להשקיה</td>
+            <td class="price">1,800-2,600</td>
+          </tr>
+
+          <tr>
+            <td class="price">10</td>
+            <td>גינת תבלינים - כולל אדמה מתאימה</td>
+            <td class="price">800-1,200</td>
+          </tr>
+
+          <tr>
+            <td class="price">11</td>
+            <td>טיפול בעץ זית קיים</td>
+            <td class="price">1,000</td>
+          </tr>
         </tbody>
       </table>
 
@@ -330,8 +404,9 @@
         </tbody>
       </table>
 
+      <!-- ✅ טווח פרויקט מתוקן בעקבות תיקון הדשא -->
       <div class="total">
-        <div>עלות הפרויקט (טווח): <span style="font-size:22px;">40,000-54,000 ש"ח</span></div>
+        <div>עלות הפרויקט (טווח): <span style="font-size:22px;">34,000-41,000 ש"ח</span></div>
         <small>המחיר הסופי ייקבע בהתאם לבחירת חלופת החיפוי והיקף חומרים בפועל</small>
       </div>
 
@@ -366,4 +441,9 @@
 
       <div class="footer">
         <div>הגינה הירוקה | 054-6698931</div>
-        <div><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="11787f777e517
+        <div>info@gina.i.ng</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
