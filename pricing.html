@@ -34,9 +34,8 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   
-  <!-- Google Analytics -->
+  <!-- Google Analytics + Ads (טעינה אחת בלבד) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJDZ29X5CZ"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17054224877"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -48,8 +47,27 @@
       gtag('set', 'traffic_type', 'internal');
     }
 
+    // GA4
     gtag('config', 'G-BJDZ29X5CZ');
+
+    // Google Ads
     gtag('config', 'AW-17054224877');
+  </script>
+
+  <!-- Schema.org (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "הגינה הירוקה והמקצועיים",
+    "url": "https://gina.i.ng/pricing.html",
+    "logo": "https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg",
+    "image": "https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg",
+    "telephone": ["+972584559727", "+972546698931"],
+    "email": "info@gina.i.ng",
+    "areaServed": "IL",
+    "description": "שירותי גינון, הדברה, השקיה ועיצוב, לצד שירותי אינסטלציה, חשמל ואיטום – עם טווחי מחירים ריאליים והצעת מחיר מותאמת לאחר בדיקה."
+  }
   </script>
   
   <style>
@@ -93,6 +111,21 @@
       line-height: 1.7;
       direction: rtl;
       overflow-x: hidden;
+    }
+
+    /* Skip link (נגישות) */
+    .skip-link{
+      position:absolute;
+      top:-40px;
+      right:20px;
+      background:#000;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:10px;
+      z-index:2000;
+    }
+    .skip-link:focus{
+      top:20px;
     }
 
     /* ===== TYPOGRAPHY ===== */
@@ -1014,13 +1047,15 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">דלג לתוכן</a>
+
   <!-- ===== HEADER - GLASS MORPHISM ===== -->
   <div class="wrapper style1">
     <header id="header">
       <div class="container">
         <div id="logo">
           <a href="/index.html">
-            <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg" alt="הגינה הירוקה">
+            <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg" alt="הגינה הירוקה" decoding="async">
           </a>
         </div>
         <nav id="nav">
@@ -1050,190 +1085,192 @@
     </div>
   </div>
 
-  <div class="container">
-    <!-- ===== הבהרה משפטית ===== -->
-    <div class="disclaimer-section">
-      <h3>איך אנחנו קובעים מחירים?</h3>
-      <p>
-        המחירים בעמוד זה הם טווחי מחירים משוערים לעבודות סטנדרטיות. הם מתבססים על מחירוני שוק עדכניים וניסיון שטח משנת 2010. כל עבודה נבדקת באופן אישי – לפי גודל השטח, מורכבות, חומרים ונגישות. <strong>המחירים המוצגים כאן אינם הצעת מחיר סופית ואינם מחייבים.</strong> הצעת מחיר סופית ניתנת רק אחרי שיחה קצרה + תמונה או סרטון מהשטח. המטרה שלנו: לשלב בין עבודה מקצועית, חומרים איכותיים ומחיר הוגן – בלי הפתעות.
-      </p>
+  <main id="main">
+    <div class="container">
+      <!-- ===== הבהרה משפטית ===== -->
+      <div class="disclaimer-section">
+        <h3>איך אנחנו קובעים מחירים?</h3>
+        <p>
+          המחירים בעמוד זה הם טווחי מחירים משוערים לעבודות סטנדרטיות. הם מתבססים על מחירוני שוק עדכניים וניסיון שטח משנת 2010. כל עבודה נבדקת באופן אישי – לפי גודל השטח, מורכבות, חומרים ונגישות. <strong>המחירים המוצגים כאן אינם הצעת מחיר סופית ואינם מחייבים.</strong> הצעת מחיר סופית ניתנת רק אחרי שיחה קצרה + תמונה או סרטון מהשטח. המטרה שלנו: לשלב בין עבודה מקצועית, חומרים איכותיים ומחיר הוגן – בלי הפתעות.
+        </p>
+      </div>
+
+      <!-- ===== חלק א: הגינה הירוקה ===== -->
+      <div class="section-logo">
+        <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg" alt="הגינה הירוקה">
+      </div>
+      
+      <h2 class="section-title">הגינה הירוקה</h2>
+      <p class="section-subtitle">שירותי גינון, הדברה, השקיה ועיצוב – לבית פרטי, בניינים משותפים וחצרות</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3><i class="fa-solid fa-leaf"></i> תחזוקת גינה חודשית</h3>
+          <p>תחזוקה שוטפת לשמירה על גינה ירוקה ומסודרת: גיזום, ניקיון, טיפול בעשבייה, ריסוס מניעה בסיסי וסידור כללי.</p>
+          <div class="price-section">
+            <div class="price-label">טווח מחירים משוער</div>
+            <div class="price-range">החל מ־350₪ עד 50 מ״ר • החל מ־550₪ עד 100 מ״ר</div>
+            <div class="price-note">המחיר מתייחס לתחזוקה שוטפת של גינות מתוחזקות בלבד (לא שיקום). זמן עבודה סטנדרטי של עד כשעתיים לביקור תחזוקה אחד. גינות גדולות יותר, מוזנחות או עם מורכבות מיוחדת — יתומחרו בנפרד.</div>
+          </div>
+          <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> גינות גדולות יותר או מורכבות יותר — יתומחרו בנפרד.</div>
+        </div>
+
+        <div class="service-card">
+          <h3><i class="fa-solid fa-broom"></i> ביקור חד-פעמי</h3>
+          <p>ניקיון עומק והכנה לעונה: ניקיון עלים, סידור, גיזום כללי וטיפול בעשבייה – הכנה לחורף או לקיץ.</p>
+          <div class="price-section">
+            <div class="price-label">טווח מחירים משוער</div>
+            <div class="price-range">600₪ - 1,400₪</div>
+            <div class="price-note">תלוי בגודל השטח ורמת ההזנחה. בגינות מוזנחות מאוד/שטח גדול — ייתכן תמחור גבוה יותר.</div>
+          </div>
+          <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> אם זו גינה שלא טופלה תקופה ארוכה — ייתכן שמדובר בשיקום ולא בביקור רגיל.</div>
+        </div>
+
+        <div class="service-card">
+          <h3><i class="fa-solid fa-scissors"></i> גיזום שיחים ועצים</h3>
+          <p>גיזום מקצועי לשיחים ועצים נמוכים, ניקוי ענפים יבשים ושיפור מראה הגינה. עצים גבוהים / מנוף / סנפלינג — בתמחור נפרד לפי גובה, סיכון ונגישות.</p>
+          <div class="price-section">
+            <div class="price-label">טווח מחירים משוער</div>
+            <div class="price-range">450₪ - 900₪ (שיחים/עצים נמוכים)</div>
+            <div class="price-note">המחיר הסופי נקבע לפי כמות, גובה, פינוי, ונגישות.</div>
+          </div>
+          <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> עבודות גובה/סיכון — מתומחרות אחרי תמונה/סרטון או ביקור.</div>
+        </div>
+
+        <div class="service-card">
+          <h3><i class="fa-solid fa-bug-slash"></i> הדברה</h3>
+          <p>הדברה נגד חרקים ומזיקים בגינה ובבית, עם חומרים מאושרים ובטוחים לילדים ובעלי חיים (בהתאם להנחיות).</p>
+          <div class="price-section">
+            <div class="price-label">טווח מחירים משוער</div>
+            <div class="price-range">דירה: 300₪–450₪ • בית קרקע: 350₪–550₪</div>
+            <div class="price-note">תלוי בגודל הבית, סוג המזיק, והאם נדרש טיפול בארונות/חצר/ביוב.</div>
+          </div>
+          <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> טיפול נקודתי שונה מטיפול "עמוק" — נעדכן לפני ביצוע.</div>
+        </div>
+
+        <div class="service-card">
+          <h3><i class="fa-solid fa-droplet"></i> מערכת השקיה</h3>
+          <p>בדיקה של מערכת ההשקיה, איתור נזילות, תיקוני קווים וכיוון לזמני העונה.</p>
+          <div class="price-section">
+            <div class="price-label">טווח מחירים משוער</div>
+            <div class="price-range">תיקון נקודתי: 220₪–350₪ • טיפול/כיוון מערכת: 350₪–650₪</div>
+            <div class="price-note">המחיר תלוי במספר קווים, סוג התקלה, זמן איתור ונגישות.</div>
+          </div>
+          <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> החלפת רכיבים/מחשב השקיה/שסתומים — בתמחור לפי חלקים + עבודה.</div>
+        </div>
+
+        <div class="service-card">
+          <h3><i class="fa-solid fa-seedling"></i> שתילות</h3>
+          <p>שתילה מקצועית של עצים, שיחים, פרחים וצמחי נוי – בהתאמה לתנאי השטח והעונה.</p>
+          <div class="price-section">
+            <div class="price-label">טווח מחירים משוער</div>
+            <div class="price-range">עבודה: החל מ־30₪ ליחידה (לשתילות קטנות ובכמות) ועד 80₪ ליחידה</div>
+            <div class="price-note">נקבע לפי גודל הצמח, כמות השתילות, סוג הקרקע ונגישות.</div>
+          </div>
+          <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> המחיר מתייחס לעבודה בלבד ואינו כולל את עלות הצמחים.</div>
+        </div>
+
+        <div class="service-card">
+          <h3><i class="fa-solid fa-pen-ruler"></i> עיצוב גינה וייעוץ</h3>
+          <p>תכנון ועיצוב גינה בהתאמה אישית – החל מסידור מחדש של גינה קיימת ועד תכנון גינה מהיסוד.</p>
+          <div class="price-section">
+            <div class="price-label">טווח מחירים משוער</div>
+            <div class="price-range">ייעוץ בשטח: 350₪–650₪</div>
+            <div class="price-note">תלוי במיקום, משך הפגישה והיקף הפרויקט.</div>
+          </div>
+          <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> בפרויקטים גדולים — ניתן לקזז מהתשלום אם סוגרים עבודה.</div>
+        </div>
+      </div>
+
+      <!-- ===== חלק ב: המקצועיים ===== -->
+      <div class="section-logo">
+        <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/_%D7%9C%D7%95%D7%92%D7%95%20%D7%94%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99%D7%99%D7%9D.png" alt="המקצועיים">
+      </div>
+      
+      <h2 class="section-title">המקצועיים</h2>
+      <p class="section-subtitle">שירותי אינסטלציה, חשמל, איטום וחיזוק חצרות לקראת חורף וקיץ</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3><i class="fa-solid fa-faucet-drip"></i> אינסטלציה</h3>
+          <p>פתיחת סתימות, תיקון נזילות, החלפת כלים סניטריים (ברזים, אסלה, כיור) וטיפול כללי בצנרת.</p>
+          <div class="price-section">
+            <div class="price-label">טווח מחירים משוער</div>
+            <div class="price-range">350₪ - 750₪</div>
+            <div class="price-note">סתימה/ביקור פשוט: 350₪–450₪ • נזילה/תיקון מורכב: 450₪–750₪ (חריגים בתמחור נפרד).</div>
+          </div>
+          <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> מחיר סופי לאחר אבחון בשטח.</div>
+        </div>
+
+        <div class="service-card">
+          <h3><i class="fa-solid fa-bolt"></i> חשמל</h3>
+          <p>חשמל גינה ועבודות חשמל פשוטות (תאורה, נקודות, חיבורים ותיקונים).</p>
+          <div class="price-section">
+            <div class="price-label">טווח מחירים משוער</div>
+            <div class="price-range">300₪ - 700₪</div>
+            <div class="price-note">ביקור + תיקון בסיסי: 300₪–450₪ • נקודה חדשה: 500₪–700₪ (לפי תוואי ונגישות).</div>
+          </div>
+          <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> לא כולל גופי תאורה/חומרים. עבודות מורכבות/לוח — חשמלאי מוסמך בתמחור נפרד במידת הצורך.</div>
+        </div>
+
+        <div class="service-card">
+          <h3><i class="fa-solid fa-shield-halved"></i> איטום</h3>
+          <p>איטום נקודתי או שטח גדול בגג, מרפסת או קירות חיצוניים – למניעת חדירת מים ונזילות.</p>
+          <div class="price-section">
+            <div class="price-label">טווח מחירים משוער</div>
+            <div class="price-range">איטום נקודתי: 600₪–1,200₪ • שטח: 80₪–150₪/מ״ר</div>
+            <div class="price-note">תלוי במצב הקיים, סוג החומר, הכנות נדרשות והנגישות.</div>
+          </div>
+          <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> הצעת מחיר סופית אחרי תמונות/וידאו או ביקור.</div>
+        </div>
+
+        <div class="service-card">
+          <h3><i class="fa-solid fa-hammer"></i> חיזוק גדרות וחצרות</h3>
+          <p>חיזוק גדרות, פרגולות, סככות ומבנים קלים לקראת רוחות חזקות וגשמים.</p>
+          <div class="price-section">
+            <div class="price-label">טווח מחירים משוער</div>
+            <div class="price-range">חיזוק קל: 100₪–180₪ למטר רץ</div>
+            <div class="price-note">הידוק/חיבורי עץ-מתכת פשוטים. החלפת עמודים/ריתוך/יציקות — בתמחור נפרד.</div>
+          </div>
+          <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> הצעת מחיר סופית לאחר מדידות ובחירת חומרים.</div>
+        </div>
+      </div>
+
+      <!-- ===== CTA SECTION ===== -->
+      <div class="cta-section">
+        <div class="cta-content">
+          <h2>רוצים הצעת מחיר מדויקת?</h2>
+          <p>שלחו לנו תמונה או סרטון של המקום + תיאור קצר של מה שדורש טיפול</p>
+          <p style="font-size: 1.1rem; margin-top: 20px; opacity: 0.95;">⏱️ נחזור אליכם עם הצעת מחיר מותאמת ומדויקת תוך 24 שעות</p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/972584559727?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%D7%95%D7%9F%20%D7%94%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D%20%D7%95%D7%A8%D7%A6%D7%99%D7%AA%D7%99%20%D7%9C%D7%A9%D7%9C%D7%95%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA" target="_blank" rel="noopener" class="cta-btn whatsapp-btn">
+              <i class="fab fa-whatsapp"></i>
+              וואטסאפ 058-455-9727
+            </a>
+            <a href="https://wa.me/972546698931?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%D7%95%D7%9F%20%D7%94%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D%20%D7%95%D7%A8%D7%A6%D7%99%D7%AA%D7%99%20%D7%9C%D7%A9%D7%9C%D7%95%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA" target="_blank" rel="noopener" class="cta-btn whatsapp-btn">
+              <i class="fab fa-whatsapp"></i>
+              וואטסאפ 054-669-8931
+            </a>
+            <a href="tel:+972546698931" class="cta-btn">
+              <i class="fas fa-phone"></i>
+              התקשרות ישירה
+            </a>
+            <a href="mailto:info@gina.i.ng" class="cta-btn">
+              <i class="fas fa-envelope"></i>
+              אימייל
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== FOOTER DISCLAIMER ===== -->
+      <div class="footer-disclaimer">
+        <p><strong>עדכון אחרון:</strong> ינואר 2026</p>
+        <p>המחירים בדף זה מתעדכנים מעת לעת בהתאם למחירי השוק, לחומרי הגלם ולעונות השנה. לקבלת הצעת מחיר מדויקת — שלחו לנו תמונה ופרטים רלוונטיים, ונחזור אליכם עם הצעה מותאמת.</p>
+        <p>טווחי המחירים בעמוד מבוססים בין היתר על מחירוני שוק נפוצים (למשל: מידרג, המקצוענים ודפי זהב) וניסיון שטח.</p>
+        <p style="font-size: 0.95rem; opacity: 0.85; margin-top: 25px;">© 2026 הגינה הירוקה והמקצועיים | ניסיון שטח משנת 2010 | עבודה מקצועית וחומרים איכותיים</p>
+      </div>
     </div>
-
-    <!-- ===== חלק א: הגינה הירוקה ===== -->
-    <div class="section-logo">
-      <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg" alt="הגינה הירוקה">
-    </div>
-    
-    <h2 class="section-title">הגינה הירוקה</h2>
-    <p class="section-subtitle">שירותי גינון, הדברה, השקיה ועיצוב – לבית פרטי, בניינים משותפים וחצרות</p>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <h3><i class="fa-solid fa-leaf"></i> תחזוקת גינה חודשית</h3>
-        <p>תחזוקה שוטפת לשמירה על גינה ירוקה ומסודרת: גיזום, ניקיון, טיפול בעשבייה, ריסוס מניעה בסיסי וסידור כללי.</p>
-        <div class="price-section">
-          <div class="price-label">טווח מחירים משוער</div>
-          <div class="price-range">החל מ־350₪ עד 50 מ״ר • החל מ־550₪ עד 100 מ״ר</div>
-          <div class="price-note">המחיר מתייחס לתחזוקה שוטפת של גינות מתוחזקות בלבד (לא שיקום). זמן עבודה סטנדרטי של עד כשעתיים לביקור תחזוקה אחד. גינות גדולות יותר, מוזנחות או עם מורכבות מיוחדת — יתומחרו בנפרד.</div>
-        </div>
-        <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> גינות גדולות יותר או מורכבות יותר — יתומחרו בנפרד.</div>
-      </div>
-
-      <div class="service-card">
-        <h3><i class="fa-solid fa-broom"></i> ביקור חד-פעמי</h3>
-        <p>ניקיון עומק והכנה לעונה: ניקיון עלים, סידור, גיזום כללי וטיפול בעשבייה – הכנה לחורף או לקיץ.</p>
-        <div class="price-section">
-          <div class="price-label">טווח מחירים משוער</div>
-          <div class="price-range">600₪ - 1,400₪</div>
-          <div class="price-note">תלוי בגודל השטח ורמת ההזנחה. בגינות מוזנחות מאוד/שטח גדול — ייתכן תמחור גבוה יותר.</div>
-        </div>
-        <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> אם זו גינה שלא טופלה תקופה ארוכה — ייתכן שמדובר בשיקום ולא בביקור רגיל.</div>
-      </div>
-
-      <div class="service-card">
-        <h3><i class="fa-solid fa-scissors"></i> גיזום שיחים ועצים</h3>
-        <p>גיזום מקצועי לשיחים ועצים נמוכים, ניקוי ענפים יבשים ושיפור מראה הגינה. עצים גבוהים / מנוף / סנפלינג — בתמחור נפרד לפי גובה, סיכון ונגישות.</p>
-        <div class="price-section">
-          <div class="price-label">טווח מחירים משוער</div>
-          <div class="price-range">450₪ - 900₪ (שיחים/עצים נמוכים)</div>
-          <div class="price-note">המחיר הסופי נקבע לפי כמות, גובה, פינוי, ונגישות.</div>
-        </div>
-        <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> עבודות גובה/סיכון — מתומחרות אחרי תמונה/סרטון או ביקור.</div>
-      </div>
-
-      <div class="service-card">
-        <h3><i class="fa-solid fa-bug-slash"></i> הדברה</h3>
-        <p>הדברה נגד חרקים ומזיקים בגינה ובבית, עם חומרים מאושרים ובטוחים לילדים ובעלי חיים (בהתאם להנחיות).</p>
-        <div class="price-section">
-          <div class="price-label">טווח מחירים משוער</div>
-          <div class="price-range">דירה: 300₪–450₪ • בית קרקע: 350₪–550₪</div>
-          <div class="price-note">תלוי בגודל הבית, סוג המזיק, והאם נדרש טיפול בארונות/חצר/ביוב.</div>
-        </div>
-        <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> טיפול נקודתי שונה מטיפול "עמוק" — נעדכן לפני ביצוע.</div>
-      </div>
-
-      <div class="service-card">
-        <h3><i class="fa-solid fa-droplet"></i> מערכת השקיה</h3>
-        <p>בדיקה של מערכת ההשקיה, איתור נזילות, תיקוני קווים וכיוון לזמני העונה.</p>
-        <div class="price-section">
-          <div class="price-label">טווח מחירים משוער</div>
-          <div class="price-range">תיקון נקודתי: 220₪–350₪ • טיפול/כיוון מערכת: 350₪–650₪</div>
-          <div class="price-note">המחיר תלוי במספר קווים, סוג התקלה, זמן איתור ונגישות.</div>
-        </div>
-        <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> החלפת רכיבים/מחשב השקיה/שסתומים — בתמחור לפי חלקים + עבודה.</div>
-      </div>
-
-      <div class="service-card">
-        <h3><i class="fa-solid fa-seedling"></i> שתילות</h3>
-        <p>שתילה מקצועית של עצים, שיחים, פרחים וצמחי נוי – בהתאמה לתנאי השטח והעונה.</p>
-        <div class="price-section">
-          <div class="price-label">טווח מחירים משוער</div>
-          <div class="price-range">עבודה: החל מ־30₪ ליחידה (לשתילות קטנות ובכמות) ועד 80₪ ליחידה</div>
-          <div class="price-note">נקבע לפי גודל הצמח, כמות השתילות, סוג הקרקע ונגישות.</div>
-        </div>
-        <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> המחיר מתייחס לעבודה בלבד ואינו כולל את עלות הצמחים.</div>
-      </div>
-
-      <div class="service-card">
-        <h3><i class="fa-solid fa-pen-ruler"></i> עיצוב גינה וייעוץ</h3>
-        <p>תכנון ועיצוב גינה בהתאמה אישית – החל מסידור מחדש של גינה קיימת ועד תכנון גינה מהיסוד.</p>
-        <div class="price-section">
-          <div class="price-label">טווח מחירים משוער</div>
-          <div class="price-range">ייעוץ בשטח: 350₪–650₪</div>
-          <div class="price-note">תלוי במיקום, משך הפגישה והיקף הפרויקט.</div>
-        </div>
-        <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> בפרויקטים גדולים — ניתן לקזז מהתשלום אם סוגרים עבודה.</div>
-      </div>
-    </div>
-
-    <!-- ===== חלק ב: המקצועיים ===== -->
-    <div class="section-logo">
-      <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/_%D7%9C%D7%95%D7%92%D7%95%20%D7%94%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99%D7%99%D7%9D.png" alt="המקצועיים">
-    </div>
-    
-    <h2 class="section-title">המקצועיים</h2>
-    <p class="section-subtitle">שירותי אינסטלציה, חשמל, איטום וחיזוק חצרות לקראת חורף וקיץ</p>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <h3><i class="fa-solid fa-faucet-drip"></i> אינסטלציה</h3>
-        <p>פתיחת סתימות, תיקון נזילות, החלפת כלים סניטריים (ברזים, אסלה, כיור) וטיפול כללי בצנרת.</p>
-        <div class="price-section">
-          <div class="price-label">טווח מחירים משוער</div>
-          <div class="price-range">350₪ - 750₪</div>
-          <div class="price-note">סתימה/ביקור פשוט: 350₪–450₪ • נזילה/תיקון מורכב: 450₪–750₪ (חריגים בתמחור נפרד).</div>
-        </div>
-        <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> מחיר סופי לאחר אבחון בשטח.</div>
-      </div>
-
-      <div class="service-card">
-        <h3><i class="fa-solid fa-bolt"></i> חשמל</h3>
-        <p>חשמל גינה ועבודות חשמל פשוטות (תאורה, נקודות, חיבורים ותיקונים).</p>
-        <div class="price-section">
-          <div class="price-label">טווח מחירים משוער</div>
-          <div class="price-range">300₪ - 700₪</div>
-          <div class="price-note">ביקור + תיקון בסיסי: 300₪–450₪ • נקודה חדשה: 500₪–700₪ (לפי תוואי ונגישות).</div>
-        </div>
-        <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> לא כולל גופי תאורה/חומרים. עבודות מורכבות/לוח — חשמלאי מוסמך בתמחור נפרד במידת הצורך.</div>
-      </div>
-
-      <div class="service-card">
-        <h3><i class="fa-solid fa-shield-halved"></i> איטום</h3>
-        <p>איטום נקודתי או שטח גדול בגג, מרפסת או קירות חיצוניים – למניעת חדירת מים ונזילות.</p>
-        <div class="price-section">
-          <div class="price-label">טווח מחירים משוער</div>
-          <div class="price-range">איטום נקודתי: 600₪–1,200₪ • שטח: 80₪–150₪/מ״ר</div>
-          <div class="price-note">תלוי במצב הקיים, סוג החומר, הכנות נדרשות והנגישות.</div>
-        </div>
-        <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> הצעת מחיר סופית אחרי תמונות/וידאו או ביקור.</div>
-      </div>
-
-      <div class="service-card">
-        <h3><i class="fa-solid fa-hammer"></i> חיזוק גדרות וחצרות</h3>
-        <p>חיזוק גדרות, פרגולות, סככות ומבנים קלים לקראת רוחות חזקות וגשמים.</p>
-        <div class="price-section">
-          <div class="price-label">טווח מחירים משוער</div>
-          <div class="price-range">חיזוק קל: 100₪–180₪ למטר רץ</div>
-          <div class="price-note">הידוק/חיבורי עץ-מתכת פשוטים. החלפת עמודים/ריתוך/יציקות — בתמחור נפרד.</div>
-        </div>
-        <div class="flexible-note"><i class="fa-solid fa-circle-info"></i> הצעת מחיר סופית לאחר מדידות ובחירת חומרים.</div>
-      </div>
-    </div>
-
-    <!-- ===== CTA SECTION ===== -->
-    <div class="cta-section">
-      <div class="cta-content">
-        <h2>רוצים הצעת מחיר מדויקת?</h2>
-        <p>שלחו לנו תמונה או סרטון של המקום + תיאור קצר של מה שדורש טיפול</p>
-        <p style="font-size: 1.1rem; margin-top: 20px; opacity: 0.95;">⏱️ נחזור אליכם עם הצעת מחיר מותאמת ומדויקת תוך 24 שעות</p>
-        <div class="cta-buttons">
-          <a href="https://wa.me/972584559727?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%D7%95%D7%9F%20%D7%94%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D%20%D7%95%D7%A8%D7%A6%D7%99%D7%AA%D7%99%20%D7%9C%D7%A9%D7%9C%D7%95%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA" target="_blank" rel="noopener" class="cta-btn whatsapp-btn">
-            <i class="fab fa-whatsapp"></i>
-            וואטסאפ 058-455-9727
-          </a>
-          <a href="https://wa.me/972546698931?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%D7%95%D7%9F%20%D7%94%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D%20%D7%95%D7%A8%D7%A6%D7%99%D7%AA%D7%99%20%D7%9C%D7%A9%D7%9C%D7%95%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA" target="_blank" rel="noopener" class="cta-btn whatsapp-btn">
-            <i class="fab fa-whatsapp"></i>
-            וואטסאפ 054-669-8931
-          </a>
-          <a href="tel:0546698931" class="cta-btn">
-            <i class="fas fa-phone"></i>
-            התקשרות ישירה
-          </a>
-          <a href="mailto:info@gina.i.ng" class="cta-btn">
-            <i class="fas fa-envelope"></i>
-            אימייל
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== FOOTER DISCLAIMER ===== -->
-    <div class="footer-disclaimer">
-      <p><strong>עדכון אחרון:</strong> ינואר 2026</p>
-      <p>המחירים בדף זה מתעדכנים מעת לעת בהתאם למחירי השוק, לחומרי הגלם ולעונות השנה. לקבלת הצעת מחיר מדויקת — שלחו לנו תמונה ופרטים רלוונטיים, ונחזור אליכם עם הצעה מותאמת.</p>
-      <p>טווחי המחירים בעמוד מבוססים בין היתר על מחירוני שוק נפוצים (למשל: מידרג, המקצוענים ודפי זהב) וניסיון שטח.</p>
-      <p style="font-size: 0.95rem; opacity: 0.85; margin-top: 25px;">© 2026 הגינה הירוקה והמקצועיים | ניסיון שטח משנת 2010 | עבודה מקצועית וחומרים איכותיים</p>
-    </div>
-  </div>
+  </main>
 </body>
 </html>
