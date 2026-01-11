@@ -4,18 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>מבצע ינואר 2026 - הגינה הירוקה והמקצועיים</title>
-  
-  <!-- Meta Tags לתצוגה מקדימה -->
-  <meta property="og:title" content="מבצע תחילת 2026 - הגינה הירוקה והמקצועיים">
-  <meta property="og:description" content="15 שנות ניסיון. שיקום וטיפול בגינות. עבודות חוץ מקצועיות. תנאים מועדפים לינואר 2026.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg">
+
+  <!-- SEO -->
+  <meta name="description" content="פתיחת שנה עם גינה וחצר מסודרות. שיקום גינות, תחזוקה, השקיה, איטום ועבודות חוץ. שקיפות מלאה, עבודה מסודרת ואחריות.">
+
+  <!-- Open Graph (WhatsApp/Facebook Preview) -->
+  <meta property="og:title" content="מבצע ינואר 2026 - הגינה הירוקה והמקצועיים">
+  <meta property="og:description" content="שיקום גינות ועבודות חוץ ברמה מקצועית. שקיפות מלאה, עבודה מסודרת ואחריות.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/colorful.jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://gina.i.ng/landing.html">
   <meta property="og:type" content="website">
-  <meta name="description" content="מבצע תחילת 2026 - שיקום גינות, עבודות חוץ, איטום והשקיה עם הגינה הירוקה והמקצועיים">
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJDZ29X5CZ"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17054224877"></script>
@@ -27,9 +31,9 @@
     gtag('config', 'G-BJDZ29X5CZ');
     gtag('config', 'AW-17054224877');
   </script>
-  
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
 
     * {
       margin: 0;
@@ -39,32 +43,10 @@
 
     body {
       font-family: 'Heebo', sans-serif;
-      background: linear-gradient(135deg, #e8f4f8, #d4e8f0);
+      background: #f6f8fb;
       color: #2c3e50;
       line-height: 1.6;
       overflow-x: hidden;
-    }
-
-    /* אפקט שלג נופל */
-    @keyframes snowfall {
-      0% {
-        top: -10%;
-        opacity: 0.8;
-      }
-      100% {
-        top: 100%;
-        opacity: 0.3;
-      }
-    }
-
-    .snowflake {
-      position: fixed;
-      top: -10%;
-      z-index: 1;
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 1.5em;
-      pointer-events: none;
-      animation: snowfall linear infinite;
     }
 
     /* תפריט עליון */
@@ -104,50 +86,27 @@
       color: #0f2f23;
     }
 
-    /* קישור של העמוד הנוכחי – דף מבצע */
     nav a[href="landing.html"],
     nav a[href="/landing.html"] {
       background: #1a4d3a;
       color: #fff;
     }
 
-    @media (max-width: 768px) {
-      nav ul {
-        gap: 10px;
-      }
-    }
-
-    /* באנר עליון מקצועי עם אפקט חורפי */
+    /* באנר עליון */
     .top-banner {
-      background: linear-gradient(-45deg, #1a4d3a, #2c5f2d, #1e5a8e, #1a4d3a);
-      background-size: 400% 400%;
-      animation: gradientShift 6s ease infinite;
+      background: linear-gradient(90deg, #1a4d3a, #1e5a8e);
       color: white;
       text-align: center;
-      padding: 18px;
-      font-weight: 700;
-      font-size: 1.15em;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-      position: relative;
-      overflow: hidden;
+      padding: 14px 16px;
+      font-weight: 800;
+      font-size: 1.02em;
+      text-shadow: none;
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-    }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
+    /* HERO Section */
     header {
-      background: linear-gradient(135deg, #1a4d3a, #2c5f2d, #1e5a8e, #4a7c59);
+      background: #0b1220;
       color: #fff;
-      text-align: center;
-      padding: 90px 20px;
       position: relative;
       overflow: hidden;
     }
@@ -155,902 +114,787 @@
     header::before {
       content: '';
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-      animation: rotate 25s linear infinite;
-    }
-
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      inset: 0;
+      background: linear-gradient(180deg, rgba(2,6,23,0.35) 0%, rgba(2,6,23,0.75) 100%);
     }
 
     .header-content {
       position: relative;
       z-index: 2;
-      max-width: 950px;
+      max-width: 1200px;
       margin: 0 auto;
+      padding: 80px 20px 60px;
     }
 
-    .logo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
+    .hero-image {
+      width: 100%;
+      max-width: 900px;
+      height: 380px;
       object-fit: cover;
-      border: 6px solid #fff;
-      margin-bottom: 35px;
-      animation: logoFloat 4s ease-in-out infinite;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-    }
-
-    @keyframes logoFloat {
-      0%, 100% { transform: translateY(0px) scale(1); }
-      50% { transform: translateY(-12px) scale(1.05); }
+      border-radius: 22px;
+      margin: 0 auto 34px;
+      display: block;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.12);
     }
 
     .main-headline {
-      font-size: 3.5em;
-      margin-bottom: 30px;
+      font-size: 3.05em;
+      margin-bottom: 20px;
       font-weight: 900;
-      text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
-      animation: slideInDown 1s ease-out;
-      line-height: 1.1;
-    }
-
-    @keyframes slideInDown {
-      from { opacity: 0; transform: translateY(-60px); }
-      to { opacity: 1; transform: translateY(0); }
+      text-shadow: none;
+      line-height: 1.12;
+      text-align: center;
     }
 
     .sub-headline {
-      font-size: 1.7em;
+      font-size: 1.5em;
       margin-bottom: 35px;
       font-weight: 600;
       opacity: 0.98;
-      animation: slideInUp 1s ease-out 0.3s backwards;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    @keyframes slideInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+    .hero-cta {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 35px;
     }
 
-    .value-proposition {
-      background: rgba(255,255,255,0.2);
-      padding: 30px 40px;
-      border-radius: 25px;
-      display: inline-block;
-      margin-top: 25px;
-      font-weight: 700;
-      font-size: 1.25em;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.25);
-      border: 3px solid rgba(255,255,255,0.4);
-      backdrop-filter: blur(15px);
-      animation: pulse 3s ease-in-out infinite;
+    .btn {
+      padding: 16px 28px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-size: 1.08em;
+      font-weight: 900;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+      border: none;
+      min-width: 240px;
+      justify-content: center;
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); box-shadow: 0 10px 35px rgba(0,0,0,0.25); }
-      50% { transform: scale(1.03); box-shadow: 0 15px 45px rgba(0,0,0,0.35); }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 38px rgba(0,0,0,0.30);
+      filter: brightness(1.02);
     }
 
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .btn-whatsapp:hover {
+      background: linear-gradient(135deg, #20b358, #0f7a6b);
+      border-color: white;
+    }
+
+    .btn-pricing {
+      background: white;
+      color: #1a4d3a;
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10);
+    }
+
+    .btn-pricing:hover {
+      background: #ffffff;
+      border-color: rgba(26,77,58,0.35);
+    }
+
+    /* Trust Bar */
+    .trust-bar {
+      background: rgba(255,255,255,0.10);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 22px;
+      padding: 22px;
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .trust-item {
+      text-align: center;
+    }
+
+    .trust-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+      font-size: 1.35em;
+      color: #d4af37;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 1.1em;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .trust-item span {
+      font-size: 0.95em;
+      opacity: 0.95;
+    }
+
+    /* Container */
     .container {
       max-width: 1200px;
       margin: auto;
       padding: 20px;
     }
 
-    .section-title {
-      font-size: 2.8em;
-      margin-bottom: 35px;
-      color: #1a4d3a;
-      text-align: center;
-      font-weight: 800;
+    /* Section Styles */
+    .section {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 56px 46px;
+      margin: 56px 0;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(15, 23, 42, 0.06);
       position: relative;
-      animation: slideInUp 0.8s ease-out;
+      overflow: hidden;
+    }
+
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(180deg, #1a4d3a, #1e5a8e);
+    }
+
+    .section-title {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #1a4d3a;
+      font-weight: 900;
+      position: relative;
     }
 
     .section-title::after {
       content: '';
       position: absolute;
-      bottom: -18px;
-      left: 50%;
-      transform: translateX(-50%);
+      bottom: -15px;
+      right: 0;
       width: 100px;
       height: 5px;
-      background: linear-gradient(90deg, #1a4d3a, #1e5a8e, #1a4d3a);
+      background: linear-gradient(90deg, #1a4d3a, #1e5a8e, #d4af37);
       border-radius: 3px;
     }
 
-    /* תג "חדש" או "מבצע" */
-    .promo-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
-      color: white;
-      padding: 8px 20px;
-      border-radius: 50px;
-      font-size: 0.9em;
-      font-weight: 700;
-      margin-right: 15px;
-      box-shadow: 0 5px 15px rgba(255,107,107,0.4);
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    /* מספרים רצים מרשימים */
-    .stats-section {
-      background: linear-gradient(135deg, #1a4d3a, #1e5a8e, #2c5f2d);
-      color: white;
-      padding: 80px 35px;
-      margin: 60px 0;
-      border-radius: 30px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 25px 60px rgba(26, 77, 58, 0.4);
-    }
-
-    .stats-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .stats-title {
-      font-size: 2.5em;
-      margin-bottom: 25px;
-      font-weight: 800;
-    }
-
-    .stats-subtitle {
-      font-size: 1.3em;
-      margin-bottom: 55px;
-      font-weight: 500;
-      opacity: 0.95;
-    }
-
-    .stats-grid {
+    /* Pricing Grid */
+    .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 45px;
-      margin-top: 55px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-top: 40px;
     }
 
-    .stat-item {
-      background: rgba(255,255,255,0.12);
-      padding: 45px 30px;
-      border-radius: 25px;
-      transition: all 0.5s ease;
-      backdrop-filter: blur(20px);
-      border: 3px solid rgba(255,255,255,0.25);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .stat-item:hover {
-      transform: translateY(-18px) scale(1.06);
-      background: rgba(255,255,255,0.22);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-      border-color: rgba(255,255,255,0.4);
-    }
-
-    .stat-number {
-      font-size: 4.5em;
-      font-weight: 900;
-      color: #ffd700;
-      display: block;
-      margin-bottom: 18px;
-      text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
-    }
-
-    .stat-label {
-      font-size: 1.25em;
-      font-weight: 600;
-      opacity: 0.97;
-    }
-
-    /* עסקים יוקרתיים */
-    .business-section {
-      background: linear-gradient(135deg, #ffffff, #f5f9fc);
-      border-radius: 35px;
-      padding: 70px 55px;
-      margin: 70px 0;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.12);
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .business-section:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 35px 90px rgba(0,0,0,0.18);
-    }
-
-    .business-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 10px;
-      height: 100%;
-      background: linear-gradient(180deg, #1a4d3a, #1e5a8e, #d4af37, #1a4d3a);
-    }
-
-    .business-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 55px;
-      flex-wrap: wrap;
-      gap: 35px;
-    }
-
-    .business-icon {
-      width: 110px;
-      height: 110px;
-      border-radius: 28px;
-      background: linear-gradient(135deg, #1a4d3a, #1e5a8e);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.8em;
-      color: white;
-      box-shadow: 0 25px 50px rgba(26, 77, 58, 0.5);
-      transition: all 0.4s ease;
-      font-weight: 900;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-
-    .business-logo {
-      width: 85px;
-      height: 85px;
-      object-fit: contain;
+    .price-card {
+      background: #ffffff;
+      border: 1px solid rgba(15, 23, 42, 0.08);
       border-radius: 18px;
-    }
-
-    .business-icon:hover {
-      transform: rotate(8deg) scale(1.15);
-      box-shadow: 0 30px 60px rgba(26, 77, 58, 0.7);
-    }
-
-    .business-title {
-      font-size: 3.5em;
-      color: #1a4d3a;
-      margin: 0;
-      font-weight: 900;
-    }
-
-    .business-subtitle {
-      font-size: 1.5em;
-      color: #555;
-      margin-top: 12px;
-      font-weight: 600;
-    }
-
-    /* שירותים יוקרתיים */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 35px;
-      margin-top: 55px;
-    }
-
-    .service-box {
-      background: linear-gradient(135deg, #fafafa, #ffffff);
-      border-radius: 28px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.1);
-      padding: 45px 40px;
-      text-align: center;
-      transition: all 0.5s ease;
+      padding: 30px 28px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
       position: relative;
       overflow: hidden;
-      border: 3px solid transparent;
-      animation: slideInUp 0.8s ease-out forwards;
     }
 
-    .service-box:nth-child(1) { animation-delay: 0.1s; }
-    .service-box:nth-child(2) { animation-delay: 0.2s; }
-    .service-box:nth-child(3) { animation-delay: 0.3s; }
-    .service-box:nth-child(4) { animation-delay: 0.4s; }
-
-    .service-box::before {
+    .price-card::before {
       content: '';
       position: absolute;
       top: 0;
-      left: 0;
+      right: 0;
       width: 100%;
-      height: 7px;
-      background: linear-gradient(90deg, #1a4d3a, #1e5a8e, #d4af37, #1a4d3a);
+      height: 5px;
+      background: linear-gradient(90deg, #1a4d3a, #1e5a8e, #d4af37);
       transform: scaleX(0);
-      transition: transform 0.5s ease;
+      transition: transform 0.4s ease;
     }
 
-    .service-box:hover::before {
+    .price-card:hover::before {
       transform: scaleX(1);
     }
 
-    .service-box:hover {
-      transform: translateY(-18px) scale(1.04);
-      box-shadow: 0 35px 70px rgba(26, 77, 58, 0.25);
-      border-color: #1e5a8e;
-      background: linear-gradient(135deg, #ffffff, #f0f5f9);
+    .price-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 46px rgba(26,77,58,0.12);
+      border-color: rgba(30, 90, 142, 0.35);
     }
 
-    .service-number {
-      width: 75px;
-      height: 75px;
+    .price-card h3 {
+      font-size: 1.5em;
+      color: #1a4d3a;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+
+    .price-card p {
+      color: #555;
+      font-size: 1.05em;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .price-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.25));
+      border: 2px solid rgba(212,175,55,0.4);
+      color: #1a4d3a;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 900;
+      font-size: 1.2em;
+    }
+
+    /* Steps */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .step-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 34px 26px;
+      text-align: center;
+      box-shadow: 0 12px 34px rgba(15, 23, 42, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 46px rgba(26,77,58,0.12);
+      border-color: rgba(30, 90, 142, 0.35);
+    }
+
+    .step-number {
+      width: 70px;
+      height: 70px;
       background: linear-gradient(135deg, #1a4d3a, #1e5a8e);
       color: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.7em;
-      font-weight: 800;
-      margin: 0 auto 28px;
-      transition: all 0.4s ease;
-      box-shadow: 0 12px 30px rgba(26, 77, 58, 0.4);
+      font-size: 2em;
+      font-weight: 900;
+      margin: 0 auto 25px;
+      box-shadow: 0 15px 35px rgba(26,77,58,0.4);
     }
 
-    .service-box:hover .service-number {
-      transform: scale(1.25) rotate(360deg);
-      box-shadow: 0 18px 40px rgba(26, 77, 58, 0.6);
-    }
-
-    .service-box h3 {
-      margin-bottom: 22px;
-      font-size: 1.6em;
+    .step-card h3 {
+      font-size: 1.4em;
       color: #1a4d3a;
-      font-weight: 800;
+      font-weight: 900;
+      margin-bottom: 15px;
     }
 
-    .service-box p {
+    .step-card p {
       color: #555;
-      line-height: 1.75;
-      font-size: 1.08em;
       font-weight: 500;
+      line-height: 1.7;
     }
 
-    /* ביקורות */
-    .reviews-section {
-      background: linear-gradient(135deg, #ffffff, #f8fbfd);
-      border-radius: 35px;
-      padding: 70px 55px;
-      margin: 70px 0;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.12);
+    /* Reviews */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
     }
 
-    .reviews {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 35px;
-      margin-top: 45px;
-    }
-
-    .text-review {
-      background: linear-gradient(135deg, #fafafa, #ffffff);
-      border-radius: 28px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.1);
-      padding: 45px 40px;
-      text-align: center;
-      transition: all 0.5s ease;
-      border: 3px solid transparent;
-      animation: slideInUp 0.8s ease-out 0.5s forwards;
-      flex: 1;
-      min-width: 340px;
+    .review-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 32px 26px;
+      box-shadow: 0 12px 34px rgba(15, 23, 42, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      border: 1px solid rgba(15, 23, 42, 0.08);
       position: relative;
     }
 
-    .text-review:hover {
-      transform: translateY(-18px) scale(1.03);
-      box-shadow: 0 30px 70px rgba(0,0,0,0.18);
-      border-color: #ffd700;
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 46px rgba(15, 23, 42, 0.10);
+      border-color: rgba(212,175,55,0.45);
     }
 
-    .text-review::before {
+    .review-card::before {
       content: '"';
-      font-size: 4.5em;
-      color: #ffd700;
       position: absolute;
-      top: 12px;
-      left: 25px;
+      top: 15px;
+      right: 20px;
+      font-size: 5em;
+      color: rgba(212,175,55,0.15);
       font-family: serif;
-      opacity: 0.4;
-    }
-
-    .review-text {
-      font-size: 1.25em;
-      color: #333;
-      line-height: 1.7;
-      margin-bottom: 28px;
-      font-style: italic;
-      font-weight: 500;
-    }
-
-    .review-author {
-      font-size: 1.15em;
-      color: #1a4d3a;
-      font-weight: 700;
-      margin-bottom: 12px;
     }
 
     .review-stars {
       color: #ffd700;
-      font-size: 1.4em;
-      margin-bottom: 18px;
+      font-size: 1.3em;
+      margin-bottom: 15px;
     }
 
-    /* CTA יוקרתי */
-    .cta {
-      margin-top: 90px;
-      text-align: center;
-      background: linear-gradient(135deg, #1a4d3a, #1e5a8e, #2c5f2d, #d4af37);
+    .review-text {
+      color: #333;
+      font-size: 1.15em;
+      font-weight: 600;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .review-author {
+      color: #1a4d3a;
+      font-weight: 900;
+      font-size: 1.1em;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      background: linear-gradient(135deg, #184E36, #1e5a8e);
       color: white;
-      padding: 80px 45px;
-      border-radius: 35px;
+      border-radius: 28px;
+      padding: 60px 44px;
+      margin: 60px 0;
+      text-align: center;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 30px 70px rgba(26, 77, 58, 0.4);
+      box-shadow: 0 22px 60px rgba(26,77,58,0.30);
     }
 
-    .cta::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.15), transparent);
-      animation: rotate 35s linear infinite;
-    }
-
-    .cta-content {
+    .final-cta-content {
       position: relative;
       z-index: 2;
     }
 
-    .cta h3 {
-      font-size: 3em;
-      margin-bottom: 35px;
+    .final-cta h2 {
+      font-size: 2.55em;
       font-weight: 900;
-      text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+      margin-bottom: 18px;
+      text-shadow: none;
     }
 
-    .cta p {
-      font-size: 1.4em;
-      margin-bottom: 28px;
+    .final-cta p {
+      font-size: 1.35em;
+      margin-bottom: 20px;
       font-weight: 600;
       opacity: 0.98;
     }
 
+    .offer-box {
+      background: rgba(255,255,255,0.15);
+      border: 2px solid rgba(255,255,255,0.25);
+      border-radius: 25px;
+      padding: 30px;
+      margin: 35px auto;
+      max-width: 700px;
+      backdrop-filter: blur(15px);
+    }
+
+    .offer-box h3 {
+      font-size: 1.6em;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .offer-box ul {
+      text-align: right;
+      padding-right: 25px;
+      line-height: 2.2;
+      font-size: 1.15em;
+      font-weight: 600;
+    }
+
     .cta-buttons {
       display: flex;
-      flex-wrap: wrap;
+      gap: 20px;
       justify-content: center;
-      gap: 25px;
-      margin-top: 45px;
+      flex-wrap: wrap;
+      margin-top: 40px;
     }
 
-    .cta a {
-      background: white;
-      color: #1a4d3a;
-      padding: 22px 45px;
-      border-radius: 50px;
+    .fineprint {
+      margin-top: 30px;
+      font-size: 0.95em;
+      opacity: 0.9;
+      font-weight: 600;
+      line-height: 1.8;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    /* Floating WhatsApp */
+    .floating-whatsapp {
+      position: fixed;
+      left: 16px;
+      bottom: 16px;
+      z-index: 9999;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: #fff;
       text-decoration: none;
-      font-size: 1.25em;
-      font-weight: 800;
-      transition: all 0.4s ease;
-      display: inline-block;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-      position: relative;
-      overflow: hidden;
-      min-width: 240px;
-      text-align: center;
-      border: 3px solid transparent;
+      padding: 14px 16px;
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .cta a:hover {
-      transform: translateY(-10px) scale(1.06);
-      box-shadow: 0 25px 60px rgba(0,0,0,0.35);
-      background: #f8f8f8;
-      border-color: #ffd700;
+    .floating-whatsapp i { font-size: 1.3em; }
+
+    @media (min-width: 900px) {
+      .floating-whatsapp { display: none; }
     }
 
-    .whatsapp-btn {
-      background: linear-gradient(135deg, #25d366, #128c7e) !important;
-      color: white !important;
-    }
-
-    .whatsapp-btn:hover {
-      background: linear-gradient(135deg, #20b358, #0f7a6b) !important;
-      color: white !important;
-      border-color: white !important;
-    }
-
-    /* רספונסיבי */
+    /* Responsive */
     @media (max-width: 768px) {
-      header {
-        padding: 70px 15px;
-      }
-      
-      .main-headline {
-        font-size: 2.8em;
-      }
-      
-      .container {
-        padding: 15px;
-      }
-      
-      .services {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      
-      .reviews {
-        flex-direction: column;
-      }
-      
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-      }
-      
-      .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .cta a {
-        width: 100%;
-        max-width: 320px;
-      }
-
-      .business-header {
-        text-align: center;
-        flex-direction: column;
-      }
-
-      .business-title {
-        font-size: 2.8em;
-      }
-
-      .business-section,
-      .reviews-section {
-        padding: 45px 35px;
-      }
+      .hero-image { height: 280px; }
+      .main-headline { font-size: 2.4em; }
+      .sub-headline { font-size: 1.2em; }
+      .trust-bar { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .section { padding: 40px 30px; }
+      .btn { min-width: auto; width: 100%; }
+      .hero-cta { flex-direction: column; }
     }
 
     @media (max-width: 480px) {
-      .logo {
-        width: 130px;
-        height: 130px;
-      }
-      
-      .main-headline {
-        font-size: 2.4em;
-      }
-      
-      .section-title {
-        font-size: 2.2em;
-      }
-      
-      .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-      
-      .stat-number {
-        font-size: 3.5em;
-      }
+      .hero-image { height: 220px; }
+      .main-headline { font-size: 2em; }
+      .section-title { font-size: 2em; }
+    }
 
-      .business-section,
-      .reviews-section {
-        padding: 35px 25px;
-      }
+    /* ===== Polished Premium + Conversion Tweaks (Jan 2026) ===== */
+
+    /* 1) קריאות "יוקרתית" יותר – מרווחי אותיות קטנים, טקסט רגוע */
+    .main-headline{
+      letter-spacing: -0.02em;
+    }
+
+    .sub-headline{
+      color: rgba(255,255,255,0.92);
+    }
+
+    /* 2) כפתורים – להפוך ליותר "פרימיום" (פחות צעקני) + לחיצה טובה */
+    .btn{
+      -webkit-tap-highlight-color: transparent;
+      cursor: pointer;
+    }
+
+    .btn:active{
+      transform: translateY(0px) scale(0.995);
+    }
+
+    /* 3) כפתור לבן – לא לקבל hover דרמטי מדי (נראה זול אם זה קופץ חזק) */
+    .btn-pricing:hover{
+      background: #ffffff;
+      border-color: rgba(26,77,58,0.35);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+      filter: none;
+    }
+
+    /* 4) כרטיסים – גבול עדין יותר, לוק "חברה גדולה" */
+    .section{
+      box-shadow: 0 18px 55px rgba(15, 23, 42, 0.06);
+    }
+
+    .price-card,
+    .step-card,
+    .review-card{
+      border-color: rgba(15, 23, 42, 0.07);
+    }
+
+    .price-card:hover,
+    .step-card:hover,
+    .review-card:hover{
+      transform: translateY(-6px);
+    }
+
+    /* 5) TRUST BAR – יותר קריא במובייל */
+    @media (max-width: 768px){
+      .trust-item strong{ font-size: 1.02em; }
+      .trust-item span{ font-size: 0.92em; opacity: 0.92; }
+
+      .main-headline{ font-size: 2.25em; }
+      .sub-headline{ font-size: 1.18em; }
+    }
+
+    /* 6) Accessibility: Focus ברור (נראה מקצועי) */
+    a:focus-visible{
+      outline: 3px solid rgba(212,175,55,0.65);
+      outline-offset: 3px;
+      border-radius: 14px;
     }
   </style>
 </head>
-<body>
-  <!-- אפקט שלג נופל -->
-  <div id="snow-container"></div>
 
-  <!-- באנר עליון מקצועי -->
+<body>
+  <!-- באנר עליון -->
   <div class="top-banner">
-    מבצע תחילת 2026 • שיקום גינות • עבודות חוץ מקצועיות • תנאים מועדפים לינואר 2026
+    מבצע ינואר 2026 • שיקום גינות • תחזוקה מסודרת • עבודות חוץ מקצועיות • שקיפות מלאה
   </div>
 
-  <!-- תפריט עליון -->
+  <!-- תפריט -->
   <nav>
     <ul>
       <li><a href="index.html">דף הבית</a></li>
       <li><a href="left-sidebar.html">שירותים</a></li>
       <li><a href="right-sidebar.html">גלריה</a></li>
-      <li class="active"><a href="landing.html">מבצע החודש</a></li>
+      <li><a href="landing.html">מבצע החודש</a></li>
       <li><a href="no-sidebar.html">צור קשר</a></li>
-      <li><a href="/pricing.html">מחירון</a></li>
+      <li><a href="pricing.html">מחירון</a></li>
     </ul>
   </nav>
 
+  <!-- HERO -->
   <header>
     <div class="header-content">
-      <h1 class="main-headline">מבצע תחילת 2026 — שיקום, תחזוקת גינות ועבודות חוץ ברמה מקצועית</h1>
-      <p class="sub-headline">פתיחת השנה בתנאים מועדפים לשירותי גינון, שיפוץ חוץ, איטום, השקיה ותשתיות</p>
-      <div class="value-proposition">
-        ניסיון של מעל 15 שנה • עבודה מדויקת • שקיפות מלאה • אחריות מקצועית
+      <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/colorful.jpeg" alt="גינה ירוקה ומטופחת" class="hero-image">
+      
+      <h1 class="main-headline">גינה שנראית מושלמת — בלי כאב ראש, בלי הפתעות</h1>
+      <p class="sub-headline">שולחים תמונה/וידאו + עיר + גודל — מקבלים הצעה מסודרת עם מחיר מראש. בלי הפתעות, בלי מריחות.</p>
+
+      <div class="hero-cta">
+        <a href="https://wa.me/972546698931?text=%D7%94%D7%99%D7%99%20%F0%9F%91%8B%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%A6%D7%A2%D7%94%20%D7%9E%D7%A1%D7%95%D7%93%D7%A8%D7%AA.%20%D7%94%D7%A2%D7%99%D7%A8%3A%20____%20%7C%20%D7%92%D7%95%D7%93%D7%9C%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20____%20%D7%9E%22%D7%A8%20%7C%20%D7%9E%D7%98%D7%A8%D7%94%3A%20____%20%7C%20%D7%A6%D7%99%D7%A8%D7%A4%D7%AA%D7%99%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%2F%D7%95%D7%99%D7%93%D7%90%D7%95." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+          שלחי בוואטסאפ עכשיו
+        </a>
+        <a href="pricing.html" class="btn btn-pricing">
+          <i class="fa-solid fa-file-invoice"></i>
+          למחירון שקוף
+        </a>
       </div>
+
+      <p style="text-align:center; margin-top:18px; opacity:0.92; font-weight:600; color:#fff; font-size:0.98em;">
+        לרוב חוזרים תוך עד 60 דקות בימים א׳–ה׳ 08:00–18:00.
+      </p>
+
+      <div class="trust-bar">
+        <div class="trust-item">
+          <div class="trust-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <strong>עבודה נקייה ובטוחה</strong>
+          <span>סדר, ניקיון ובטיחות</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><i class="fa-solid fa-receipt"></i></div>
+          <strong>שקיפות מלאה</strong>
+          <span>מחיר ברור לפני ביצוע</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><i class="fa-solid fa-bolt"></i></div>
+          <strong>מענה מהיר</strong>
+          <span>תיאום נוח וזמין</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><i class="fa-solid fa-award"></i></div>
+          <strong>אחריות מקצועית</strong>
+          <span>עבודה תקנית ואיכותית</span>
+        </div>
+      </div>
+
+      <p style="text-align:center; margin-top:18px; opacity:0.92; font-weight:600; color:#fff;">
+        עובדים מסודר • מסבירים מראש • משאירים נקי • זמינות מהירה בוואטסאפ
+      </p>
     </div>
   </header>
 
   <div class="container">
-    <!-- מספרים מרשימים -->
-    <div class="stats-section">
-      <div class="stats-content">
-        <h2 class="stats-title">מבצע ינואר 2026</h2>
-        <p class="stats-subtitle">שיקום ותחזוקת גינות • עבודות חוץ מקצועיות • תחילת שנה נכונה</p>
-        <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-number" data-target="15">0</span>
-            <div class="stat-label">שנות ניסיון מוכח</div>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="380">0</span>
-            <div class="stat-label">פרויקטים הושלמו ב-2025</div>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="98">0</span>
-            <div class="stat-label">% שביעות רצון לקוחות</div>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="8">0</span>
-            <div class="stat-label">תחומי מומחיות</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- למה זה חשוב עכשיו -->
-    <div style="background: white; border-radius: 30px; padding: 50px 40px; margin: 60px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.1); max-width: 900px; margin-left: auto; margin-right: auto;">
-      <h2 class="section-title" style="margin-bottom: 30px;">למה זה חשוב עכשיו</h2>
-      <h3 style="font-size: 1.35em; color: #1a4d3a; margin-bottom: 20px; font-weight: 700;">פתיחת שנה היא הזמן הנכון לטפל במה שדורש טיפול</h3>
-      <p style="font-size: 1.15em; line-height: 1.8; color: #555; margin-bottom: 25px;">
-        לאחר עונת החגים והגשמים הראשונים, מתגלות לרוב בעיות בגינה ובתשתיות: בלאי, רטיבות, נזילות, הזנחה, צמחייה שיצאה משליטה או מערכות שדורשות התאמה.
+    <!-- למה עכשיו -->
+    <section class="section">
+      <h2 class="section-title">למה עכשיו</h2>
+      <p style="font-size: 1.15em; color: #555; font-weight: 500; line-height: 1.85; margin-bottom: 30px;">
+        בתחילת השנה (ובעיקר אחרי הגשמים הראשונים) מתגלות בעיות: עשבייה שיוצאת משליטה, השקיה שדורשת כיוון,
+        בלאי, הצפה/רטיבות, וצמחייה שמעמיסה על הבית והחצר.
+        זה הזמן להחזיר שליטה — ולבנות גינה שנראית מצוין כל השנה.
       </p>
-      <p style="font-size: 1.15em; line-height: 1.8; color: #555;">
-        ינואר הוא הזמן הנכון לעצור את ההידרדרות, להסדיר את הדברים, ולהתחיל את השנה בסביבה מתוחזקת, בטוחה ונעימה.
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>שולחים תמונה/וידאו</h3>
+          <p>+ עיר + גודל משוער + מה המטרה</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>מקבלים הצעה מסודרת</h3>
+          <p>שקופה וברורה, בלי הפתעות</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>מגיעים ומבצעים</h3>
+          <p>נקי, מקצועי, עם אחריות</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- מחירון שקוף -->
+    <section class="section">
+      <h2 class="section-title">מבצע ינואר 2026 — מחיר מראש, עבודה מסודרת</h2>
+      <p style="font-size: 1.2em; color: #555; font-weight: 600; line-height: 1.8; margin-bottom: 15px;">
+        מחירון שקוף + בונוס להזמנות במהלך ינואר:
+        <strong style="color: #1a4d3a;">10% הנחה</strong> על השירות הראשון,
+        ו־<strong style="color: #1a4d3a;">15% הנחה</strong> על השירות השני באותו נכס.
       </p>
-    </div>
-
-    <!-- למי זה מתאים -->
-    <div style="background: linear-gradient(135deg, #f9f9f9, #ffffff); border-radius: 30px; padding: 50px 40px; margin: 60px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.1); max-width: 900px; margin-left: auto; margin-right: auto;">
-      <h2 class="section-title" style="margin-bottom: 30px;">למי זה מתאים</h2>
-      <p style="font-size: 1.15em; line-height: 1.8; color: #555; margin-bottom: 25px;">
-        המבצע מיועד ללקוחות ש:
+      <p style="font-size: 1.05em; color: #666; font-weight: 500; line-height: 1.7;">
+        (מתאים במיוחד למי שרוצה לסגור "גם גינה" וגם "תיקון חוץ" באותו ביקור).
       </p>
-      <ul style="font-size: 1.1em; line-height: 2; color: #555; padding-right: 25px;">
-        <li>רוצים לשקם גינה מוזנחת</li>
-        <li>נכנסים לבית חדש ורוצים להכין את החוץ כמו שצריך</li>
-        <li>גילו נזקי מים, רטיבות או תקלות אחרי הגשמים הראשונים</li>
-        <li>רוצים להסדיר תחזוקה מסודרת לשנה הקרובה</li>
-        <li>מחפשים פתרון מקצועי אחד לכל עבודות החוץ והבית</li>
-      </ul>
-    </div>
 
-    <!-- עסק ראשון - הגינה הירוקה -->
-    <div class="business-section">
-      <div class="business-header">
-        <div class="business-icon">
-          <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg" alt="לוגו הגינה הירוקה" class="business-logo">
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>תחזוקה לגינה מתוחזקת</h3>
+          <p>עד 50 מ״ר • עד שעה וחצי עבודה • תחזוקה בלבד</p>
+          <span class="price-tag">החל מ־350 ₪</span>
         </div>
-        <div>
-          <h2 class="business-title">הגינה הירוקה</h2>
-          <p class="business-subtitle">שירותי גינון מקצועיים – מעל 15 שנות ניסיון</p>
+
+        <div class="price-card">
+          <h3>שיקום חד־פעמי</h3>
+          <p>עד 50 מ״ר • ניקיון עומק, עשבייה, גיזום כללי וסידור</p>
+          <span class="price-tag">החל מ־550 ₪</span>
+        </div>
+
+        <div class="price-card">
+          <h3>חבילת תחזוקה – 3 חודשים</h3>
+          <p>עד 50 מ״ר • ביקור חודשי × 3 • תחזוקה בלבד</p>
+          <span class="price-tag">החל מ־350 ₪/חודש</span>
+        </div>
+
+        <div class="price-card">
+          <h3>חבילת תחזוקה – 3 חודשים (עד 100 מ"ר)</h3>
+          <p>עד 100 מ״ר • ביקור חודשי × 3 • עד שעתיים עבודה בכל ביקור</p>
+          <span class="price-tag">החל מ־500 ₪/חודש</span>
         </div>
       </div>
 
-      <div class="services">
-        <div class="service-box">
-          <div class="service-number">01</div>
-          <h3>שיקום וניקוי גינות קיימות</h3>
-          <p>ניקוי יסודי של הגינה, הסרת עלווה יבשה ופסולת, טיפול בבלאי ובנזקים שהצטברו, החייאת אזורי גינה מוזנחים. שיקום מלא והחזרת הגינה למצב מטופח ומזמין.</p>
-        </div>
-        <div class="service-box">
-          <div class="service-number">02</div>
-          <h3>גיזום, דילול ועיצוב עצים ושיחים</h3>
-          <p>גיזום מקצועי לעצים ושיחים, דילול צמחייה צפופה, עיצוב וצורה אסתטית. שמירה על בריאות הצמחים וייפוי מראה הגינה לקראת האביב.</p>
-        </div>
-        <div class="service-box">
-          <div class="service-number">03</div>
-          <h3>התאמת מערכות השקיה לעונה</h3>
-          <p>בדיקה וכיוון מערכות השקיה, תיקון נזקים שנוצרו בחורף, התאמת תזמון והספקת מים לעונת האביב. מערכת תקינה ויעילה לשנה הקרובה.</p>
-        </div>
-        <div class="service-box">
-          <div class="service-number">04</div>
-          <h3>שתילות חורף ותחילת אביב</h3>
-          <p>שתילת צמחים מתאימים לתקופה, החלפת צמחים ישנים, הוספת מגוון ופריחה. גינה צבעונית ומרעננת שתלווה אתכם לאורך כל השנה.</p>
-        </div>
+      <div style="margin-top: 35px; background: rgba(26,77,58,0.05); border: 2px solid rgba(26,77,58,0.1); border-radius: 20px; padding: 25px;">
+        <p style="font-size: 1.05em; color: #333; font-weight: 600; line-height: 1.85;">
+          <strong style="color: #1a4d3a;">הבהרה חשובה:</strong> המחיר הסופי נקבע לפי תמונות/וידאו והיקף עבודה בפועל.
+          גינה מוזנחת מאוד, גישה מורכבת, פינוי חריג, או שטח גדול — יתומחרו לאחר בדיקה.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <!-- עסק שני - המקצועיים -->
-    <div class="business-section">
-      <div class="business-header">
-        <div class="business-icon">
-          <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/_%D7%9C%D7%95%D7%92%D7%95%20%D7%94%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99%D7%99%D7%9D.png" alt="לוגו המקצועיים" class="business-logo">
-        </div>
-        <div>
-          <h2 class="business-title">המקצועיים</h2>
-          <p class="business-subtitle">שיפוצים ועבודות חוץ – מעל 15 שנות ניסיון</p>
-        </div>
-      </div>
+    <!-- שירותים -->
+    <section class="section">
+      <h2 class="section-title">מה אפשר לעשות אצלך בנכס</h2>
+      <p style="font-size: 1.15em; color: #555; font-weight: 600; line-height: 1.85;">
+        שיקום גינות • תחזוקה מסודרת • גיזומים ועיצוב • השקיה ותיקונים • שתילות עונתיות
+        <br>
+        וגם עבודות חוץ משלימות: איטום/רטיבות/תיקוני תחזוקה נקודתיים — לפי צורך.
+      </p>
+    </section>
 
-      <div class="services">
-        <div class="service-box">
-          <div class="service-number">01</div>
-          <h3>איתור ותיקון נזילות וחדירות מים</h3>
-          <p>איתור מקור הנזילה, תיקון מקצועי ומונע, איטום קירות וגגות. פתרון יסודי שעוצר נזקי מים לטווח ארוך.</p>
-        </div>
-        <div class="service-box">
-          <div class="service-number">02</div>
-          <h3>איטום, טיח וצבע חוץ</h3>
-          <p>איטום חיצוני למניעת רטיבות, תיקון סדקים וטיח, צביעה חיצונית בחומרים איכותיים. הבית נראה מסודר ומוגן מפני גשמים.</p>
-        </div>
-        <div class="service-box">
-          <div class="service-number">03</div>
-          <h3>בדיקות ותיקוני חשמל חוץ ובית</h3>
-          <p>בדיקת מערכות חשמל ותיקוני בטיחות, תאורת חוץ, לוחות חשמל. עבודה בטיחותית לפי התקן, אחריות מלאה על הביצוע.</p>
-        </div>
-        <div class="service-box">
-          <div class="service-number">04</div>
-          <h3>תיקוני תחזוקה ושיפוץ נקודתיים</h3>
-          <p>תיקונים קטנים ובינוניים בבית ובחוץ, שיפוץ נקודתי לפני שמתפתחת בעיה גדולה יותר. אחריות מקצועית על כל תיקון.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- למה לבחור בנו -->
-    <div style="background: linear-gradient(135deg, #1a4d3a, #2c5f2d); color: white; border-radius: 30px; padding: 60px 50px; margin: 70px 0; box-shadow: 0 25px 60px rgba(26, 77, 58, 0.3);">
-      <h2 class="section-title" style="color: white; margin-bottom: 40px;">למה לבחור בנו</h2>
-      <ul style="font-size: 1.2em; line-height: 2.2; padding-right: 30px; list-style: none;">
-        <li style="margin-bottom: 15px; position: relative; padding-right: 35px;">
-          <span style="position: absolute; right: 0; font-size: 1.3em;">✓</span>
-          מעל 15 שנות ניסיון מצטבר
-        </li>
-        <li style="margin-bottom: 15px; position: relative; padding-right: 35px;">
-          <span style="position: absolute; right: 0; font-size: 1.3em;">✓</span>
-          עבודה עם חומרים תקניים ואיכותיים בלבד
-        </li>
-        <li style="margin-bottom: 15px; position: relative; padding-right: 35px;">
-          <span style="position: absolute; right: 0; font-size: 1.3em;">✓</span>
-          סדר, ניקיון ובטיחות באתר העבודה
-        </li>
-        <li style="margin-bottom: 15px; position: relative; padding-right: 35px;">
-          <span style="position: absolute; right: 0; font-size: 1.3em;">✓</span>
-          הצעת מחיר מפורטת ושקופה מראש
-        </li>
-        <li style="position: relative; padding-right: 35px;">
-          <span style="position: absolute; right: 0; font-size: 1.3em;">✓</span>
-          אחריות מקצועית על הביצוע
-        </li>
-      </ul>
-    </div>
-
-    <!-- ביקורות -->
-    <div class="reviews-section">
+    <!-- חוות דעת -->
+    <section class="section">
       <h2 class="section-title">חוות דעת</h2>
       
-      <div class="reviews">
-        <div class="text-review">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
-          <div class="review-text">עבודה מקצועית, מדויקת וללא הפתעות. הכל היה ברור ומסודר.</div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">עבודה מקצועית ומסודרת. הכל היה ברור מראש, בלי הפתעות.</div>
           <div class="review-author">ניר</div>
         </div>
-        <div class="text-review">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
-          <div class="review-text">טיפלו לנו גם בגינה וגם בבית, חסכו לנו הרבה התרוצצויות.</div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">סידרו לנו את הגינה ברמה אחרת. הגיעו בזמן, נקי, תוצאה מושלמת.</div>
           <div class="review-author">שירן</div>
         </div>
-        <div class="text-review">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
-          <div class="review-text">איתרו לנו נזילה שלא הצליחו למצוא לפניהם. הצילו לנו את הקיר.</div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">מענה מהיר, שירות נעים, ופתרו לנו תקלה בהשקיה שלא מצאו לפניהם.</div>
           <div class="review-author">אבי</div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- CTA יוקרתי -->
-    <div class="cta">
-      <div class="cta-content">
-        <h3>רוצים לבדוק התאמה למבצע תחילת 2026?</h3>
-        <p>שלחו לנו תמונה או סרטון של השטח + תיאור קצר של מה שנדרש</p>
-        <p style="font-size: 1.05em; margin-top: 18px; opacity: 0.95;">נחזור אליכם עם הערכה מקצועית והצעת מחיר מותאמת</p>
-        <div style="background: rgba(255,255,255,0.15); padding: 20px 30px; border-radius: 15px; margin: 30px auto; max-width: 650px;">
-          <h4 style="font-size: 1.15em; margin-bottom: 15px; font-weight: 700;">תנאי המבצע</h4>
-          <ul style="font-size: 1em; line-height: 1.8; text-align: right; padding-right: 25px; opacity: 0.95;">
-            <li>תקף להזמנות המתבצעות במהלך ינואר 2026</li>
-            <li>כפוף לזמינות ולבדיקת היקף העבודה</li>
+    <!-- CTA סופי -->
+    <div class="final-cta">
+      <div class="final-cta-content">
+        <h2>רוצה גינה שגורמת לך להגיד "וואו" כל פעם שאת יוצאת החוצה?</h2>
+        <p>
+          שלחי עכשיו בוואטסאפ: <strong>תמונה/וידאו</strong> + <strong>עיר</strong> + <strong>גודל משוער</strong> + <strong>מה המטרה</strong>.
+          <br>
+          נחזור עם הצעה מסודרת ומחיר מראש.
+        </p>
+
+        <div class="offer-box">
+          <h3>מבצע ינואר:</h3>
+          <ul>
+            <li>10% הנחה על השירות הראשון</li>
+            <li>15% הנחה על השירות השני באותו נכס</li>
+            <li>כפוף לזמינות ובדיקת התאמה</li>
           </ul>
         </div>
+
         <div class="cta-buttons">
-          <a href="https://wa.me/972546698931" target="_blank" class="whatsapp-btn">וואטסאפ 054-669-8931</a>
-          <a href="https://wa.me/972534372319" target="_blank" class="whatsapp-btn">וואטסאפ 053-437-2319</a>
-          <a href="tel:0546698931">התקשרות ישירה</a>
-          <a href="mailto:info@gina.i.ng">info@gina.i.ng</a>
+          <a href="https://wa.me/972546698931?text=%D7%94%D7%99%D7%99%20%F0%9F%91%8B%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%A6%D7%A2%D7%94%20%D7%9E%D7%A1%D7%95%D7%93%D7%A8%D7%AA.%20%D7%94%D7%A2%D7%99%D7%A8%3A%20____%20%7C%20%D7%92%D7%95%D7%93%D7%9C%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20____%20%D7%9E%22%D7%A8%20%7C%20%D7%9E%D7%98%D7%A8%D7%94%3A%20____%20%7C%20%D7%A6%D7%99%D7%A8%D7%A4%D7%AA%D7%99%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%2F%D7%95%D7%99%D7%93%D7%90%D7%95." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            וואטסאפ 054-669-8931
+          </a>
+          <a href="https://wa.me/972534372319?text=%D7%94%D7%99%D7%99%20%F0%9F%91%8B%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%A6%D7%A2%D7%94%20%D7%9E%D7%A1%D7%95%D7%93%D7%A8%D7%AA.%20%D7%94%D7%A2%D7%99%D7%A8%3A%20____%20%7C%20%D7%92%D7%95%D7%93%D7%9C%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20____%20%D7%9E%22%D7%A8%20%7C%20%D7%9E%D7%98%D7%A8%D7%94%3A%20____%20%7C%20%D7%A6%D7%99%D7%A8%D7%A4%D7%AA%D7%99%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%2F%D7%95%D7%99%D7%93%D7%90%D7%95." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            וואטסאפ 053-437-2319
+          </a>
+          <a href="tel:0546698931" class="btn btn-pricing">
+            <i class="fa-solid fa-phone"></i>
+            שיחה ישירה
+          </a>
+          <a href="pricing.html" class="btn btn-pricing">
+            <i class="fa-solid fa-file-invoice"></i>
+            מחירון מלא
+          </a>
+          <a href="mailto:info@gina.i.ng" class="btn btn-pricing">
+            <i class="fa-solid fa-envelope"></i>
+            info@gina.i.ng
+          </a>
+        </div>
+
+        <div class="fineprint">
+          <strong>תנאי המבצע:</strong> המבצע תקף להזמנות במהלך ינואר 2026, כפוף לזמינות ולבדיקת התאמה.
+          המחיר הסופי נקבע לפי תמונות/וידאו והיקף עבודה בפועל.
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 40px 20px; color: #555; font-weight: 600;">
+      <p style="font-size: 1.1em; margin-bottom: 10px;">© 2026 הגינה הירוקה והמקצועיים - כל הזכויות שמורות</p>
+      <p>054-669-8931 • 053-437-2319 • info@gina.i.ng</p>
+    </footer>
   </div>
 
-  <!-- Footer -->
-  <footer style="background: linear-gradient(135deg, #1a4d3a, #1e5a8e); color: white; text-align: center; padding: 50px 25px; margin-top: 90px;">
-    <p style="font-size: 1.1em; font-weight: 600;">© 2026 הגינה הירוקה והמקצועיים - כל הזכויות שמורות</p>
-    <p style="margin-top: 15px; opacity: 0.95; font-size: 1.05em;">054-669-8931 | 053-437-2319 | info@gina.i.ng</p>
-  </footer>
-
-  <script>
-    // יצירת אפקט שלג נופל
-    function createSnowflakes() {
-      const container = document.getElementById('snow-container');
-      const snowflakeSymbols = ['❄', '❅', '❆'];
-      
-      for (let i = 0; i < 20; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.className = 'snowflake';
-        snowflake.textContent = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
-        snowflake.style.left = Math.random() * 100 + '%';
-        snowflake.style.animationDuration = (Math.random() * 3 + 4) + 's';
-        snowflake.style.animationDelay = Math.random() * 5 + 's';
-        snowflake.style.fontSize = (Math.random() * 0.8 + 0.8) + 'em';
-        container.appendChild(snowflake);
-      }
-    }
-
-    // מספרים רצים מתקדמים
-    function animateCounters() {
-      const counters = document.querySelectorAll('.stat-number');
-      const duration = 2500;
-      
-      counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
-        const increment = target / (duration / 16);
-        let current = 0;
-        
-        const updateCounter = () => {
-          if (current < target) {
-            current += increment;
-            counter.textContent = Math.ceil(current);
-            requestAnimationFrame(updateCounter);
-          } else {
-            counter.textContent = target;
-          }
-        };
-        
-        updateCounter();
-      });
-    }
-
-    // Intersection Observer
-    const statsSection = document.querySelector('.stats-section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCounters();
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    if (statsSection) {
-      observer.observe(statsSection);
-    }
-
-    // הפעלת אפקט השלג
-    createSnowflakes();
-  </script>
+  <!-- כפתור וואטסאפ צף -->
+  <a href="https://wa.me/972546698931?text=%D7%94%D7%99%D7%99%20%F0%9F%91%8B%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%A6%D7%A2%D7%94%20%D7%9E%D7%A1%D7%95%D7%93%D7%A8%D7%AA.%20%D7%94%D7%A2%D7%99%D7%A8%3A%20____%20%7C%20%D7%92%D7%95%D7%93%D7%9C%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20____%20%D7%9E%22%D7%A8%20%7C%20%D7%9E%D7%98%D7%A8%D7%94%3A%20____%20%7C%20%D7%A6%D7%99%D7%A8%D7%A4%D7%AA%D7%99%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%2F%D7%95%D7%99%D7%93%D7%90%D7%95." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span>שלחי הודעה</span>
+  </a>
 </body>
 </html>
