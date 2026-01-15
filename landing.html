@@ -1,556 +1,648 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="he">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>מבצע ינואר 2026 - הגינה הירוקה והמקצועיים</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
-  <meta name="description" content="פתיחת שנה עם גינה וחצר מסודרות. שיקום גינות, תחזוקה, השקיה, איטום ועבודות חוץ. שקיפות מלאה, עבודה מסודרת ואחריות.">
+  <title>הטבת ינואר 2026 | הגינה הירוקה</title>
+  <meta name="description" content="שיקום ותחזוקת גינות בדרום ובמרכז. שולחים תמונות + עיר + גודל משוער ומקבלים הצעה ראשונית בטווח תואם. שקיפות מלאה, תיאום מסודר ועבודה מוקפדת." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://gina.i.ng/landing.html" />
 
   <!-- Open Graph (WhatsApp/Facebook Preview) -->
-  <meta property="og:title" content="מבצע ינואר 2026 - הגינה הירוקה והמקצועיים">
-  <meta property="og:description" content="שיקום גינות ועבודות חוץ ברמה מקצועית. שקיפות מלאה, עבודה מסודרת ואחריות.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/colorful.jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:url" content="https://gina.i.ng/landing.html">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="הטבת ינואר 2026 | הגינה הירוקה" />
+  <meta property="og:description" content="שולחים תמונות + עיר + גודל משוער ומקבלים הצעה ראשונית בטווח תואם. שירות אמין, מקצועי ומהיר." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/garden_colors.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://gina.i.ng/landing.html" />
+  <meta property="og:type" content="website" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="הטבת ינואר 2026 | הגינה הירוקה" />
+  <meta name="twitter:description" content="שולחים תמונות + עיר + גודל משוער ומקבלים הצעה ראשונית בטווח תואם." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/garden_colors.png" />
 
-  <!-- Google Analytics -->
+  <!-- Icons / PWA (optional, relies on files you already have in repo) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <!-- Font + Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJDZ29X5CZ"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17054224877"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('set', 'traffic_type', 'internal');
     gtag('config', 'G-BJDZ29X5CZ');
-    gtag('config', 'AW-17054224877');
+
+    function trackLead(action, extra) {
+      try {
+        gtag('event', action, Object.assign({ page: 'landing_jan_2026' }, extra || {}));
+      } catch(e) {}
+    }
   </script>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
+    *{ margin:0; padding:0; box-sizing:border-box; }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root{
+      --green:#1a4d3a;
+      --blue:#1e5a8e;
+      --gold:#d4af37;
+      --text:#0f172a;
+      --muted:#475569;
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --border:rgba(15, 23, 42, 0.09);
+      --shadow:0 18px 55px rgba(15, 23, 42, 0.06);
+      --shadow-strong:0 22px 60px rgba(26,77,58,0.28);
+      --radius:22px;
     }
 
-    body {
-      font-family: 'Heebo', sans-serif;
-      background: #f6f8fb;
-      color: #2c3e50;
-      line-height: 1.6;
-      overflow-x: hidden;
+    body{
+      font-family:'Heebo', sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      overflow-x:hidden;
     }
 
-    /* תפריט עליון */
-    nav {
-      background: rgba(255, 255, 255, 0.95);
+    a{ color:inherit; }
+
+    /* Top banner */
+    .top-banner{
+      background: linear-gradient(90deg, var(--green), var(--blue));
+      color:#fff;
+      text-align:center;
+      padding:12px 16px;
+      font-weight:900;
+      font-size:1.0em;
+    }
+
+    /* Nav */
+    nav{
+      background: rgba(255,255,255,0.95);
       backdrop-filter: blur(10px);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
       z-index: 50;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      flex-wrap: wrap;
+    .nav-inner{
+      max-width:1200px;
+      margin:0 auto;
+      padding:10px 14px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      justify-content:space-between;
+      flex-wrap:wrap;
     }
 
-    nav a {
-      text-decoration: none;
-      color: #1a4d3a;
-      font-weight: 600;
-      font-size: 0.95em;
-      padding: 6px 10px;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-      white-space: nowrap;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+      color:var(--green);
+      font-weight:900;
+      white-space:nowrap;
     }
 
-    nav a:hover {
-      background: rgba(26,77,58,0.08);
-      color: #0f2f23;
+    .brand-logos{
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
 
-    nav a[href="landing.html"],
-    nav a[href="/landing.html"] {
-      background: #1a4d3a;
-      color: #fff;
+    .brand-logos img{
+      height:34px;
+      width:auto;
+      display:block;
+      border-radius:10px;
+      background:#fff;
+      padding:4px;
+      border:1px solid rgba(15,23,42,0.08);
+      box-shadow: 0 8px 18px rgba(15,23,42,0.06);
     }
 
-    /* באנר עליון */
-    .top-banner {
-      background: linear-gradient(90deg, #1a4d3a, #1e5a8e);
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      font-weight: 800;
-      font-size: 1.02em;
-      text-shadow: none;
+    .nav-links{
+      list-style:none;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:center;
     }
 
-    /* HERO Section */
-    header {
-      background: #0b1220;
-      color: #fff;
-      position: relative;
-      overflow: hidden;
+    .nav-links a{
+      text-decoration:none;
+      color:var(--green);
+      font-weight:800;
+      font-size:0.95em;
+      padding:7px 12px;
+      border-radius:999px;
+      transition: all 0.2s ease;
+      white-space:nowrap;
     }
 
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(2,6,23,0.35) 0%, rgba(2,6,23,0.75) 100%);
+    .nav-links a:hover{ background: rgba(26,77,58,0.08); color:#0f2f23; }
+
+    .nav-links a[href="landing.html"],
+    .nav-links a[href="/landing.html"]{
+      background: var(--green);
+      color:#fff;
     }
 
-    .header-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 20px 60px;
+    /* HERO */
+    header{
+      background:#0b1220;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
     }
 
-    .hero-image {
-      width: 100%;
-      max-width: 900px;
-      height: 380px;
-      object-fit: cover;
-      border-radius: 22px;
-      margin: 0 auto 34px;
-      display: block;
+    header::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(2,6,23,0.35) 0%, rgba(2,6,23,0.82) 100%);
+      pointer-events:none;
+    }
+
+    .header-content{
+      position:relative;
+      z-index:2;
+      max-width:1200px;
+      margin:0 auto;
+      padding:62px 20px 56px;
+      text-align:center;
+    }
+
+    .hero-image{
+      width:100%;
+      max-width:980px;
+      height:390px;
+      object-fit:cover;
+      border-radius:var(--radius);
+      margin:0 auto 22px;
+      display:block;
       box-shadow: 0 18px 50px rgba(0,0,0,0.35);
-      border: 1px solid rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,0.12);
+      background:#0b1220;
     }
 
-    .main-headline {
-      font-size: 3.05em;
-      margin-bottom: 20px;
-      font-weight: 900;
-      text-shadow: none;
-      line-height: 1.12;
-      text-align: center;
+    .eyebrow{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:999px;
+      background: rgba(255,255,255,0.10);
+      border:1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(12px);
+      font-weight:900;
+      letter-spacing:-0.01em;
+      margin-bottom:16px;
+      color: rgba(255,255,255,0.95);
     }
 
-    .sub-headline {
-      font-size: 1.5em;
-      margin-bottom: 35px;
-      font-weight: 600;
-      opacity: 0.98;
-      text-align: center;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+    .main-headline{
+      font-size:3.0em;
+      margin-bottom:16px;
+      font-weight:900;
+      line-height:1.12;
+      letter-spacing:-0.02em;
     }
 
-    .hero-cta {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 35px;
+    .sub-headline{
+      font-size:1.35em;
+      margin-bottom:20px;
+      font-weight:700;
+      color: rgba(255,255,255,0.92);
+      max-width:920px;
+      margin-left:auto;
+      margin-right:auto;
     }
 
-    .btn {
-      padding: 16px 28px;
-      border-radius: 16px;
-      text-decoration: none;
-      font-size: 1.08em;
-      font-weight: 900;
+    .hours-note{
+      margin-top:14px;
+      font-weight:800;
+      opacity:0.95;
+      color: rgba(255,255,255,0.92);
+      font-size:1.02em;
+    }
+
+    .hero-cta{
+      display:flex;
+      gap:16px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:22px;
+    }
+
+    .btn{
+      padding:16px 28px;
+      border-radius:16px;
+      text-decoration:none;
+      font-size:1.05em;
+      font-weight:900;
       transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
       box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-      border: none;
-      min-width: 240px;
-      justify-content: center;
+      border:none;
+      min-width:260px;
+      justify-content:center;
+      cursor:pointer;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 38px rgba(0,0,0,0.30);
-      filter: brightness(1.02);
-    }
+    .btn:hover{ transform: translateY(-2px); box-shadow: 0 16px 38px rgba(0,0,0,0.30); filter: brightness(1.02); }
+    .btn:active{ transform: translateY(0) scale(0.995); }
 
-    .btn-whatsapp {
+    .btn-whatsapp{
       background: linear-gradient(135deg, #25d366, #128c7e);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.18);
+      color:#fff;
+      border:1px solid rgba(255,255,255,0.18);
     }
 
-    .btn-whatsapp:hover {
-      background: linear-gradient(135deg, #20b358, #0f7a6b);
-      border-color: white;
+    .btn-pricing{
+      background:#fff;
+      color:var(--green);
+      border:1px solid rgba(15,23,42,0.12);
+      box-shadow: 0 10px 24px rgba(15,23,42,0.10);
     }
 
-    .btn-pricing {
-      background: white;
-      color: #1a4d3a;
-      border: 1px solid rgba(15, 23, 42, 0.12);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10);
-    }
-
-    .btn-pricing:hover {
-      background: #ffffff;
-      border-color: rgba(26,77,58,0.35);
-    }
-
-    /* Trust Bar */
-    .trust-bar {
+    /* Trust bar */
+    .trust-bar{
       background: rgba(255,255,255,0.10);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: 22px;
-      padding: 22px;
-      margin-top: 34px;
-      display: grid;
+      border:1px solid rgba(255,255,255,0.16);
+      border-radius:var(--radius);
+      padding:20px;
+      margin-top:28px;
+      display:grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
+      gap:16px;
+      text-align:center;
     }
 
-    .trust-item {
-      text-align: center;
-    }
-
-    .trust-icon {
-      width: 48px;
-      height: 48px;
+    .trust-icon{
+      width:48px;
+      height:48px;
       background: rgba(255,255,255,0.12);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 12px;
-      font-size: 1.35em;
-      color: #d4af37;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto 10px;
+      font-size:1.35em;
+      color:var(--gold);
     }
 
-    .trust-item strong {
-      display: block;
-      font-size: 1.1em;
-      font-weight: 800;
-      margin-bottom: 5px;
-    }
-
-    .trust-item span {
-      font-size: 0.95em;
-      opacity: 0.95;
-    }
+    .trust-item strong{ display:block; font-size:1.06em; font-weight:900; margin-bottom:4px; }
+    .trust-item span{ font-size:0.95em; opacity:0.95; }
 
     /* Container */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
+    .container{ max-width:1200px; margin:0 auto; padding:20px; }
+
+    /* Sections */
+    .section{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:56px 46px;
+      margin:56px 0;
+      box-shadow: var(--shadow);
+      border:1px solid rgba(15,23,42,0.06);
+      position:relative;
+      overflow:hidden;
     }
 
-    /* Section Styles */
-    .section {
-      background: #ffffff;
-      border-radius: 22px;
-      padding: 56px 46px;
-      margin: 56px 0;
-      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      position: relative;
-      overflow: hidden;
+    .section::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      width:6px;
+      height:100%;
+      background: linear-gradient(180deg, var(--green), var(--blue));
     }
 
-    .section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 6px;
-      height: 100%;
-      background: linear-gradient(180deg, #1a4d3a, #1e5a8e);
+    .section-title{
+      font-size:2.35em;
+      margin-bottom:22px;
+      color:var(--green);
+      font-weight:900;
+      position:relative;
     }
 
-    .section-title {
-      font-size: 2.5em;
-      margin-bottom: 30px;
-      color: #1a4d3a;
-      font-weight: 900;
-      position: relative;
+    .section-title::after{
+      content:'';
+      position:absolute;
+      bottom:-12px;
+      right:0;
+      width:110px;
+      height:5px;
+      background: linear-gradient(90deg, var(--green), var(--blue), var(--gold));
+      border-radius:3px;
     }
 
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      right: 0;
-      width: 100px;
-      height: 5px;
-      background: linear-gradient(90deg, #1a4d3a, #1e5a8e, #d4af37);
-      border-radius: 3px;
+    /* Split block */
+    .split{
+      display:grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap:26px;
+      margin-top:28px;
+      align-items:start;
     }
 
-    /* Pricing Grid */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-      margin-top: 40px;
+    .lead{
+      font-size:1.12em;
+      color:#334155;
+      font-weight:650;
+      line-height:1.95;
     }
 
-    .price-card {
-      background: #ffffff;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      border-radius: 18px;
-      padding: 30px 28px;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-      position: relative;
-      overflow: hidden;
+    .sidebox{
+      background: linear-gradient(180deg, rgba(26,77,58,0.06), rgba(30,90,142,0.06));
+      border:1px solid rgba(15,23,42,0.08);
+      border-radius:18px;
+      padding:22px;
+      box-shadow: 0 10px 26px rgba(15,23,42,0.06);
     }
 
-    .price-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 5px;
-      background: linear-gradient(90deg, #1a4d3a, #1e5a8e, #d4af37);
-      transform: scaleX(0);
-      transition: transform 0.4s ease;
+    .sidebox h3{
+      font-size:1.2em;
+      font-weight:900;
+      color: var(--green);
+      margin-bottom:12px;
     }
 
-    .price-card:hover::before {
-      transform: scaleX(1);
-    }
+    .sidebox ul{ padding-right:18px; line-height:2.0; font-weight:800; color:#0f172a; }
 
-    .price-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 46px rgba(26,77,58,0.12);
-      border-color: rgba(30, 90, 142, 0.35);
-    }
-
-    .price-card h3 {
-      font-size: 1.5em;
-      color: #1a4d3a;
-      font-weight: 900;
-      margin-bottom: 15px;
-    }
-
-    .price-card p {
-      color: #555;
-      font-size: 1.05em;
-      line-height: 1.7;
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
-
-    .price-tag {
-      display: inline-block;
-      background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.25));
-      border: 2px solid rgba(212,175,55,0.4);
-      color: #1a4d3a;
-      padding: 12px 25px;
-      border-radius: 50px;
-      font-weight: 900;
-      font-size: 1.2em;
+    .muted{
+      color: rgba(255,255,255,0.92);
     }
 
     /* Steps */
-    .steps-grid {
-      display: grid;
+    .steps-grid{
+      display:grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-top: 40px;
+      gap:22px;
+      margin-top:30px;
     }
 
-    .step-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 34px 26px;
-      text-align: center;
+    .step-card{
+      background:#fff;
+      border-radius:18px;
+      padding:30px 24px;
+      text-align:center;
       box-shadow: 0 12px 34px rgba(15, 23, 42, 0.08);
       transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-      border: 1px solid rgba(15, 23, 42, 0.08);
+      border:1px solid var(--border);
     }
 
-    .step-card:hover {
-      transform: translateY(-4px);
+    .step-card:hover{
+      transform: translateY(-6px);
       box-shadow: 0 18px 46px rgba(26,77,58,0.12);
       border-color: rgba(30, 90, 142, 0.35);
     }
 
-    .step-number {
-      width: 70px;
-      height: 70px;
-      background: linear-gradient(135deg, #1a4d3a, #1e5a8e);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2em;
-      font-weight: 900;
-      margin: 0 auto 25px;
+    .step-number{
+      width:70px;
+      height:70px;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      color:#fff;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2em;
+      font-weight:900;
+      margin:0 auto 18px;
       box-shadow: 0 15px 35px rgba(26,77,58,0.4);
     }
 
-    .step-card h3 {
-      font-size: 1.4em;
-      color: #1a4d3a;
-      font-weight: 900;
-      margin-bottom: 15px;
-    }
+    .step-card h3{ font-size:1.3em; color:var(--green); font-weight:900; margin-bottom:10px; }
+    .step-card p{ color:#475569; font-weight:700; line-height:1.7; }
 
-    .step-card p {
-      color: #555;
-      font-weight: 500;
-      line-height: 1.7;
-    }
-
-    /* Reviews */
-    .reviews-grid {
-      display: grid;
+    /* Offer cards */
+    .offer-grid{
+      display:grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-top: 40px;
+      gap:18px;
+      margin-top:28px;
     }
 
-    .review-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 32px 26px;
-      box-shadow: 0 12px 34px rgba(15, 23, 42, 0.08);
+    .offer-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:26px 22px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
       transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      position: relative;
     }
 
-    .review-card:hover {
+    .offer-card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 18px 46px rgba(26,77,58,0.12);
+      border-color: rgba(212,175,55,0.40);
+    }
+
+    .offer-card h3{ font-size:1.25em; font-weight:900; color:var(--green); margin-bottom:10px; }
+    .offer-card p{ color:#475569; font-weight:700; line-height:1.75; }
+
+    .tag{
+      display:inline-block;
+      margin-top:12px;
+      background: linear-gradient(135deg, rgba(212,175,55,0.16), rgba(212,175,55,0.26));
+      border:2px solid rgba(212,175,55,0.38);
+      color:var(--green);
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:1.05em;
+    }
+
+    /* Services */
+    .services-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:18px;
+      margin-top:26px;
+    }
+
+    .service{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:24px 22px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .service:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 18px 46px rgba(26,77,58,0.12);
+      border-color: rgba(30, 90, 142, 0.35);
+    }
+
+    .service .icon{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      background: rgba(26,77,58,0.08);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: var(--green);
+      font-size:1.35em;
+      margin-bottom:12px;
+    }
+
+    .service h3{ font-size:1.22em; font-weight:900; color:var(--green); margin-bottom:10px; }
+    .service p{ color:#475569; font-weight:700; line-height:1.75; }
+
+    .inline-links{
+      margin-top:18px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .link-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(15,23,42,0.10);
+      background:#fff;
+      text-decoration:none;
+      font-weight:900;
+      color: var(--green);
+      box-shadow: 0 10px 22px rgba(15,23,42,0.06);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .link-pill:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(15,23,42,0.08); }
+
+    /* Reviews screenshots */
+    .reviews-images{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .review-shot{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      text-decoration:none;
+      display:block;
+    }
+
+    .review-shot:hover{
       transform: translateY(-4px);
-      box-shadow: 0 18px 46px rgba(15, 23, 42, 0.10);
-      border-color: rgba(212,175,55,0.45);
+      border-color: rgba(30, 90, 142, 0.25);
+      box-shadow: 0 18px 46px rgba(15, 23, 42, 0.08);
     }
 
-    .review-card::before {
-      content: '"';
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 5em;
-      color: rgba(212,175,55,0.15);
-      font-family: serif;
+    .review-shot img{ width:100%; height:auto; display:block; }
+
+    .review-shot .cap{
+      padding:12px 14px;
+      font-weight:900;
+      color: rgba(15,23,42,0.76);
     }
 
-    .review-stars {
-      color: #ffd700;
-      font-size: 1.3em;
-      margin-bottom: 15px;
+    /* FAQ */
+    details{
+      border:1px solid rgba(15,23,42,0.10);
+      border-radius:16px;
+      padding:16px 16px;
+      background:#fff;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.05);
     }
 
-    .review-text {
-      color: #333;
-      font-size: 1.15em;
-      font-weight: 600;
-      line-height: 1.7;
-      margin-bottom: 20px;
-      font-style: italic;
+    details + details{ margin-top:14px; }
+
+    summary{
+      cursor:pointer;
+      font-weight:900;
+      color:var(--green);
+      font-size:1.12em;
+      list-style:none;
     }
 
-    .review-author {
-      color: #1a4d3a;
-      font-weight: 900;
-      font-size: 1.1em;
-    }
+    summary::-webkit-details-marker{ display:none; }
+
+    details p{ margin-top:12px; color:#475569; font-weight:700; line-height:1.85; }
 
     /* Final CTA */
-    .final-cta {
-      background: linear-gradient(135deg, #184E36, #1e5a8e);
-      color: white;
+    .final-cta{
+      background: linear-gradient(135deg, #184E36, var(--blue));
+      color:#fff;
       border-radius: 28px;
-      padding: 60px 44px;
+      padding: 56px 44px;
       margin: 60px 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 22px 60px rgba(26,77,58,0.30);
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+      box-shadow: var(--shadow-strong);
     }
 
-    .final-cta-content {
-      position: relative;
-      z-index: 2;
-    }
+    .final-cta h2{ font-size:2.4em; font-weight:900; margin-bottom:14px; line-height:1.15; }
+    .final-cta p{ font-size:1.22em; margin-bottom:16px; font-weight:750; opacity:0.98; line-height:1.6; }
 
-    .final-cta h2 {
-      font-size: 2.55em;
-      font-weight: 900;
-      margin-bottom: 18px;
-      text-shadow: none;
-    }
-
-    .final-cta p {
-      font-size: 1.35em;
-      margin-bottom: 20px;
-      font-weight: 600;
-      opacity: 0.98;
-    }
-
-    .offer-box {
-      background: rgba(255,255,255,0.15);
-      border: 2px solid rgba(255,255,255,0.25);
-      border-radius: 25px;
-      padding: 30px;
-      margin: 35px auto;
-      max-width: 700px;
-      backdrop-filter: blur(15px);
-    }
-
-    .offer-box h3 {
-      font-size: 1.6em;
-      font-weight: 900;
-      margin-bottom: 20px;
-    }
-
-    .offer-box ul {
-      text-align: right;
-      padding-right: 25px;
-      line-height: 2.2;
-      font-size: 1.15em;
-      font-weight: 600;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-
-    .fineprint {
-      margin-top: 30px;
-      font-size: 0.95em;
-      opacity: 0.9;
-      font-weight: 600;
-      line-height: 1.8;
-      background: rgba(255,255,255,0.1);
-      padding: 20px;
+    .fineprint{
+      margin-top: 18px;
+      font-size: 0.96em;
+      opacity: 0.95;
+      font-weight: 750;
+      line-height: 1.85;
+      background: rgba(255,255,255,0.10);
+      padding: 16px;
       border-radius: 15px;
+      text-align:right;
+      max-width:880px;
+      margin-left:auto;
+      margin-right:auto;
     }
 
-    /* Floating WhatsApp */
-    .floating-whatsapp {
+    /* Footer */
+    footer{
+      padding:36px 20px;
+      text-align:center;
+      color: rgba(15,23,42,0.70);
+      font-weight:800;
+    }
+
+    footer .foot-links{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+
+    footer a{ text-decoration:none; font-weight:900; color: var(--blue); }
+
+    /* Floating WhatsApp (mobile) */
+    .floating-whatsapp{
       position: fixed;
       left: 16px;
       bottom: 16px;
@@ -562,339 +654,382 @@
       border-radius: 999px;
       font-weight: 900;
       box-shadow: 0 18px 40px rgba(0,0,0,0.25);
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
 
-    .floating-whatsapp i { font-size: 1.3em; }
+    .floating-whatsapp i{ font-size:1.3em; }
 
-    @media (min-width: 900px) {
-      .floating-whatsapp { display: none; }
+    @media (min-width: 900px){
+      .floating-whatsapp{ display:none; }
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero-image { height: 280px; }
-      .main-headline { font-size: 2.4em; }
-      .sub-headline { font-size: 1.2em; }
-      .trust-bar { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-      .pricing-grid { grid-template-columns: 1fr; }
-      .steps-grid { grid-template-columns: 1fr; }
-      .reviews-grid { grid-template-columns: 1fr; }
-      .section { padding: 40px 30px; }
-      .btn { min-width: auto; width: 100%; }
-      .hero-cta { flex-direction: column; }
-    }
-
-    @media (max-width: 480px) {
-      .hero-image { height: 220px; }
-      .main-headline { font-size: 2em; }
-      .section-title { font-size: 2em; }
-    }
-
-    /* ===== Polished Premium + Conversion Tweaks (Jan 2026) ===== */
-
-    /* 1) קריאות "יוקרתית" יותר – מרווחי אותיות קטנים, טקסט רגוע */
-    .main-headline{
-      letter-spacing: -0.02em;
-    }
-
-    .sub-headline{
-      color: rgba(255,255,255,0.92);
-    }
-
-    /* 2) כפתורים – להפוך ליותר "פרימיום" (פחות צעקני) + לחיצה טובה */
-    .btn{
-      -webkit-tap-highlight-color: transparent;
-      cursor: pointer;
-    }
-
-    .btn:active{
-      transform: translateY(0px) scale(0.995);
-    }
-
-    /* 3) כפתור לבן – לא לקבל hover דרמטי מדי (נראה זול אם זה קופץ חזק) */
-    .btn-pricing:hover{
-      background: #ffffff;
-      border-color: rgba(26,77,58,0.35);
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
-      filter: none;
-    }
-
-    /* 4) כרטיסים – גבול עדין יותר, לוק "חברה גדולה" */
-    .section{
-      box-shadow: 0 18px 55px rgba(15, 23, 42, 0.06);
-    }
-
-    .price-card,
-    .step-card,
-    .review-card{
-      border-color: rgba(15, 23, 42, 0.07);
-    }
-
-    .price-card:hover,
-    .step-card:hover,
-    .review-card:hover{
-      transform: translateY(-6px);
-    }
-
-    /* 5) TRUST BAR – יותר קריא במובייל */
-    @media (max-width: 768px){
-      .trust-item strong{ font-size: 1.02em; }
-      .trust-item span{ font-size: 0.92em; opacity: 0.92; }
-
-      .main-headline{ font-size: 2.25em; }
-      .sub-headline{ font-size: 1.18em; }
-    }
-
-    /* 6) Accessibility: Focus ברור (נראה מקצועי) */
+    /* Accessibility */
     a:focus-visible{
       outline: 3px solid rgba(212,175,55,0.65);
       outline-offset: 3px;
       border-radius: 14px;
     }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .split{ grid-template-columns: 1fr; }
+      .services-grid{ grid-template-columns: 1fr; }
+      .offer-grid{ grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px){
+      .hero-image{ height: 250px; }
+      .main-headline{ font-size: 2.2em; }
+      .sub-headline{ font-size: 1.18em; }
+      .trust-bar{ grid-template-columns: repeat(2, 1fr); }
+      .steps-grid{ grid-template-columns: 1fr; }
+      .reviews-images{ grid-template-columns: 1fr; }
+      .section{ padding: 40px 28px; }
+      .btn{ min-width: auto; width: 100%; }
+      .hero-cta{ flex-direction: column; }
+    }
+
+    @media (max-width: 480px){
+      .hero-image{ height: 210px; }
+      .main-headline{ font-size: 1.95em; }
+      .section-title{ font-size: 2.0em; }
+      .final-cta{ padding: 44px 22px; }
+    }
   </style>
 </head>
 
 <body>
-  <!-- באנר עליון -->
   <div class="top-banner">
-    מבצע ינואר 2026 • שיקום גינות • תחזוקה מסודרת • עבודות חוץ מקצועיות • שקיפות מלאה
+    הטבת ינואר 2026 • שיקום גינות • תחזוקה מסודרת • שקיפות מלאה
   </div>
 
-  <!-- תפריט -->
-  <nav>
-    <ul>
-      <li><a href="index.html">דף הבית</a></li>
-      <li><a href="left-sidebar.html">שירותים</a></li>
-      <li><a href="right-sidebar.html">גלריה</a></li>
-      <li><a href="landing.html">מבצע החודש</a></li>
-      <li><a href="no-sidebar.html">צור קשר</a></li>
-      <li><a href="pricing.html">מחירון</a></li>
-    </ul>
+  <nav aria-label="תפריט">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" onclick="trackLead('nav_home')" aria-label="דף הבית">
+        <span class="brand-logos" aria-hidden="true">
+          <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg" alt="לוגו הגינה הירוקה" loading="eager" decoding="async" />
+          <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/%D7%9C%D7%95%D7%92%D7%95%20%D7%94%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99%D7%99%D7%9D_.png" alt="לוגו המקצועיים" loading="lazy" decoding="async" />
+        </span>
+        <span>הגינה הירוקה</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" onclick="trackLead('nav_home')">דף הבית</a></li>
+        <li><a href="left-sidebar.html" onclick="trackLead('nav_services')">שירותים</a></li>
+        <li><a href="right-sidebar.html" onclick="trackLead('nav_gallery')">גלריה</a></li>
+        <li><a href="landing.html" onclick="trackLead('nav_landing')">הטבת ינואר</a></li>
+        <li><a href="no-sidebar.html" onclick="trackLead('nav_contact')">צור קשר</a></li>
+        <li><a href="pricing.html" onclick="trackLead('nav_pricing')">מחירון</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- HERO -->
   <header>
     <div class="header-content">
-      <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/colorful.jpeg" alt="גינה ירוקה ומטופחת" class="hero-image">
-      
-      <h1 class="main-headline">גינה שנראית מושלמת — בלי כאב ראש, בלי הפתעות</h1>
-      <p class="sub-headline">שולחים תמונה/וידאו + עיר + גודל — מקבלים הצעה מסודרת עם מחיר מראש. בלי הפתעות, בלי מריחות.</p>
+      <img
+        src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/garden_colors.png"
+        alt="גינה מטופחת"
+        class="hero-image"
+        loading="eager"
+        decoding="async"
+      />
+
+      <div class="eyebrow">15+ שנות ניסיון • שקיפות מלאה • תיאום מסודר</div>
+
+      <h1 class="main-headline">גינה מטופחת ומדויקת — לאורך כל העונה</h1>
+      <p class="sub-headline">שולחים תמונות/וידאו + עיר + גודל משוער — ומקבלים <strong>הצעה ראשונית בטווח תואם</strong>. אם זה מתאים לכם, מתקדמים לתיאום וביצוע בפועל.</p>
 
       <div class="hero-cta">
-        <a href="https://wa.me/972546698931?text=%D7%94%D7%99%D7%99%20%F0%9F%91%8B%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%A6%D7%A2%D7%94%20%D7%9E%D7%A1%D7%95%D7%93%D7%A8%D7%AA.%20%D7%94%D7%A2%D7%99%D7%A8%3A%20____%20%7C%20%D7%92%D7%95%D7%93%D7%9C%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20____%20%D7%9E%22%D7%A8%20%7C%20%D7%9E%D7%98%D7%A8%D7%94%3A%20____%20%7C%20%D7%A6%D7%99%D7%A8%D7%A4%D7%AA%D7%99%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%2F%D7%95%D7%99%D7%93%D7%90%D7%95." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+        <a
+          href="https://wa.me/972546698931?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%A6%D7%A2%D7%94%20%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%AA.%0A%D7%A2%D7%99%D7%A8%3A%20____%0A%D7%92%D7%95%D7%93%D7%9C%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20____%20%D7%9E%22%D7%A8%0A%D7%9E%D7%94%20%D7%A0%D7%93%D7%A8%D7%A9%3A%20____%0A%D7%9E%D7%A6%D7%A8%D7%A4%2F%D7%AA%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%2F%D7%95%D7%99%D7%93%D7%90%D7%95"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-whatsapp"
+          onclick="trackLead('cta_whatsapp_top', {phone:'0546698931'})"
+          aria-label="פתיחת וואטסאפ לתיאום ושיחת ייעוץ"
+        >
           <i class="fa-brands fa-whatsapp"></i>
-          שלחי בוואטסאפ עכשיו
+          לתיאום ושיחת ייעוץ בוואטסאפ
         </a>
-        <a href="pricing.html" class="btn btn-pricing">
+
+        <a
+          href="https://gina.i.ng/pricing.html"
+          class="btn btn-pricing"
+          onclick="trackLead('cta_pricing_top')"
+          aria-label="מעבר למחירון"
+        >
           <i class="fa-solid fa-file-invoice"></i>
           למחירון שקוף
         </a>
       </div>
 
-      <p style="text-align:center; margin-top:18px; opacity:0.92; font-weight:600; color:#fff; font-size:0.98em;">
-        לרוב חוזרים תוך עד 60 דקות בימים א׳–ה׳ 08:00–18:00.
-      </p>
+      <div class="hours-note">
+        זמינים 24/7 לשליחת הודעות • מענה בשעות הפעילות: א׳–ה׳ 09:00–17:00
+      </div>
 
-      <div class="trust-bar">
+      <div class="trust-bar" aria-label="יתרונות">
         <div class="trust-item">
           <div class="trust-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <strong>עבודה נקייה ובטוחה</strong>
-          <span>סדר, ניקיון ובטיחות</span>
+          <strong>עבודה מוקפדת ובטיחותית</strong>
+          <span>סדר, ניקיון וביצוע תקני</span>
         </div>
         <div class="trust-item">
           <div class="trust-icon"><i class="fa-solid fa-receipt"></i></div>
           <strong>שקיפות מלאה</strong>
-          <span>מחיר ברור לפני ביצוע</span>
+          <span>הצעה ברורה לפני ביצוע</span>
         </div>
         <div class="trust-item">
           <div class="trust-icon"><i class="fa-solid fa-bolt"></i></div>
           <strong>מענה מהיר</strong>
-          <span>תיאום נוח וזמין</span>
+          <span>תיאום נוח בוואטסאפ</span>
         </div>
         <div class="trust-item">
           <div class="trust-icon"><i class="fa-solid fa-award"></i></div>
           <strong>אחריות מקצועית</strong>
-          <span>עבודה תקנית ואיכותית</span>
+          <span>תוצאה שמחזיקה לאורך זמן</span>
         </div>
       </div>
-
-      <p style="text-align:center; margin-top:18px; opacity:0.92; font-weight:600; color:#fff;">
-        עובדים מסודר • מסבירים מראש • משאירים נקי • זמינות מהירה בוואטסאפ
-      </p>
     </div>
   </header>
 
   <div class="container">
-    <!-- למה עכשיו -->
-    <section class="section">
-      <h2 class="section-title">למה עכשיו</h2>
-      <p style="font-size: 1.15em; color: #555; font-weight: 500; line-height: 1.85; margin-bottom: 30px;">
-        בתחילת השנה (ובעיקר אחרי הגשמים הראשונים) מתגלות בעיות: עשבייה שיוצאת משליטה, השקיה שדורשת כיוון,
-        בלאי, הצפה/רטיבות, וצמחייה שמעמיסה על הבית והחצר.
-        זה הזמן להחזיר שליטה — ולבנות גינה שנראית מצוין כל השנה.
-      </p>
 
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h3>שולחים תמונה/וידאו</h3>
-          <p>+ עיר + גודל משוער + מה המטרה</p>
+    <!-- למה עכשיו -->
+    <section class="section" aria-label="למה עכשיו">
+      <h2 class="section-title">למה עכשיו</h2>
+      <div class="split">
+        <div>
+          <p class="lead">
+            תחילת שנה היא הזדמנות לעשות סדר: גיזום נכון, ניקוי יסודי, סידור ערוגות ותיקוני השקיה — כדי שהגינה תיראה טוב ותישאר יציבה לאורך זמן.
+            אנחנו עובדים מסודר ושקוף: מתחילים בהצעה ראשונית לפי מה שתשלחו, ואם זה מתאים — מתקדמים לתיאום.
+          </p>
+          <div class="steps-grid" aria-label="איך זה עובד">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3>שולחים פרטים</h3>
+              <p>תמונות/וידאו + עיר + גודל משוער + מה נדרש.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3>מקבלים הצעה ראשונית</h3>
+              <p>טווח תואם למה ששלחתם, בצורה ברורה וכתובה.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3>מתאמים ומבצעים</h3>
+              <p>אם מתאים — קובעים מועד ומבצעים בצורה נקייה ומוקפדת.</p>
+            </div>
+          </div>
         </div>
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3>מקבלים הצעה מסודרת</h3>
-          <p>שקופה וברורה, בלי הפתעות</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3>מגיעים ומבצעים</h3>
-          <p>נקי, מקצועי, עם אחריות</p>
-        </div>
+
+        <aside class="sidebox" aria-label="מה מומלץ לשלוח">
+          <h3>מה מומלץ לשלוח בהודעה</h3>
+          <ul>
+            <li>מבט כללי על הגינה</li>
+            <li>אזורים בעייתיים / צמחייה שגדלה</li>
+            <li>מערכת השקיה (אם קיימת)</li>
+            <li>גישה לחניה / כניסה</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <!-- מחירון שקוף -->
-    <section class="section">
-      <h2 class="section-title">מבצע ינואר 2026 — מחיר מראש, עבודה מסודרת</h2>
-      <p style="font-size: 1.2em; color: #555; font-weight: 600; line-height: 1.8; margin-bottom: 15px;">
-        מחירון שקוף + בונוס להזמנות במהלך ינואר:
-        <strong style="color: #1a4d3a;">10% הנחה</strong> על השירות הראשון,
-        ו־<strong style="color: #1a4d3a;">15% הנחה</strong> על השירות השני באותו נכס.
-      </p>
-      <p style="font-size: 1.05em; color: #666; font-weight: 500; line-height: 1.7;">
-        (מתאים במיוחד למי שרוצה לסגור "גם גינה" וגם "תיקון חוץ" באותו ביקור).
-      </p>
+    <!-- הטבת ינואר -->
+    <section class="section" aria-label="הטבת ינואר 2026">
+      <h2 class="section-title">הטבת ינואר 2026</h2>
+      <p class="lead">תנאים מועדפים להזמנות במהלך ינואר — כדי לסגור טיפול לגינה בצורה מסודרת ובמחיר הוגן.</p>
 
-      <div class="pricing-grid">
-        <div class="price-card">
-          <h3>תחזוקה לגינה מתוחזקת</h3>
-          <p>עד 50 מ״ר • עד שעה וחצי עבודה • תחזוקה בלבד</p>
-          <span class="price-tag">החל מ־350 ₪</span>
+      <div class="offer-grid" role="list">
+        <div class="offer-card" role="listitem">
+          <h3>עד 10% על שירות גינון ראשון</h3>
+          <p>באותו נכס, בהתאם להתאמה והיקף עבודה.</p>
         </div>
-
-        <div class="price-card">
-          <h3>שיקום חד־פעמי</h3>
-          <p>עד 50 מ״ר • ניקיון עומק, עשבייה, גיזום כללי וסידור</p>
-          <span class="price-tag">החל מ־550 ₪</span>
+        <div class="offer-card" role="listitem">
+          <h3>עד 10% נוספים על שירות גינון שני</h3>
+          <p>כאשר מבצעים שני שירותים באותו נכס באותו חודש.</p>
         </div>
-
-        <div class="price-card">
-          <h3>חבילת תחזוקה – 3 חודשים</h3>
-          <p>עד 50 מ״ר • ביקור חודשי × 3 • תחזוקה בלבד</p>
-          <span class="price-tag">החל מ־350 ₪/חודש</span>
-        </div>
-
-        <div class="price-card">
-          <h3>חבילת תחזוקה – 3 חודשים (עד 100 מ"ר)</h3>
-          <p>עד 100 מ״ר • ביקור חודשי × 3 • עד שעתיים עבודה בכל ביקור</p>
-          <span class="price-tag">החל מ־500 ₪/חודש</span>
+        <div class="offer-card" role="listitem">
+          <h3>דוגמה שקופה (לפי מחירון)</h3>
+          <p>שירות החל מ־350 ₪ → עם ההטבה: החל מ־315 ₪*</p>
+          <span class="tag">*הדוגמה להמחשה בלבד</span>
         </div>
       </div>
 
-      <div style="margin-top: 35px; background: rgba(26,77,58,0.05); border: 2px solid rgba(26,77,58,0.1); border-radius: 20px; padding: 25px;">
-        <p style="font-size: 1.05em; color: #333; font-weight: 600; line-height: 1.85;">
-          <strong style="color: #1a4d3a;">הבהרה חשובה:</strong> המחיר הסופי נקבע לפי תמונות/וידאו והיקף עבודה בפועל.
-          גינה מוזנחת מאוד, גישה מורכבת, פינוי חריג, או שטח גדול — יתומחרו לאחר בדיקה.
-        </p>
+      <div style="margin-top:18px; color:#475569; font-weight:800; line-height:1.9;">
+        ההטבה חלה על <strong>שירותי גינון (רכיב העבודה)</strong> בלבד, בהתאם להתאמה והיקף עבודה. המחירים המלאים והבסיסיים נמצאים במחירון.
+      </div>
+
+      <div class="inline-links" aria-label="קישורים שימושיים">
+        <a class="link-pill" href="https://gina.i.ng/pricing.html" onclick="trackLead('offer_pricing')" aria-label="מחירון">
+          <i class="fa-solid fa-file-invoice"></i> למחירון
+        </a>
+        <a class="link-pill" href="https://wa.me/972546698931" target="_blank" rel="noopener" onclick="trackLead('offer_whatsapp')" aria-label="וואטסאפ">
+          <i class="fa-brands fa-whatsapp"></i> פתיחת וואטסאפ
+        </a>
       </div>
     </section>
 
     <!-- שירותים -->
-    <section class="section">
-      <h2 class="section-title">מה אפשר לעשות אצלך בנכס</h2>
-      <p style="font-size: 1.15em; color: #555; font-weight: 600; line-height: 1.85;">
-        שיקום גינות • תחזוקה מסודרת • גיזומים ועיצוב • השקיה ותיקונים • שתילות עונתיות
-        <br>
-        וגם עבודות חוץ משלימות: איטום/רטיבות/תיקוני תחזוקה נקודתיים — לפי צורך.
-      </p>
-    </section>
+    <section class="section" aria-label="שירותים">
+      <h2 class="section-title">שירותים מרכזיים</h2>
+      <p class="lead">שיקום, תחזוקה ועבודות חוץ — עם תיאום מסודר ושקיפות מלאה. אם אתם לא בטוחים מה לבחור, שלחו תמונות ונכוון אתכם.</p>
 
-    <!-- חוות דעת -->
-    <section class="section">
-      <h2 class="section-title">חוות דעת</h2>
-      
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <div class="review-text">עבודה מקצועית ומסודרת. הכל היה ברור מראש, בלי הפתעות.</div>
-          <div class="review-author">ניר</div>
+      <div class="services-grid" role="list">
+        <div class="service" role="listitem">
+          <div class="icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>שיקום גינה</h3>
+          <p>ניקוי יסודי, גיזום, סידור ערוגות והחזרת סדר לגינה.</p>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <div class="review-text">סידרו לנו את הגינה ברמה אחרת. הגיעו בזמן, נקי, תוצאה מושלמת.</div>
-          <div class="review-author">שירן</div>
+        <div class="service" role="listitem">
+          <div class="icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <h3>תחזוקה שוטפת</h3>
+          <p>ביקור קבוע עם טיפול עקבי — כדי לשמור על תוצאה לאורך זמן.</p>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <div class="review-text">מענה מהיר, שירות נעים, ופתרו לנו תקלה בהשקיה שלא מצאו לפניהם.</div>
-          <div class="review-author">אבי</div>
+        <div class="service" role="listitem">
+          <div class="icon"><i class="fa-solid fa-droplet"></i></div>
+          <h3>השקיה ותיקונים</h3>
+          <p>בדיקה, איתור נזילות, תיקונים והתאמות לפי הצורך.</p>
         </div>
+        <div class="service" role="listitem">
+          <div class="icon"><i class="fa-solid fa-tree"></i></div>
+          <h3>גיזומים ועצים</h3>
+          <p>גיזום בריאותי/עיצובי בהתאם לגישה ולמורכבות השטח.</p>
+        </div>
+        <div class="service" role="listitem">
+          <div class="icon"><i class="fa-solid fa-brush"></i></div>
+          <h3>ניקיון חצר והכנה לעונה</h3>
+          <p>פינוי עלים/עשבייה וסידור כללי שמייצר שינוי מידי.</p>
+        </div>
+        <div class="service" role="listitem">
+          <div class="icon"><i class="fa-solid fa-hammer"></i></div>
+          <h3>עבודות חוץ משלימות</h3>
+          <p>דרך השותפות “המקצועיים”: עבודות תחזוקה לבית ולחוץ.</p>
+        </div>
+      </div>
+
+      <div class="inline-links" aria-label="קישורים לשירותים">
+        <a class="link-pill" href="left-sidebar.html" onclick="trackLead('services_page')" aria-label="דף שירותים">
+          <i class="fa-solid fa-list"></i> לכל השירותים
+        </a>
+        <a class="link-pill" href="right-sidebar.html" onclick="trackLead('gallery_page')" aria-label="גלריה">
+          <i class="fa-solid fa-images"></i> לגלריה
+        </a>
       </div>
     </section>
 
-    <!-- CTA סופי -->
-    <div class="final-cta">
+    <!-- חוות דעת -->
+    <section class="section" aria-label="חוות דעת">
+      <h2 class="section-title">לקוחות מספרים</h2>
+      <p class="lead">ביקורות אמיתיות (צילומי מסך) + אפשרות להשאיר ביקורת באיזי.</p>
+
+      <div class="reviews-images" aria-label="צילומי מסך של ביקורות">
+        <a class="review-shot" href="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/review_noa.jpg" target="_blank" rel="noopener" onclick="trackLead('review_open_noa')">
+          <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/review_noa.jpg" alt="ביקורת נועה" loading="lazy" decoding="async" />
+          <div class="cap">ביקורת – נועה</div>
+        </a>
+        <a class="review-shot" href="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/review_or.jpg" target="_blank" rel="noopener" onclick="trackLead('review_open_or')">
+          <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/review_or.jpg" alt="ביקורת אור" loading="lazy" decoding="async" />
+          <div class="cap">ביקורת – אור</div>
+        </a>
+        <a class="review-shot" href="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/review_tehila.jpg" target="_blank" rel="noopener" onclick="trackLead('review_open_tehila')">
+          <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/review_tehila.jpg" alt="ביקורת תהילה" loading="lazy" decoding="async" />
+          <div class="cap">ביקורת – תהילה</div>
+        </a>
+      </div>
+
+      <div class="inline-links" aria-label="קישור לביקורות באיזי">
+        <a class="link-pill" href="https://easy.co.il/page/10137838?action=leavereview&utm_medium=direct_link&utm_campaign=reviews_share&utm_source=easy_biz_admin" target="_blank" rel="noopener" onclick="trackLead('easy_leave_review')" aria-label="השארת ביקורת באיזי">
+          <i class="fa-solid fa-star"></i> להשארת ביקורת באיזי
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" aria-label="שאלות נפוצות">
+      <h2 class="section-title">שאלות נפוצות</h2>
+
+      <details>
+        <summary>איך מקבלים הצעת מחיר?</summary>
+        <p>שולחים תמונות/וידאו + עיר + גודל משוער + מה נדרש — ומקבלים הצעה ראשונית בטווח תואם. אם זה מתאים לכם, מתקדמים לתיאום.</p>
+      </details>
+
+      <details>
+        <summary>האם אפשר לקבל מחיר מדויק בלי ביקור?</summary>
+        <p>הצעה ראשונית ניתנת לפי תמונות. המחיר הסופי נקבע לפי היקף בפועל, גישה, מצב השטח והאם יש רכיבים נוספים (למשל פינוי מיוחד).</p>
+      </details>
+
+      <details>
+        <summary>באילו אזורים אתם עובדים?</summary>
+        <p>בעיקר דרום ומרכז: קריית גת, אשקלון, יבנה, ראשון לציון, תל אביב ועוד. שלחו עיר בהודעה ונאשר זמינות.</p>
+      </details>
+
+      <details>
+        <summary>מה שעות המענה?</summary>
+        <p>אפשר לשלוח הודעה בכל שעה. מענה אנושי בימים א׳–ה׳ בין 09:00–17:00.</p>
+      </details>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" aria-label="קריאה לפעולה">
       <div class="final-cta-content">
-        <h2>רוצה גינה שגורמת לך להגיד "וואו" כל פעם שאת יוצאת החוצה?</h2>
-        <p>
-          שלחי עכשיו בוואטסאפ: <strong>תמונה/וידאו</strong> + <strong>עיר</strong> + <strong>גודל משוער</strong> + <strong>מה המטרה</strong>.
-          <br>
-          נחזור עם הצעה מסודרת ומחיר מראש.
-        </p>
+        <h2>רוצים שנכין לכם הצעה מסודרת?</h2>
+        <p>שלחו תמונות + עיר + גודל משוער — ונחזור אליכם עם הצעה ראשונית בטווח תואם.</p>
 
-        <div class="offer-box">
-          <h3>מבצע ינואר:</h3>
-          <ul>
-            <li>10% הנחה על השירות הראשון</li>
-            <li>15% הנחה על השירות השני באותו נכס</li>
-            <li>כפוף לזמינות ובדיקת התאמה</li>
-          </ul>
-        </div>
+        <div class="hero-cta" style="margin-top:18px;">
+          <a
+            href="https://wa.me/972546698931?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%A6%D7%A2%D7%94%20%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%AA.%0A%D7%A2%D7%99%D7%A8%3A%20____%0A%D7%92%D7%95%D7%93%D7%9C%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20____%20%D7%9E%22%D7%A8%0A%D7%9E%D7%94%20%D7%A0%D7%93%D7%A8%D7%A9%3A%20____%0A%D7%9E%D7%A6%D7%A8%D7%A4%2F%D7%AA%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%2F%D7%95%D7%99%D7%93%D7%90%D7%95"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+            onclick="trackLead('cta_whatsapp_bottom', {phone:'0546698931'})"
+            aria-label="פתיחת וואטסאפ לתיאום"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            לתיאום ושיחת ייעוץ בוואטסאפ
+          </a>
 
-        <div class="cta-buttons">
-          <a href="https://wa.me/972546698931?text=%D7%94%D7%99%D7%99%20%F0%9F%91%8B%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%A6%D7%A2%D7%94%20%D7%9E%D7%A1%D7%95%D7%93%D7%A8%D7%AA.%20%D7%94%D7%A2%D7%99%D7%A8%3A%20____%20%7C%20%D7%92%D7%95%D7%93%D7%9C%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20____%20%D7%9E%22%D7%A8%20%7C%20%D7%9E%D7%98%D7%A8%D7%94%3A%20____%20%7C%20%D7%A6%D7%99%D7%A8%D7%A4%D7%AA%D7%99%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%2F%D7%95%D7%99%D7%93%D7%90%D7%95." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
-            וואטסאפ 054-669-8931
-          </a>
-          <a href="https://wa.me/972534372319?text=%D7%94%D7%99%D7%99%20%F0%9F%91%8B%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%A6%D7%A2%D7%94%20%D7%9E%D7%A1%D7%95%D7%93%D7%A8%D7%AA.%20%D7%94%D7%A2%D7%99%D7%A8%3A%20____%20%7C%20%D7%92%D7%95%D7%93%D7%9C%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20____%20%D7%9E%22%D7%A8%20%7C%20%D7%9E%D7%98%D7%A8%D7%94%3A%20____%20%7C%20%D7%A6%D7%99%D7%A8%D7%A4%D7%AA%D7%99%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%2F%D7%95%D7%99%D7%93%D7%90%D7%95." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
-            וואטסאפ 053-437-2319
-          </a>
-          <a href="tel:0546698931" class="btn btn-pricing">
-            <i class="fa-solid fa-phone"></i>
-            שיחה ישירה
-          </a>
-          <a href="pricing.html" class="btn btn-pricing">
+          <a
+            href="https://gina.i.ng/pricing.html"
+            class="btn btn-pricing"
+            onclick="trackLead('cta_pricing_bottom')"
+            aria-label="מעבר למחירון"
+          >
             <i class="fa-solid fa-file-invoice"></i>
-            מחירון מלא
-          </a>
-          <a href="mailto:info@gina.i.ng" class="btn btn-pricing">
-            <i class="fa-solid fa-envelope"></i>
-            info@gina.i.ng
+            למחירון שקוף
           </a>
         </div>
 
         <div class="fineprint">
-          <strong>תנאי המבצע:</strong> המבצע תקף להזמנות במהלך ינואר 2026, כפוף לזמינות ולבדיקת התאמה.
-          המחיר הסופי נקבע לפי תמונות/וידאו והיקף עבודה בפועל.
+          <strong>תנאי ההטבה:</strong> ההטבה מיועדת להזמנות במהלך ינואר 2026, וחלה על שירותי גינון (רכיב העבודה) בלבד, בהתאם להתאמה והיקף עבודה. ייתכנו רכיבי עלות נוספים לפי צורך (לדוגמה: חומרים/ציוד/פינוי חריג) — הכל יוסבר ויתומחר בצורה שקופה מראש.
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <footer style="text-align: center; padding: 40px 20px; color: #555; font-weight: 600;">
-      <p style="font-size: 1.1em; margin-bottom: 10px;">© 2026 הגינה הירוקה והמקצועיים - כל הזכויות שמורות</p>
-      <p>054-669-8931 • 053-437-2319 • info@gina.i.ng</p>
+    <footer>
+      © הגינה הירוקה • שיקום ותחזוקת גינות • דרום ומרכז
+      <div class="foot-links">
+        <a href="https://gina.i.ng/pricing.html" onclick="trackLead('footer_pricing')">מחירון</a>
+        <a href="left-sidebar.html" onclick="trackLead('footer_services')">שירותים</a>
+        <a href="right-sidebar.html" onclick="trackLead('footer_gallery')">גלריה</a>
+        <a href="https://easy.co.il/page/10137838?action=leavereview&utm_medium=direct_link&utm_campaign=reviews_share&utm_source=easy_biz_admin" target="_blank" rel="noopener" onclick="trackLead('footer_easy')">ביקורות באיזי</a>
+      </div>
     </footer>
+
   </div>
 
-  <!-- כפתור וואטסאפ צף -->
-  <a href="https://wa.me/972546698931?text=%D7%94%D7%99%D7%99%20%F0%9F%91%8B%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%A6%D7%A2%D7%94%20%D7%9E%D7%A1%D7%95%D7%93%D7%A8%D7%AA.%20%D7%94%D7%A2%D7%99%D7%A8%3A%20____%20%7C%20%D7%92%D7%95%D7%93%D7%9C%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20____%20%D7%9E%22%D7%A8%20%7C%20%D7%9E%D7%98%D7%A8%D7%94%3A%20____%20%7C%20%D7%A6%D7%99%D7%A8%D7%A4%D7%AA%D7%99%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%2F%D7%95%D7%99%D7%93%D7%90%D7%95." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-    <span>שלחי הודעה</span>
+  <!-- Floating WhatsApp (mobile) -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/972546698931"
+    target="_blank"
+    rel="noopener noreferrer"
+    onclick="trackLead('floating_whatsapp', {phone:'0546698931'})"
+    aria-label="פתיחת וואטסאפ"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+    פתיחת וואטסאפ
   </a>
 </body>
 </html>
