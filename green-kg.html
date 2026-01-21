@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>הצעת מחיר - הגינה הירוקה | גרין מבנים - קריית גת</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Noto+Sans+Hebrew:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#184E36;
+      --brand2:#2E7D56;
+      --ink:#151515;
+      --muted:#5e5e5e;
+      --line:#e8e8e8;
+      --bg:#f6f8f6;
+      --card:#ffffff;
+      --soft:rgba(24,78,54,.06);
+    }
+
+    *{ box-sizing:border-box; }
+    html{ -webkit-text-size-adjust:100%; font-family:"Heebo","Noto Sans Hebrew",Arial,"Segoe UI",sans-serif; }
+    body{ -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; font-weight:400; }
+    *, *::before, *::after{ font-family:inherit; }
+    button, input, textarea, select{ font-family:inherit; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:inherit;
+    }
+
+    .page{
+      max-width: 980px;
+      margin: 22px auto;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow: 0 6px 22px rgba(0,0,0,.05);
+    }
+
+    .topbar{
+      padding:22px 28px;
+      background: linear-gradient(135deg, rgba(24,78,54,.12), rgba(46,125,86,.05));
+      border-bottom:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      align-items:flex-start;
+    }
+
+    .brandwrap{ display:flex; gap:14px; align-items:center; }
+    .logo{
+      width:72px; height:72px;
+      border-radius:16px;
+      border:1px solid rgba(24,78,54,.18);
+      background:#fff;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .logo img{ width:100%; height:100%; object-fit:contain; }
+
+    h1{
+      margin:0;
+      color:var(--brand);
+      font-size:26px;
+      font-weight:700;
+      letter-spacing:0;
+    }
+    .subtitle{
+      margin:6px 0 0 0;
+      color:rgba(24,78,54,.95);
+      font-weight:800;
+      font-size:14px;
+    }
+
+    .sideNote{
+      max-width:360px;
+      text-align:right;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .content{ padding:22px 28px 30px 28px; }
+
+    /* כרטיס פרטי הצעה */
+    .infocard{
+      margin-top:14px;
+      border:1px solid rgba(24,78,54,.18);
+      border-radius:16px;
+      overflow:hidden;
+      background:#fff;
+    }
+    .infocard .head{
+      padding:10px 12px;
+      background:var(--soft);
+      color:var(--brand);
+      font-weight:800;
+      font-size:14px;
+      border-bottom:1px solid rgba(24,78,54,.10);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:0;
+    }
+    .cell{
+      padding:10px 12px;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      font-size:14px;
+    }
+    .cell:nth-child(odd){ border-left:1px solid var(--line); }
+    .grid .cell:last-child,
+    .grid .cell:nth-last-child(2){ border-bottom:0; }
+    .k{ color:rgba(24,78,54,.95); font-weight:800; white-space:nowrap; }
+    .v{ font-weight:700; color:#2b2b2b; text-align:left; }
+
+    h2{
+      margin:24px 0 8px 0;
+      color:var(--brand);
+      font-size:15px;
+      font-weight:600;
+      border-right:4px solid var(--brand);
+      padding-right:10px;
+    }
+    p{
+      margin:8px 0;
+      line-height:1.85;
+      font-size:14px;
+      color:#2b2b2b;
+    }
+
+    /* טבלאות */
+    table, th, td{
+      font-family: inherit;
+    }
+
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      border:1px solid rgba(24,78,54,.18);
+      border-radius:16px;
+      overflow:hidden;
+      background:#fff;
+      margin-top:10px;
+    }
+    thead th{
+      background:var(--brand);
+      color:#fff;
+      padding:12px 10px;
+      text-align:right;
+      font-size:14px;
+      font-weight:800;
+    }
+    tbody td{
+      padding:12px 10px;
+      font-size:14px;
+      border-bottom:1px solid var(--line);
+      vertical-align:top;
+      background:#fff;
+    }
+    tbody tr:nth-child(even) td{ background:rgba(24,78,54,.03); }
+    tbody tr:last-child td{ border-bottom:0; }
+
+    .price{ white-space:nowrap; font-weight:800; }
+    .muted{ color:var(--muted); font-size:13px; line-height:1.65; margin-top:6px; }
+
+    .mini-list{
+      margin:8px 0 0 0;
+      padding: 0 18px 0 0;
+      line-height:1.85;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .mini-list li{ margin:4px 0; }
+
+    .box{
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+      padding:14px 14px;
+    }
+    ul{
+      margin:6px 0 0 0;
+      padding: 0 18px 0 0;
+      line-height:1.9;
+      font-size:14px;
+      color:#2b2b2b;
+    }
+    li{ margin:6px 0; }
+
+    .total{
+      margin-top:14px;
+      border:1px solid rgba(24,78,54,.22);
+      border-right:8px solid var(--brand);
+      border-radius:16px;
+      padding:14px 14px;
+      background:rgba(24,78,54,.05);
+      color:var(--brand);
+      font-weight:800;
+      font-size:20px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .total small{
+      font-size:13px;
+      color:rgba(24,78,54,.90);
+      font-weight:700;
+    }
+
+    .footer{
+      margin-top:18px;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
+      color:var(--brand);
+      font-weight:800;
+      font-size:14px;
+    }
+
+    .stamp{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(24,78,54,.18);
+      background:rgba(24,78,54,.06);
+      color:rgba(24,78,54,.95);
+      font-weight:800;
+      font-size:12px;
+    }
+
+    @media (max-width: 768px) {
+      .page{ margin:12px; border-radius:12px; }
+      .topbar{ flex-direction:column; padding:18px 18px; }
+      .sideNote{ max-width:100%; text-align:right; margin-top:14px; }
+      .grid{ grid-template-columns:1fr; }
+      .cell:nth-child(odd){ border-left:0; border-top:1px solid var(--line); }
+      .cell:first-child{ border-top:0; }
+      .content{ padding:18px 18px 24px 18px; }
+      h1{ font-size:24px; }
+      .footer{ flex-direction:column; gap:8px; text-align:center; }
+      table{ font-size:13px; }
+      tbody td, thead th{ padding:10px 8px; }
+    }
+
+    /* הדפסה ל-PDF */
+    @page { size:A4; margin: 12mm 14mm; }
+    @media print{
+      *{-webkit-print-color-adjust: exact; print-color-adjust: exact; color-adjust: exact;}
+      body{ background:#fff; margin:0; padding:0; }
+      .page{ margin:0; border:none; border-radius:0; box-shadow:none; max-width:100%; }
+      .topbar{ page-break-after: avoid; }
+      .content{ page-break-before: avoid; }
+      h2{ page-break-after: avoid; page-break-inside: avoid; }
+      table, tr, td, th{ page-break-inside: avoid; }
+      .box, .total, .infocard{ page-break-inside: avoid; page-break-after: auto; }
+      thead{ display:table-header-group; }
+      tbody{ display:table-row-group; }
+      a{ color:inherit; text-decoration:none; }
+      .sideNote{ text-align:right; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="topbar">
+      <div>
+        <div class="brandwrap">
+          <div class="logo">
+            <img src="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg" alt="הגינה הירוקה">
+          </div>
+          <div>
+            <h1>הצעת מחיר לעבודות גינון והשקיה</h1>
+            <div class="subtitle">הגינה הירוקה <span class="stamp">הצעת מחיר</span></div>
+          </div>
+        </div>
+
+        <div class="infocard">
+          <div class="head">פרטי ההצעה</div>
+          <div class="grid">
+            <div class="cell"><div class="k">לקוח</div><div class="v">גרין מבנים</div></div>
+            <div class="cell"><div class="k">אתר</div><div class="v">קריית גת</div></div>
+            <div class="cell"><div class="k">כתובת</div><div class="v">הברזל פינת הפלטינה / פלטינה 28</div></div>
+            <div class="cell"><div class="k">תאריך</div><div class="v">20.01.2026</div></div>
+            <div class="cell"><div class="k">תוקף ההצעה</div><div class="v">14 ימים</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sideNote">
+        הצעת מחיר לביצוע עבודות טיפול בנזילות ותיקונים במערכת השקיה קיימת,
+        וכן עקירת ברושים באתר.
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>פירוט עבודות ומחירים</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" style="width:8%">סעיף</th>
+            <th scope="col">תיאור העבודה</th>
+            <th scope="col" style="width:22%">מחיר (ש"ח)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="price">1</td>
+            <td>
+              <b>מערכת השקיה – טיפול כללי</b>
+              <ul class="mini-list">
+                <li>בדיקה, איתור ותיקון נזילות/תקלות במערכת השקיה קיימת</li>
+                <li>תיקונים נקודתיים והשלמות סטנדרטיות (מחברים/קטעי צנרת לפי צורך)</li>
+                <li>בדיקת הפעלה בסיום העבודה</li>
+              </ul>
+              <div class="muted">היקף מוערך: כ־400 מ׳ קווי השקיה.</div>
+            </td>
+            <td class="price">2,200</td>
+          </tr>
+
+          <tr>
+            <td class="price">2</td>
+            <td>
+              <b>עקירת ברושים</b> – כ־30 יח׳ (גובה עד 1.5 מ׳), כולל חיתוך וריכוז הגזם בשטח האתר.
+            </td>
+            <td class="price">3,000</td>
+          </tr>
+
+          <tr>
+            <td class="price">3</td>
+            <td>
+              <b>פינוי גזם – אופציונלי</b> (בכפוף לאישור ובהתאם להיקף בפועל)
+              <div class="muted">
+                עגלה: החל מ־700 ₪ &nbsp; | &nbsp; משאית: החל מ־1,000 ₪
+              </div>
+            </td>
+            <td class="price">לפי צורך</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="total">
+        <div>
+          סה״כ לביצוע (ללא פינוי גזם):
+          <span style="font-size:22px;">5,200 ש"ח</span>
+        </div>
+        <small>פינוי גזם יתומחר לפי היקף בפועל ובאישור מראש.</small>
+      </div>
+
+      <h2>לוח זמנים משוער</h2>
+      <div class="box">
+        <p><b>משך ביצוע משוער:</b> בין 2 ל־3 ימי עבודה (כפוף למורכבות התיקונים בפועל באתר).</p>
+      </div>
+
+      <h2>תנאי תשלום</h2>
+      <div class="box">
+        <p><b>תשלום בסיום העבודה</b></p>
+      </div>
+
+      <h2>הבהרות</h2>
+      <div class="box">
+        <ul>
+          <li>הצעה זו מבוססת על היקפים מוערכים ובדיקה כללית בשטח.</li>
+          <li>במקרה של תוספות/חריגים מעבר להיקף הסביר (למשל תקלות רחבות/החלפת קווים משמעותית) — תימסר הצעת מחיר משלימה לאישור מראש.</li>
+        </ul>
+      </div>
+
+      <div class="footer">
+        <div>הגינה הירוקה | 054-6698931</div>
+        <div>info@gina.i.ng</div>
+      </div>
+      </div>
+  </div>
+</body>
+</html>
