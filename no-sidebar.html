@@ -3,11 +3,11 @@
 <head>
     <!-- FontAwesome Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>צור קשר - הגינה הירוקה</title>
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJDZ29X5CZ"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17054224877"></script>
@@ -42,7 +42,7 @@
                     <li><a href="index.html">דף הבית</a></li>
                     <li><a href="left-sidebar.html">שירותים</a></li>
                     <li><a href="right-sidebar.html">גלריה</a></li>
-                    <li><a href="/pricing.html">מחירון</a></li>
+                    <li><a href="pricing.html">מחירון</a></li>
                     <li class="active"><a href="no-sidebar.html">צור קשר</a></li>
                 </ul>
             </nav>
@@ -75,9 +75,9 @@
             <div class="text-box">
                 <h3>וואטסאפ</h3>
                 <p>
-                     להודעה מהירה
+                    להודעה מהירה
                     <br>
-                    <a href="https://wa.me/972546698931" target="_blank" class="button" style="margin-top: 10px;">וואטסאפ 054-669-8931</a>
+                    <a href="https://wa.me/972546698931" target="_blank" rel="noopener noreferrer" class="button" style="margin-top: 10px;">וואטסאפ 054-669-8931</a>
                 </p>
             </div>
             <div class="text-box">
@@ -92,27 +92,32 @@
 
         <!-- טופס יצירת קשר -->
         <form action="https://formsubmit.co/info@gina.i.ng" method="POST" style="margin-top: 80px;">
-            <input type="hidden" name="_next" value="https://gina.i.ng/thank-you.html">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="פנייה חדשה מהאתר הגינה הירוקה">
-            <input type="hidden" name="_template" value="box">
-            <input type="hidden" name="_autoresponse" value="תודה על הפנייה! נחזור אליך בהקדם.">
-            
-            <h3 style="text-align: center; margin-bottom: 40px; color: var(--text-primary);">מלאו את הטופס ואנחנו נחזור אליכם בהקדם</h3>
-            
-            <div style="max-width: 600px; margin: 0 auto;">
-                <input type="text" name="name" placeholder="שם מלא *" required>
-                <input type="tel" name="phone" placeholder="טלפון לחזרה *" required>
-                <input type="email" name="email" placeholder="אימייל (לא חובה)">
-                <textarea name="message" placeholder="ספרו לנו על הפרויקט (לא חובה)" rows="5"></textarea>
-                
-                <div style="text-align: center; margin-top: 20px;">
-                    <button type="submit" class="button">
-                        <i class="fas fa-paper-plane"></i> שלחו את הפרטים
-                    </button>
-                </div>
-            </div>
-        </form>
+    <input type="hidden" name="_next" value="https://gina.i.ng/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="פנייה חדשה מהאתר הגינה הירוקה">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_autoresponse" value="תודה על הפנייה! נחזור אליך בהקדם.">
+
+    <!-- Anti-spam honeypot -->
+    <input type="text" name="_honey" style="display:none">
+
+    <h3 style="text-align: center; margin-bottom: 40px; color: var(--text-primary);">
+        מלאו את הטופס ואנחנו נחזור אליכם בהקדם
+    </h3>
+
+    <div style="max-width: 600px; margin: 0 auto;">
+        <input type="text" name="שם מלא" placeholder="שם מלא *" required>
+        <input type="tel" name="טלפון" placeholder="טלפון לחזרה *" required>
+        <input type="email" name="אימייל" placeholder="אימייל (לא חובה)">
+        <textarea name="הודעה" placeholder="ספרו לנו על הפרויקט (לא חובה)" rows="5"></textarea>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button type="submit" class="button">
+                <i class="fas fa-paper-plane"></i> שלחו את הפרטים
+            </button>
+        </div>
+    </div>
+</form>
 
         <!-- CTA Section -->
         <div class="cta-section" style="margin-top: 80px;">
@@ -164,5 +169,6 @@
 
 </body>
 </html>
+
 
 
