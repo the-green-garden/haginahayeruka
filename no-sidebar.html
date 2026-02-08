@@ -91,27 +91,57 @@
         </div>
 
         <!-- טופס יצירת קשר -->
-        <form action="https://formsubmit.co/info@gina.i.ng" method="POST" style="margin-top: 80px;">
+        <!-- טופס יצירת קשר -->
+<form action="https://formsubmit.co/info@gina.i.ng" method="POST" enctype="multipart/form-data" style="margin-top: 80px;">
     <input type="hidden" name="_next" value="https://gina.i.ng/thank-you.html">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="פנייה חדשה מהאתר הגינה הירוקה">
     <input type="hidden" name="_template" value="box">
-    <input type="hidden" name="_autoresponse" value="תודה על הפנייה! נחזור אליך בהקדם.">
+    <input type="hidden" name="_autoresponse" value="שלום וברכה! 🌿
 
+קיבלנו את פנייתך ונחזור אליך בהקדם האפשרי.
+
+אם ברצונך לשלוח לנו תמונות נוספות, סרטונים או פרטים על הגינה –
+אפשר לשלוח ישירות בוואטסאפ:
+https://wa.me/972546698931
+
+צוות הגינה הירוקה
+📞 054-669-8931
+📧 info@gina.i.ng">
+    
     <!-- Anti-spam honeypot -->
     <input type="text" name="_honey" style="display:none">
-
+    
     <h3 style="text-align: center; margin-bottom: 40px; color: var(--text-primary);">
         מלאו את הטופס ואנחנו נחזור אליכם בהקדם
     </h3>
-
+    
     <div style="max-width: 600px; margin: 0 auto;">
         <input type="text" name="שם מלא" placeholder="שם מלא *" required>
+        
         <input type="tel" name="טלפון" placeholder="טלפון לחזרה *" required>
-        <input type="email" name="אימייל" placeholder="אימייל (לא חובה)">
-        <textarea name="הודעה" placeholder="ספרו לנו על הפרויקט (לא חובה)" rows="5"></textarea>
-
-        <div style="text-align: center; margin-top: 20px;">
+        
+        <input type="email" name="אימייל" placeholder="אימייל *" required>
+        
+        <textarea name="הודעה" placeholder="ספרו לנו על הפרויקט *" rows="5" required></textarea>
+        
+        <!-- העלאת קבצים -->
+        <div style="margin-top: 20px;">
+            <label style="display: block; margin-bottom: 8px; color: var(--text-primary); font-weight: 500;">
+                📸 צירוף תמונות/סרטונים (לא חובה)
+            </label>
+            <input 
+                type="file" 
+                name="attachment" 
+                accept="image/*,video/*" 
+                multiple
+                style="width: 100%; padding: 10px; border: 2px dashed #4CAF50; border-radius: 8px; background: #f9f9f9;">
+            <small style="display: block; margin-top: 5px; color: #666;">
+                ניתן לצרף עד 3 קבצים (תמונות או סרטונים)
+            </small>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
             <button type="submit" class="button">
                 <i class="fas fa-paper-plane"></i> שלחו את הפרטים
             </button>
@@ -169,6 +199,3 @@
 
 </body>
 </html>
-
-
-
