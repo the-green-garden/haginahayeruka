@@ -23,57 +23,49 @@
     <meta name="description" content="צור קשר עם הגינה הירוקה – שירותי גינון, תחזוקת גינות והדברה בדרום ובמרכז.">
     <meta name="keywords" content="גינון, שירותי גינון, תחזוקת גינות, הדברה">
 
-    <!-- ✅ CSS - קובץ אחד מרכזי בלבד -->
+    <!-- CSS - קובץ אחד מרכזי בלבד -->
     <link rel="stylesheet" href="style.css">
-</head>
+
     <!-- כפתור וואטסאפ צף -->
-<style>
-  .floating-whatsapp {
-    position: fixed;
-    left: 18px;
-    bottom: 18px;
-    z-index: 9999;
-    background: #25d366;
-    color: #fff !important;
-    padding: 13px 18px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 15px;
-    text-decoration: none;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.22);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    direction: rtl;
-  }
+    <style>
+      .floating-whatsapp {
+        position: fixed;
+        left: 18px;
+        bottom: 18px;
+        z-index: 9999;
+        background: #25d366;
+        color: #fff !important;
+        padding: 13px 18px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 15px;
+        text-decoration: none;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.22);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        direction: rtl;
+      }
 
-  .floating-whatsapp:hover {
-    background: #1fb85a;
-    color: #fff !important;
-    transform: translateY(-2px);
-  }
+      .floating-whatsapp:hover {
+        background: #1fb85a;
+        color: #fff !important;
+        transform: translateY(-2px);
+      }
 
-  @media (max-width: 600px) {
-    .floating-whatsapp {
-      left: 12px;
-      right: 12px;
-      bottom: 12px;
-      justify-content: center;
-      font-size: 14px;
-      padding: 14px 16px;
-    }
-  }
-</style>
-
-<a class="floating-whatsapp"
-   href="https://wa.me/972533332148?text=היי,%20אשמח%20לקבל%20הצעת%20מחיר%20מהירה%20מהגינה%20הירוקה"
-   target="_blank"
-   rel="noopener noreferrer"
-   onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'floating_whatsapp_button'}); }">
-  <i class="fab fa-whatsapp"></i>
-  הצעת מחיר מהירה בוואטסאפ
-</a>
-    <body>
+      @media (max-width: 600px) {
+        .floating-whatsapp {
+          left: 12px;
+          right: 12px;
+          bottom: 12px;
+          justify-content: center;
+          font-size: 14px;
+          padding: 14px 16px;
+        }
+      }
+    </style>
+</head>
+<body>
 
 <!-- כותרת וניווט -->
 <div class="wrapper style1">
@@ -107,6 +99,14 @@
             </p>
         </div>
 
+        <div class="text-box" style="margin: 35px auto; max-width: 850px;">
+            <h3>מה כדאי לשלוח לנו?</h3>
+            <p>
+                כדי שנוכל לעזור מהר יותר, שלחו לנו עיר/אזור, תיאור קצר של מה שצריך לבצע, ותמונות או סרטון קצר של הגינה.
+                כך נוכל להבין אם אפשר לתת טווח מחיר ראשוני או שצריך לתאם ביקור בשטח.
+            </p>
+        </div>
+
         <!-- דרכי יצירת קשר -->
         <div class="text-box-row" style="margin-top: 60px;">
             <div class="text-box">
@@ -129,7 +129,12 @@
                 <p>
                     להודעה מהירה
                     <br>
-                    <a href="https://wa.me/972533332148" target="_blank" rel="noopener noreferrer" class="button" style="margin-top: 10px;">
+                    <a href="https://wa.me/972533332148?text=היי,%20אשמח%20לקבל%20הצעת%20מחיר%20מהירה%20מהגינה%20הירוקה"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="button"
+                       style="margin-top: 10px;"
+                       onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'contact_box_whatsapp'}); }">
                         וואטסאפ 053-333-2148
                     </a>
                 </p>
@@ -196,7 +201,7 @@ https://wa.me/972533332148
                 </div>
                 
                 <div style="text-align: center; margin-top: 30px;">
-                    <button type="submit" class="button">
+                    <button type="submit" class="button" onclick="if (typeof gtag === 'function') { gtag('event', 'contact_form_submit', {'event_category': 'lead', 'event_label': 'contact_page_form'}); }">
                         <i class="fas fa-paper-plane"></i> שלחו את הפרטים
                     </button>
                 </div>
@@ -208,10 +213,16 @@ https://wa.me/972533332148
             <div class="cta-content">
                 <h2>או בואו לדבר אתנו עכשיו!</h2>
                 <p>לא בטוחים איפה להתחיל? שלחו לנו תמונות או סרטון קצר ונוכל לתת לכם הכוונה ראשונית.</p>
-                <a href="https://wa.me/972533332148" target="_blank" class="button button-white" rel="noopener noreferrer">
+                <a href="https://wa.me/972533332148?text=היי,%20אשמח%20לקבל%20הצעת%20מחיר%20מהירה%20מהגינה%20הירוקה"
+                   target="_blank"
+                   class="button button-white"
+                   rel="noopener noreferrer"
+                   onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'contact_cta_whatsapp'}); }">
                     <i class="fab fa-whatsapp"></i> דברו אתנו בוואטסאפ
                 </a>
-                <a href="tel:0533332148" class="button button-white">
+                <a href="tel:0533332148"
+                   class="button button-white"
+                   onclick="if (typeof gtag === 'function') { gtag('event', 'phone_click', {'event_category': 'lead', 'event_label': 'contact_cta_phone'}); }">
                     <i class="fas fa-phone-alt"></i> התקשרו עכשיו
                 </a>
             </div>
@@ -232,12 +243,18 @@ https://wa.me/972533332148
                     </a>
                 </li>
                 <li>
-                    <a href="https://wa.me/972533332148" target="_blank" title="WhatsApp" rel="noopener noreferrer">
+                    <a href="https://wa.me/972533332148?text=היי,%20אשמח%20לקבל%20הצעת%20מחיר%20מהירה%20מהגינה%20הירוקה"
+                       target="_blank"
+                       title="WhatsApp"
+                       rel="noopener noreferrer"
+                       onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'footer_whatsapp'}); }">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="tel:0533332148" title="התקשר אלינו">
+                    <a href="tel:0533332148"
+                       title="התקשר אלינו"
+                       onclick="if (typeof gtag === 'function') { gtag('event', 'phone_click', {'event_category': 'lead', 'event_label': 'footer_phone'}); }">
                         <i class="fas fa-phone-alt"></i>
                     </a>
                 </li>
@@ -250,6 +267,15 @@ https://wa.me/972533332148
         </div>
     </section>
 </div>
+
+<a class="floating-whatsapp"
+   href="https://wa.me/972533332148?text=היי,%20אשמח%20לקבל%20הצעת%20מחיר%20מהירה%20מהגינה%20הירוקה"
+   target="_blank"
+   rel="noopener noreferrer"
+   onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'floating_whatsapp_button'}); }">
+  <i class="fab fa-whatsapp"></i>
+  הצעת מחיר מהירה בוואטסאפ
+</a>
 
 </body>
 </html>
