@@ -6,7 +6,7 @@
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>שירותי גינון, שיקום גינות והדברה – הגינה הירוקה</title>
+    <title>שירותי גינון, שיקום גינות, השקיה והדברה – הגינה הירוקה</title>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJDZ29X5CZ"></script>
@@ -20,47 +20,131 @@
       gtag('config', 'AW-17054224877');
     </script>
 
-    <meta name="description" content="הגינה הירוקה מציעה שירותי גינון, שיקום גינות, תחזוקה שוטפת, תיקון מערכות השקיה, גיזום, שתילות והדברה בדרום ובמרכז. שלחו תמונות בוואטסאפ וקבלו הכוונה ראשונית.">
+    <meta name="description" content="שירותי הגינה הירוקה – שיקום גינות, תחזוקה חודשית, תיקון מערכות השקיה, גיזום, שתילות, ניקוי עשבייה והדברה בדרום ובמרכז. שלחו תמונות בוואטסאפ וקבלו הכוונה ראשונית.">
     <meta name="keywords" content="גינון, שירותי גינון, גנן, שיקום גינות, תחזוקת גינות, תיקון השקיה, גיזום עצים, שתילות, הדברה, ריסוס">
+    <meta property="og:title" content="שירותי גינון והדברה – הגינה הירוקה">
+    <meta property="og:description" content="שיקום גינות, תחזוקה, השקיה, שתילות, גיזום והדברה. שלחו תמונות וקבלו הכוונה ראשונית.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/home-hero-garden-banner.png">
+    <meta property="og:type" content="website">
 
     <!-- CSS - קובץ אחד מרכזי בלבד -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=services-premium-v2">
 
-    <!-- כפתור וואטסאפ צף -->
+    <!-- שיפורים נקודתיים לדף השירותים -->
     <style>
-      .floating-whatsapp {
-        position: fixed;
-        left: 18px;
-        bottom: 18px;
-        z-index: 9999;
-        background: #25d366;
-        color: #fff !important;
-        padding: 13px 18px;
-        border-radius: 999px;
-        font-weight: 700;
-        font-size: 15px;
-        text-decoration: none;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.22);
+      .services-intro-card {
+        max-width: 980px;
+        margin: 35px auto 0;
+        padding: 30px 28px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, #ffffff, #eef6f1);
+        border: 1px solid rgba(13, 92, 61, 0.12);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.06);
+        text-align: center;
+      }
+
+      .services-intro-card h3 {
+        color: #0d5c3d;
+        margin-bottom: 12px;
+      }
+
+      .service-problem-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+        margin-top: 45px;
+      }
+
+      .service-problem-card {
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 30px 24px;
+        text-align: center;
+        border: 1px solid rgba(13, 92, 61, 0.10);
+        box-shadow: 0 12px 34px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s ease;
+      }
+
+      .service-problem-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 20px 50px rgba(13, 92, 61, 0.14);
+        border-color: rgba(46, 204, 113, 0.45);
+      }
+
+      .service-problem-card i {
+        width: 54px;
+        height: 54px;
+        margin: 0 auto 16px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, rgba(13, 92, 61, 0.10), rgba(46, 204, 113, 0.14));
         display: flex;
         align-items: center;
-        gap: 8px;
-        direction: rtl;
+        justify-content: center;
+        color: #0d5c3d;
+        font-size: 1.4rem;
       }
 
-      .floating-whatsapp:hover {
-        background: #1fb85a;
-        color: #fff !important;
-        transform: translateY(-2px);
+      .service-problem-card h3 {
+        color: #0d5c3d;
+        font-size: 1.25rem;
+        margin-bottom: 10px;
       }
 
-      @media (max-width: 600px) {
-        .floating-whatsapp {
-          left: 12px;
-          right: 12px;
-          bottom: 12px;
-          justify-content: center;
-          font-size: 14px;
-          padding: 14px 16px;
+      .service-problem-card p {
+        margin: 0;
+        font-size: 0.98rem;
+        line-height: 1.7;
+      }
+
+      .what-to-send-box {
+        max-width: 980px;
+        margin: 70px auto 0;
+        padding: 38px 32px;
+        border-radius: 30px;
+        background: linear-gradient(135deg, #0a4330, #0d5c3d, #1a875f);
+        color: #fff;
+        text-align: center;
+        box-shadow: 0 20px 60px rgba(13, 92, 61, 0.26);
+      }
+
+      .what-to-send-box h2,
+      .what-to-send-box p {
+        color: #fff;
+      }
+
+      .what-to-send-list {
+        list-style: none;
+        padding: 0;
+        margin: 25px auto 30px;
+        max-width: 720px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        text-align: right;
+      }
+
+      .what-to-send-list li {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 16px;
+        padding: 13px 15px;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .what-to-send-list i {
+        margin-left: 8px;
+        color: #f1c40f;
+      }
+
+      @media (max-width: 700px) {
+        .what-to-send-list {
+          grid-template-columns: 1fr;
+        }
+
+        .services-intro-card,
+        .what-to-send-box {
+          padding: 28px 22px;
         }
       }
     </style>
@@ -89,24 +173,80 @@
     </div>
 </div>
 
-<!-- אזור תוכן -->
+<!-- פתיח השירותים -->
 <div class="wrapper style2">
   <section class="container">
     <div class="intro-text">
       <h2>שירותי הגינון וההדברה שלנו 🌿</h2>
       <p>
-        אנחנו מספקים פתרונות גינון מקיפים לבית, לבניינים, לעסקים ולשטחים פרטיים — משיקום גינה מוזנחת ועד תחזוקה שוטפת, השקיה, גיזום, שתילות והדברה.
-        <br><br>
-        אפשר לשלוח לנו תמונות או סרטון קצר של הגינה בוואטסאפ, לציין עיר/אזור ומה נדרש, ונחזור אליכם עם הכוונה ראשונית וטווח מחיר בהתאם לצורך.
+        צריכים לסדר גינה מוזנחת, לתקן השקיה, לגזום, לשתול, להדביר או להתחיל תחזוקה קבועה? אנחנו כאן כדי לעשות סדר ולהבין יחד מה נכון לגינה שלכם.
       </p>
     </div>
 
-    <div class="text-box" style="margin: 35px auto; max-width: 900px;">
+    <div class="services-intro-card">
         <h3>לא בטוחים איזה שירות אתם צריכים?</h3>
         <p>
-            זה בסדר גמור — הרבה לקוחות לא יודעים אם הגינה צריכה תחזוקה, יישור קו, שיקום, תיקון השקיה או הדברה.
+            זה לגמרי בסדר. הרבה לקוחות לא יודעים אם הגינה צריכה תחזוקה, יישור קו, שיקום, תיקון השקיה או הדברה.
             שלחו לנו תמונות או סרטון קצר, ואנחנו נעזור להבין מה נכון לעשות קודם.
         </p>
+        <a href="https://wa.me/972533332148?text=היי,%20אשמח%20לקבל%20הצעת%20מחיר%20מהירה%20מהגינה%20הירוקה"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="button"
+           style="margin-top: 12px;"
+           onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'services_intro_whatsapp'}); }">
+          <i class="fab fa-whatsapp"></i> שלחו תמונות בוואטסאפ
+        </a>
+    </div>
+
+    <div class="service-problem-grid">
+      <div class="service-problem-card">
+        <i class="fas fa-broom"></i>
+        <h3>הגינה מוזנחת?</h3>
+        <p>ניקוי יסודי, סידור שטח, טיפול בעשבייה, גיזום ופינוי גזם לפי הצורך.</p>
+      </div>
+
+      <div class="service-problem-card">
+        <i class="fas fa-calendar-check"></i>
+        <h3>צריכים תחזוקה קבועה?</h3>
+        <p>תחזוקה חודשית או תקופתית לגינות פרטיות, בניינים ושטחים משותפים.</p>
+      </div>
+
+      <div class="service-problem-card">
+        <i class="fas fa-droplet"></i>
+        <h3>יש תקלה בהשקיה?</h3>
+        <p>איתור וטיפול בפיצוצים, נזילות, ממטרות, טפטפות וקווי השקיה.</p>
+      </div>
+
+      <div class="service-problem-card">
+        <i class="fas fa-tree"></i>
+        <h3>צריך גיזום או שתילות?</h3>
+        <p>גיזום שיחים ועצים, שתילת פרחים וצמחים והתאמה למראה ולתחזוקה הרצויה.</p>
+      </div>
+
+      <div class="service-problem-card">
+        <i class="fas fa-bug-slash"></i>
+        <h3>יש מזיקים בגינה או בחצר?</h3>
+        <p>הדברה וריסוס נגד תיקנים, נמלים ומזיקים בהתאם לסוג הבעיה והשטח.</p>
+      </div>
+
+      <div class="service-problem-card">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h3>רוצים הכוונה לפני שמתחילים?</h3>
+        <p>נבחן לפי תמונות מה כדאי לעשות קודם, מה דחוף ומה יכול להמתין.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- פירוט השירותים -->
+<div class="wrapper style2">
+  <section class="container">
+    <div class="intro-text">
+      <h2>פירוט השירותים</h2>
+      <p>
+        כל שירות מותאם לפי מצב הגינה, גודל השטח, רמת ההזנחה, נגישות, חומרים וזמן עבודה.
+      </p>
     </div>
 
     <div class="text-box-row">
@@ -174,19 +314,23 @@
       </div>
     </div>
 
-    <div style="margin-top: 40px; text-align: center;">
+    <div class="what-to-send-box">
+      <h2>מה לשלוח לנו כדי לקבל הכוונה מהירה?</h2>
+      <p>כדי שנוכל להבין את העבודה ולחזור עם כיוון ראשוני, מומלץ לשלוח:</p>
+      <ul class="what-to-send-list">
+        <li><i class="fas fa-location-dot"></i> עיר או אזור</li>
+        <li><i class="fas fa-camera"></i> תמונות ברורות של הגינה</li>
+        <li><i class="fas fa-video"></i> סרטון קצר אם אפשר</li>
+        <li><i class="fas fa-list-check"></i> מה תרצו לבצע</li>
+        <li><i class="fas fa-ruler-combined"></i> הערכת גודל אם ידועה</li>
+        <li><i class="fas fa-triangle-exclamation"></i> האם מדובר במקרה דחוף</li>
+      </ul>
       <a href="https://wa.me/972533332148?text=היי,%20אשמח%20לקבל%20הצעת%20מחיר%20מהירה%20מהגינה%20הירוקה"
          target="_blank"
          rel="noopener noreferrer"
-         class="button"
-         onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'services_main_whatsapp'}); }">
-        <i class="fab fa-whatsapp"></i> שלחו תמונות להצעת מחיר בוואטסאפ
-      </a>
-      <br><br>
-      <a href="tel:0533332148"
-         class="button"
-         onclick="if (typeof gtag === 'function') { gtag('event', 'phone_click', {'event_category': 'lead', 'event_label': 'services_main_phone'}); }">
-        <i class="fas fa-phone-alt"></i> התקשרו עכשיו
+         class="button button-white"
+         onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'services_what_to_send_whatsapp'}); }">
+        <i class="fab fa-whatsapp"></i> שליחת פרטים בוואטסאפ
       </a>
     </div>
   </section>
