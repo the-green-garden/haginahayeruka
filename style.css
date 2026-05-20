@@ -777,3 +777,10 @@ textarea:focus {
     font-size: 1.15rem;
   }
 }
+
+/* הסתרת כפתור וואטסאפ צף בדף הבית במובייל */
+@media (max-width: 600px) {
+  body.homepage .floating-whatsapp {
+    display: none !important;
+  }
+}
