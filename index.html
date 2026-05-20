@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>הגינה הירוקה – שירותי גינון, שיקום גינות והדברה</title>
+    <title>הגינה הירוקה – שירותי גינון, שיקום גינות, השקיה והדברה</title>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJDZ29X5CZ"></script>
@@ -26,7 +26,7 @@
     
     <meta property="og:title" content="הגינה הירוקה – גינון, שיקום גינות והדברה">
     <meta property="og:description" content="שלחו תמונות או סרטון קצר של הגינה וקבלו הכוונה ראשונית להצעת מחיר – שירותי גינון, תחזוקה, השקיה והדברה בדרום ובמרכז.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg">
+    <meta property="og:image" content="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/home-hero-garden-banner.png">
     <meta property="og:type" content="website">
     
     <link rel="icon" type="image/jpg" href="https://raw.githubusercontent.com/the-green-garden/haginahayeruka/main/logo.jpg">
@@ -37,51 +37,127 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- CSS ראשי -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=home-premium-v2">
 
-    <!-- כפתור וואטסאפ צף -->
+    <!-- שיפורים נקודתיים לדף הבית -->
     <style>
-      .floating-whatsapp {
-        position: fixed;
-        left: 18px;
-        bottom: 18px;
-        z-index: 9999;
-        background: #25d366;
-        color: #fff !important;
-        padding: 13px 18px;
-        border-radius: 999px;
-        font-weight: 700;
-        font-size: 15px;
-        text-decoration: none;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.22);
+      .home-trust-strip {
+        max-width: 1050px;
+        margin: -45px auto 70px;
+        padding: 0 20px;
+        position: relative;
+        z-index: 5;
+      }
+
+      .home-trust-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .home-trust-item {
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid rgba(13, 92, 61, 0.12);
+        border-radius: 22px;
+        padding: 22px 18px;
+        text-align: center;
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+      }
+
+      .home-trust-item i {
+        color: #0d5c3d;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
+
+      .home-trust-item strong {
+        display: block;
+        color: #0d5c3d;
+        font-size: 1.02rem;
+        margin-bottom: 6px;
+      }
+
+      .home-trust-item span {
+        display: block;
+        color: #666;
+        font-size: 0.92rem;
+        line-height: 1.5;
+      }
+
+      .home-section-heading {
+        max-width: 900px;
+        margin: 0 auto 45px;
+        text-align: center;
+      }
+
+      .home-section-heading h2 {
+        color: #0d5c3d;
+        font-size: 2.35rem;
+        margin-bottom: 14px;
+      }
+
+      .home-section-heading p {
+        color: #666;
+        font-size: 1.12rem;
+      }
+
+      .premium-card-icon {
+        width: 54px;
+        height: 54px;
+        margin: 0 auto 18px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, rgba(13, 92, 61, 0.10), rgba(46, 204, 113, 0.14));
         display: flex;
         align-items: center;
-        gap: 8px;
-        direction: rtl;
+        justify-content: center;
+        color: #0d5c3d;
+        font-size: 1.45rem;
       }
 
-      .floating-whatsapp:hover {
-        background: #1fb85a;
-        color: #fff !important;
-        transform: translateY(-2px);
+      .home-mini-cta {
+        max-width: 980px;
+        margin: 60px auto 0;
+        padding: 34px 28px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, #ffffff, #eef6f1);
+        border: 1px solid rgba(13, 92, 61, 0.12);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.07);
+        text-align: center;
       }
 
-      @media (max-width: 600px) {
-        .floating-whatsapp {
-          left: 12px;
-          right: 12px;
-          bottom: 12px;
-          justify-content: center;
-          font-size: 14px;
-          padding: 14px 16px;
+      .home-mini-cta h3 {
+        color: #0d5c3d;
+        margin-bottom: 12px;
+      }
+
+      .home-mini-cta p {
+        margin-bottom: 22px;
+      }
+
+      @media (max-width: 768px) {
+        .home-trust-strip {
+          margin: -28px auto 45px;
+        }
+
+        .home-trust-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+
+        .home-trust-item {
+          padding: 18px 12px;
+          border-radius: 18px;
+        }
+
+        .home-trust-item span {
+          font-size: 0.84rem;
+        }
+
+        .home-section-heading h2 {
+          font-size: 1.85rem;
         }
       }
     </style>
-    
-    <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body class="homepage">
     <!-- Header -->
@@ -124,7 +200,7 @@
                    target="_blank"
                    class="button"
                    rel="noopener noreferrer"
-                   style="margin-bottom: 15px; display: inline-block;"
+                   style="margin-bottom: 15px; display: inline-flex;"
                    onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'homepage_hero_whatsapp'}); }">
                     <i class="fab fa-whatsapp"></i> לקבלת הצעת מחיר מהירה בוואטסאפ
                 </a>
@@ -133,7 +209,7 @@
 
                 <a href="tel:0533332148"
                    class="button"
-                   style="display: inline-block;"
+                   style="display: inline-flex;"
                    onclick="if (typeof gtag === 'function') { gtag('event', 'phone_click', {'event_category': 'lead', 'event_label': 'homepage_hero_phone'}); }">
                     <i class="fas fa-phone-alt"></i> התקשרו עכשיו
                 </a>
@@ -141,33 +217,104 @@
         </div>
     </div>
 
-    <!-- תיבות טקסט בשורה -->
+    <!-- פס אמון -->
+    <section class="home-trust-strip" aria-label="יתרונות השירות">
+        <div class="home-trust-grid">
+            <div class="home-trust-item">
+                <i class="fas fa-camera"></i>
+                <strong>הצעה לפי תמונות</strong>
+                <span>שולחים תמונות או סרטון ומקבלים הכוונה ראשונית.</span>
+            </div>
+            <div class="home-trust-item">
+                <i class="fas fa-location-dot"></i>
+                <strong>דרום ומרכז</strong>
+                <span>שירות לגינות פרטיות, בניינים, עסקים וחצרות.</span>
+            </div>
+            <div class="home-trust-item">
+                <i class="fas fa-seedling"></i>
+                <strong>פתרון מקיף</strong>
+                <span>גינון, השקיה, שתילות, גיזום, שיקום והדברה.</span>
+            </div>
+            <div class="home-trust-item">
+                <i class="fas fa-handshake"></i>
+                <strong>שירות אישי</strong>
+                <span>הסבר ברור, עבודה מסודרת והתאמה לתקציב.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- שירותים מרכזיים -->
     <div class="wrapper style2">
         <section class="container">
+            <div class="home-section-heading">
+                <h2>מה אנחנו עושים?</h2>
+                <p>
+                    אנחנו מטפלים בגינות מכל הסוגים — מגינה שצריכה ניקוי וסידור ראשוני ועד תחזוקה קבועה ושיקום מלא של שטח מוזנח.
+                </p>
+            </div>
+
             <div class="text-box-row">
                 <div class="text-box">
-                    <h2>מה אנחנו עושים?</h2>
+                    <div class="premium-card-icon"><i class="fas fa-broom"></i></div>
+                    <h3>שיקום ויישור קו</h3>
                     <p>
-                        אנחנו מטפלים בגינות מכל הסוגים — מגינה שצריכה ניקוי וסידור ראשוני, דרך תחזוקה קבועה ועד שיקום מלא של שטח מוזנח.
-                        השירות כולל בין היתר גיזום, שתילות, ניקיון עשבייה, תיקוני השקיה, טיפול בעצים והדברה לפי הצורך.
+                        ניקוי יסודי, טיפול בעשבייה, גיזום, סידור שטח והחזרת הגינה למצב נקי ומטופח.
                     </p>
                 </div>
 
                 <div class="text-box">
-                    <h2>איך מקבלים הצעה?</h2>
+                    <div class="premium-card-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>תחזוקה חודשית</h3>
                     <p>
-                        כדי לתת לכם מענה מהיר ומדויק יותר, אפשר לשלוח לנו בוואטסאפ תמונות או סרטון קצר של הגינה, לציין עיר/אזור ולכתוב מה תרצו לבצע.
-                        אם הפרטים מספיקים — נוכל לתת טווח מחיר ראשוני. אם צריך בדיקה בשטח, נתאם ביקור בצורה מסודרת.
+                        תחזוקה שוטפת לגינות פרטיות ובניינים: ניקיון, גיזום, בדיקת השקיה ושמירה על מראה מסודר.
                     </p>
                 </div>
 
                 <div class="text-box">
-                    <h2>למה לבחור בהגינה הירוקה?</h2>
+                    <div class="premium-card-icon"><i class="fas fa-droplet"></i></div>
+                    <h3>השקיה ותקלות</h3>
                     <p>
-                        כי אנחנו עובדים בצורה מסודרת, מדברים בגובה העיניים, מסבירים מראש מה נדרש, ומשתדלים לתת פתרון שמתאים גם לגינה וגם לתקציב.
-                        העבודה מתבצעת תוך הקפדה על ניקיון, בטיחות, שירות אישי ותוצאה שנראית טוב לאורך זמן.
+                        תיקון נזילות, פיצוצים, טפטפות, ממטרות ומערכות השקיה קיימות או חדשות.
                     </p>
                 </div>
+
+                <div class="text-box">
+                    <div class="premium-card-icon"><i class="fas fa-tree"></i></div>
+                    <h3>גיזום ושתילות</h3>
+                    <p>
+                        גיזום שיחים ועצים, שתילות עונתיות, צמחייה רב־עונתית וסידור אזורי צמחייה.
+                    </p>
+                </div>
+
+                <div class="text-box">
+                    <div class="premium-card-icon"><i class="fas fa-bug-slash"></i></div>
+                    <h3>הדברה וריסוס</h3>
+                    <p>
+                        טיפול נגד תיקנים, נמלים ומזיקים בגינה ובחצר — בהתאמה לצורך ולסביבת הבית.
+                    </p>
+                </div>
+
+                <div class="text-box">
+                    <div class="premium-card-icon"><i class="fas fa-pen-ruler"></i></div>
+                    <h3>ייעוץ והכוונה</h3>
+                    <p>
+                        לא בטוחים מה הגינה צריכה? נבדוק לפי תמונות ונעזור להבין מה נכון לעשות קודם.
+                    </p>
+                </div>
+            </div>
+
+            <div class="home-mini-cta">
+                <h3>רוצים לדעת מה מתאים לגינה שלכם?</h3>
+                <p>
+                    שלחו תמונות או סרטון קצר של הגינה, כתבו עיר/אזור ומה תרצו לבצע, ונחזור עם הכוונה ראשונית.
+                </p>
+                <a href="https://wa.me/972533332148?text=היי,%20אשמח%20לקבל%20הצעת%20מחיר%20מהירה%20מהגינה%20הירוקה"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="button"
+                   onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'homepage_services_whatsapp'}); }">
+                    <i class="fab fa-whatsapp"></i> שליחת תמונות להצעת מחיר
+                </a>
             </div>
         </section>
     </div>
@@ -175,44 +322,63 @@
     <!-- איך זה עובד -->
     <div class="wrapper style2">
         <section class="container">
-            <div class="intro-text">
+            <div class="home-section-heading">
                 <h2>איך מקבלים הצעת מחיר?</h2>
                 <p>
-                    כדי שנוכל לתת לכם מענה מהיר ומדויק יותר, מומלץ לשלוח לנו כמה פרטים פשוטים בוואטסאפ.
+                    תהליך פשוט, ברור ונוח — כדי שלא תצטרכו לנחש מה הגינה צריכה.
                 </p>
             </div>
 
             <div class="text-box-row">
                 <div class="text-box">
+                    <div class="premium-card-icon"><i class="fas fa-images"></i></div>
                     <h3>1. שולחים תמונות או סרטון</h3>
                     <p>
-                        צלמו את הגינה, החצר, מערכת ההשקיה או האזור שדורש טיפול — גם סרטון קצר עוזר מאוד להבין את מצב השטח.
+                        צלמו את הגינה, החצר, מערכת ההשקיה או האזור שדורש טיפול. גם סרטון קצר עוזר להבין את מצב השטח.
                     </p>
                 </div>
 
                 <div class="text-box">
+                    <div class="premium-card-icon"><i class="fas fa-message"></i></div>
                     <h3>2. כותבים מה צריך לבצע</h3>
                     <p>
-                        לדוגמה: ניקוי עשבייה, תחזוקה חודשית, גיזום, תיקון השקיה, שתילות, הדברה או שיקום כללי של הגינה.
+                        לדוגמה: ניקוי עשבייה, תחזוקה חודשית, גיזום, תיקון השקיה, שתילות, הדברה או שיקום כללי.
                     </p>
                 </div>
 
                 <div class="text-box">
-                    <h3>3. מקבלים הכוונה ראשונית</h3>
+                    <div class="premium-card-icon"><i class="fas fa-shekel-sign"></i></div>
+                    <h3>3. מקבלים הכוונה וטווח מחיר</h3>
                     <p>
                         אם הפרטים מספיקים — נחזור עם טווח מחיר ראשוני. אם צריך בדיקה בשטח — נתאם ביקור בצורה מסודרת.
                     </p>
                 </div>
             </div>
+        </section>
+    </div>
 
-            <div style="text-align: center; margin-top: 35px;">
-                <a href="https://wa.me/972533332148?text=היי,%20אשמח%20לקבל%20הצעת%20מחיר%20מהירה%20מהגינה%20הירוקה"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="button"
-                   onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'homepage_process_whatsapp'}); }">
-                    <i class="fab fa-whatsapp"></i> שליחת תמונות להצעת מחיר
-                </a>
+    <!-- CTA Section -->
+    <div class="wrapper style2">
+        <section class="container">
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h2>הגינה שלכם יכולה להיראות טוב יותר כבר מהשלב הבא</h2>
+                    <p>
+                        שלחו לנו תמונות או סרטון קצר, ונעזור לכם להבין מה נכון לעשות קודם — בלי התחייבות וללא בלבול.
+                    </p>
+                    <a href="https://wa.me/972533332148?text=היי,%20אשמח%20לקבל%20הצעת%20מחיר%20מהירה%20מהגינה%20הירוקה"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="button button-white"
+                       onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click', {'event_category': 'lead', 'event_label': 'homepage_bottom_cta_whatsapp'}); }">
+                        <i class="fab fa-whatsapp"></i> דברו איתנו בוואטסאפ
+                    </a>
+                    <a href="tel:0533332148"
+                       class="button button-white"
+                       onclick="if (typeof gtag === 'function') { gtag('event', 'phone_click', {'event_category': 'lead', 'event_label': 'homepage_bottom_cta_phone'}); }">
+                        <i class="fas fa-phone-alt"></i> התקשרו עכשיו
+                    </a>
+                </div>
             </div>
         </section>
     </div>
