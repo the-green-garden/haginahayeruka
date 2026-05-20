@@ -731,6 +731,39 @@ textarea:focus {
     line-height: 1 !important;
     margin: 0 !important;
   }
+
+  body.homepage .floating-whatsapp {
+    display: none !important;
+  }
+
+  #header {
+    padding: 8px 0 !important;
+  }
+
+  #header .container {
+    gap: 10px !important;
+  }
+
+  #logo img {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  #nav ul {
+    gap: 4px !important;
+  }
+
+  #nav a {
+    padding: 8px 12px !important;
+    font-size: 0.84rem !important;
+    border-radius: 999px !important;
+  }
+
+  #banner {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+    min-height: 500px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -775,12 +808,5 @@ textarea:focus {
     width: 50px;
     height: 50px;
     font-size: 1.15rem;
-  }
-}
-
-/* הסתרת כפתור וואטסאפ צף בדף הבית במובייל */
-@media (max-width: 600px) {
-  body.homepage .floating-whatsapp {
-    display: none !important;
   }
 }
