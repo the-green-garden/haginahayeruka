@@ -810,3 +810,36 @@ textarea:focus {
     font-size: 1.15rem;
   }
 }
+
+/* ליטוש כפתורים בתוך אזורי CTA - מרווחים נקיים יותר */
+.cta-section .button {
+  margin: 8px 10px;
+}
+
+@media (max-width: 768px) {
+  .cta-section .button {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 330px !important;
+    margin: 12px auto !important;
+  }
+}
+
+/* ליטוש כרטיסי CTA במובייל */
+@media (max-width: 600px) {
+  .cta-section {
+    padding: 46px 22px !important;
+    border-radius: 24px !important;
+  }
+
+  .cta-section h2 {
+    font-size: 1.72rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .cta-section p {
+    font-size: 1.02rem !important;
+    line-height: 1.75 !important;
+  }
+}
+
