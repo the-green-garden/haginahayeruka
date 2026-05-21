@@ -843,3 +843,9 @@ textarea:focus {
   }
 }
 
+/* הסתרת כפתור וואטסאפ צף בדף השירותים במובייל */
+@media (max-width: 600px) {
+  body.services-page .floating-whatsapp {
+    display: none !important;
+  }
+}
